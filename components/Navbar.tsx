@@ -29,7 +29,6 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
@@ -49,38 +48,38 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
 
   return (
     <>
-      {/* Top Notification / Micro-bar with Legible Fonts */}
-      <div className="bg-dalia-navy text-white text-sm py-2.5 px-4 border-b border-dalia-gold/30 hidden md:block transition-all">
+      {/* Top Notification / Micro-bar */}
+      <div className="bg-dalia-navy text-white text-sm py-2 px-4 border-b border-dalia-gold/30 hidden md:block transition-all">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
             <a
               href="tel:+56987654321"
               className="flex items-center gap-2 hover:text-dalia-gold transition-colors font-medium"
             >
-              <Phone size={15} className="text-dalia-gold" />
+              <Phone size={14} className="text-dalia-gold" />
               <span>+56 9 8765 4321</span>
             </a>
             <div className="flex items-center gap-2 text-dalia-slate-light font-medium">
-              <Clock size={15} className="text-dalia-gold" />
+              <Clock size={14} className="text-dalia-gold" />
               <span>Lun - Vie 08:30 - 20:00 | Sáb 09:00 - 14:00</span>
             </div>
             <div className="flex items-center gap-2 text-dalia-slate-light font-medium">
-              <MapPin size={15} className="text-dalia-gold" />
+              <MapPin size={14} className="text-dalia-gold" />
               <span>Av. Las Condes 12345</span>
             </div>
           </div>
-          <div className="flex items-center gap-5">
-            <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm bg-dalia-navy-dark text-dalia-rose-light px-3 py-1 rounded-full border border-dalia-rose/30 font-semibold">
-              <Sparkles size={13} className="text-dalia-gold" />
+          <div className="flex items-center gap-4">
+            <span className="inline-flex items-center gap-1.5 text-xs bg-dalia-navy-dark text-dalia-rose-light px-3 py-0.5 rounded-full border border-dalia-rose/30 font-semibold">
+              <Sparkles size={12} className="text-dalia-gold" />
               <span>Diagnóstico 3D en tu primera visita</span>
             </span>
             <a
               href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20quisiera%20solicitar%20información%20para%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-dalia-gold hover:text-white transition-colors font-bold text-sm"
+              className="flex items-center gap-1.5 text-dalia-gold hover:text-white transition-colors font-bold text-xs"
             >
-              <MessageCircle size={15} />
+              <MessageCircle size={14} />
               <span>WhatsApp Directo</span>
             </a>
           </div>
@@ -91,12 +90,12 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
-            ? "bg-[#FAF8F7]/95 backdrop-blur-md shadow-md py-3.5 border-b border-dalia-gold/30"
-            : "bg-[#FAF8F7]/85 backdrop-blur-sm py-4 border-b border-dalia-warm/80"
+            ? "bg-[#FAF8F7]/95 backdrop-blur-md shadow-md py-3 border-b border-dalia-gold/30"
+            : "bg-[#FAF8F7]/90 backdrop-blur-sm py-3.5 border-b border-dalia-warm/80"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
+          {/* Logo with safe shrink */}
           <Logo variant="horizontal" size={isScrolled ? "sm" : "md"} />
 
           {/* Desktop Navigation */}
@@ -117,7 +116,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                   >
                     <Link
                       href={link.href}
-                      className={`px-3.5 py-2.5 rounded-xl text-base font-bold tracking-wide flex items-center gap-1.5 transition-all ${
+                      className={`px-3.5 py-2 rounded-xl text-base font-bold tracking-wide flex items-center gap-1.5 transition-all ${
                         isActive
                           ? "text-dalia-navy bg-dalia-rose/40"
                           : "text-dalia-navy hover:text-dalia-gold-dark hover:bg-dalia-warm/50"
@@ -175,7 +174,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-4 py-2.5 rounded-xl text-base font-bold tracking-wide transition-all ${
+                  className={`px-3.5 py-2 rounded-xl text-base font-bold tracking-wide transition-all ${
                     isActive
                       ? "text-dalia-navy bg-dalia-rose/40"
                       : "text-dalia-navy hover:text-dalia-gold-dark hover:bg-dalia-warm/50"
@@ -187,79 +186,79 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
             })}
           </nav>
 
-          {/* Action CTAs */}
-          <div className="hidden lg:flex items-center gap-3.5">
+          {/* Action CTAs Desktop */}
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-2xl border-2 border-dalia-gold/40 text-dalia-navy hover:bg-dalia-rose/25 transition-all"
+              className="p-2.5 rounded-2xl border-2 border-dalia-gold/40 text-dalia-navy hover:bg-dalia-rose/25 transition-all"
               title="Escríbenos por WhatsApp"
             >
-              <MessageCircle size={20} className="text-dalia-gold" />
+              <MessageCircle size={19} className="text-dalia-gold" />
             </a>
 
             <button
               onClick={onOpenAppointment}
-              className="btn-gold px-6 py-3 rounded-2xl text-base font-bold flex items-center gap-2 shadow-md"
+              className="btn-gold px-6 py-2.5 rounded-2xl text-base font-bold flex items-center gap-2 shadow-md"
             >
-              <Calendar size={18} />
+              <Calendar size={17} />
               <span>Agendar Cita</span>
             </button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile menu button with safe layout */}
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               onClick={onOpenAppointment}
-              className="btn-gold px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-1.5 shadow-sm"
+              className="btn-gold px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-1 shadow-sm"
             >
-              <Calendar size={15} />
+              <Calendar size={13} />
               <span>Cita</span>
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-dalia-navy hover:bg-dalia-warm/60 transition-colors"
+              className="p-1.5 sm:p-2 rounded-xl text-dalia-navy hover:bg-dalia-warm/60 transition-colors"
               aria-label="Abrir menú de navegación"
             >
-              {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
         {/* Mobile menu drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-dalia-warm bg-[#FAF8F7] px-5 pt-4 pb-7 space-y-3 animate-in slide-in-from-top-4">
+          <div className="lg:hidden border-t border-dalia-warm bg-[#FAF8F7] px-4 pt-3 pb-6 space-y-2.5 animate-in slide-in-from-top-4">
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="px-4 py-3 rounded-xl text-lg font-bold text-dalia-navy hover:bg-dalia-rose/25"
+                  className="px-4 py-2.5 rounded-xl text-base font-bold text-dalia-navy hover:bg-dalia-rose/25"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
 
-            <div className="pt-4 flex flex-col gap-2.5">
+            <div className="pt-3 flex flex-col gap-2">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   if (onOpenAppointment) onOpenAppointment();
                 }}
-                className="w-full btn-gold py-3.5 rounded-2xl text-center font-bold text-base flex items-center justify-center gap-2 shadow-md"
+                className="w-full btn-gold py-3 rounded-2xl text-center font-bold text-sm flex items-center justify-center gap-2 shadow-md"
               >
-                <Calendar size={18} />
+                <Calendar size={16} />
                 <span>Agendar Cita de Valoración</span>
               </button>
               <a
                 href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full btn-navy py-3.5 rounded-2xl text-center font-bold text-base flex items-center justify-center gap-2 shadow-md"
+                className="w-full btn-navy py-3 rounded-2xl text-center font-bold text-sm flex items-center justify-center gap-2 shadow-md"
               >
-                <MessageCircle size={18} />
+                <MessageCircle size={16} />
                 <span>WhatsApp Directo (+56 9 8765 4321)</span>
               </a>
             </div>
