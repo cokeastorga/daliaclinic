@@ -88,24 +88,6 @@ export default function HeroSection() {
                   className="object-cover object-center"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-transparent to-transparent" />
-
-                {/* Overlay Bottom Badge */}
-                <div className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-dalia-gold/40 shadow-luxury hover:border-dalia-rose transition-colors">
-                  <div className="flex items-center justify-between gap-3">
-                    <div>
-                      <p className="text-xs sm:text-sm uppercase tracking-wider font-extrabold text-dalia-gold-dark">
-                        Diagnóstico 3D en Consulta
-                      </p>
-                      <p className="text-base sm:text-lg font-bold text-dalia-navy mt-0.5">
-                        Visualiza tu Sonrisa Ideal Antes de Iniciar
-                      </p>
-                    </div>
-                    <div className="w-12 h-12 rounded-2xl bg-dalia-navy text-dalia-gold flex items-center justify-center shrink-0 shadow-sm">
-                      <Sparkles size={22} />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
