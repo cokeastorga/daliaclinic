@@ -85,6 +85,14 @@ body {
     -webkit-text-fill-color: transparent;
   }
 
+  /* Rose Shimmer Text Gradient */
+  .text-rose-gradient {
+    color: #B76E68;
+    background: linear-gradient(135deg, #B76E68 0%, #D48E88 50%, #A35751 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .text-navy-gradient {
     background: linear-gradient(135deg, #133853 0%, #1C4E72 70%, #0D2538 100%);
     -webkit-background-clip: text;
