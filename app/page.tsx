@@ -17,8 +17,6 @@ import {
   Calendar,
   ArrowRight,
   ShieldCheck,
-  Star,
-  GraduationCap,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -32,13 +30,13 @@ export default function HomePage() {
       {/* 2. Los 5 Pilares Dalia: Tarjetas Didácticas e Interactivas */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-xs md:text-sm uppercase tracking-[0.25em] font-bold text-dalia-gold-dark block mb-2">
+          <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
             Nuestra Identidad & Propósito
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-dalia-navy tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
             La Experiencia Dalia Clinic
           </h2>
-          <p className="text-base text-dalia-graphite mt-3 leading-relaxed">
+          <p className="text-lg md:text-xl text-dalia-graphite mt-3 leading-relaxed">
             Selecciona cada pilar para descubrir cómo combinamos ciencia, arte y exclusividad en cada tratamiento.
           </p>
         </div>
@@ -51,21 +49,21 @@ export default function HomePage() {
       <section id="servicios" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
-            <span className="text-xs md:text-sm uppercase tracking-[0.25em] font-bold text-dalia-gold-dark block mb-2">
+            <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
               Tratamientos Integrales en Las Condes
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-dalia-navy tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
               Especialidades y Servicios
             </h2>
-            <p className="text-base text-dalia-graphite mt-2 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-dalia-graphite mt-2 max-w-2xl leading-relaxed">
               Explora nuestras especialidades. Cada tarjeta cuenta con información directa y acceso al detalle clínico completo.
             </p>
           </div>
           <button
             onClick={() => openAppointment()}
-            className="btn-gold px-6 py-3.5 rounded-2xl text-sm font-semibold flex items-center gap-2 self-start md:self-auto shrink-0 shadow-md"
+            className="btn-gold px-7 py-4 rounded-2xl text-base sm:text-lg font-bold flex items-center gap-2.5 self-start md:self-auto shrink-0 shadow-lg"
           >
-            <Calendar size={16} />
+            <Calendar size={18} />
             <span>Agendar Cita con Especialista</span>
           </button>
         </div>
@@ -85,13 +83,13 @@ export default function HomePage() {
       {/* 6. Nuestro Equipo Médico: Tarjetas Limpias y Visuales */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs md:text-sm uppercase tracking-[0.25em] font-bold text-dalia-gold-dark block mb-2">
+          <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
             Profesionales Colegiados
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-dalia-navy tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
             Nuestro Equipo Médico
           </h2>
-          <p className="text-base text-dalia-graphite mt-3 leading-relaxed">
+          <p className="text-lg md:text-xl text-dalia-graphite mt-3 leading-relaxed">
             Cirujanos dentistas y médicos especialistas dedicados a tu salud y estética facial.
           </p>
         </div>
@@ -100,10 +98,10 @@ export default function HomePage() {
           {doctorsData.slice(0, 3).map((doctor) => (
             <div
               key={doctor.id}
-              className="bg-white rounded-3xl overflow-hidden border border-dalia-gold/25 shadow-luxury hover:shadow-luxury-hover transition-all duration-300 group flex flex-col justify-between"
+              className="bg-white rounded-3xl overflow-hidden border border-dalia-gold/30 shadow-luxury hover:shadow-luxury-hover transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
-                <div className="relative h-72 w-full overflow-hidden bg-dalia-warm">
+                <div className="relative h-76 w-full overflow-hidden bg-dalia-warm">
                   <Image
                     src={doctor.image}
                     alt={`Doctor ${doctor.name}`}
@@ -111,36 +109,36 @@ export default function HomePage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-transparent to-transparent" />
-                  <div className="absolute top-4 right-4 bg-dalia-navy/85 text-dalia-gold text-xs font-bold px-3 py-1 rounded-full border border-dalia-gold/30">
+                  <div className="absolute top-4 right-4 bg-dalia-navy/90 text-dalia-gold text-sm font-bold px-3.5 py-1 rounded-full border border-dalia-gold/40">
                     {doctor.experienceYears}+ años exp.
                   </div>
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="text-xs font-semibold text-dalia-gold uppercase tracking-wide block">
+                    <span className="text-sm font-bold text-dalia-gold uppercase tracking-wide block">
                       {doctor.specialty}
                     </span>
-                    <p className="font-serif text-xl font-bold">{doctor.name}</p>
-                    <p className="text-xs text-dalia-slate-light">{doctor.licenseNumber}</p>
+                    <p className="font-serif text-2xl font-bold">{doctor.name}</p>
+                    <p className="text-sm text-dalia-slate-light font-medium">{doctor.licenseNumber}</p>
                   </div>
                 </div>
 
-                <div className="p-6 space-y-3">
-                  <p className="text-sm text-dalia-graphite leading-relaxed">
+                <div className="p-7 space-y-3">
+                  <p className="text-base text-dalia-graphite leading-relaxed">
                     {doctor.bio.split(".")[0]}. {doctor.bio.split(".")[1]}.
                   </p>
                 </div>
               </div>
 
-              <div className="p-6 pt-0 border-t border-dalia-warm/60 flex items-center justify-between">
+              <div className="p-7 pt-0 border-t border-dalia-warm/60 flex items-center justify-between">
                 <Link
                   href="/equipo"
-                  className="text-sm font-bold text-dalia-navy hover:text-dalia-gold flex items-center gap-1.5 transition-colors"
+                  className="text-base font-extrabold text-dalia-navy hover:text-dalia-gold flex items-center gap-1.5 transition-colors"
                 >
                   <span>Ver trayectoria completa</span>
-                  <ArrowRight size={14} />
+                  <ArrowRight size={16} />
                 </Link>
                 <button
                   onClick={() => openAppointment()}
-                  className="btn-gold text-xs px-3.5 py-1.5 rounded-xl font-semibold"
+                  className="btn-gold text-sm sm:text-base px-4 py-2 rounded-xl font-bold shadow-sm"
                 >
                   Agendar
                 </button>
@@ -149,13 +147,13 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <Link
             href="/equipo"
-            className="inline-flex items-center gap-2 text-sm font-bold text-dalia-navy hover:text-dalia-gold border-b-2 border-dalia-gold pb-1 transition-colors"
+            className="inline-flex items-center gap-2.5 text-base sm:text-lg font-extrabold text-dalia-navy hover:text-dalia-gold border-b-2 border-dalia-gold pb-1.5 transition-colors"
           >
             <span>Conoce a todos los especialistas de Dalia Clinic</span>
-            <ArrowRight size={16} />
+            <ArrowRight size={18} />
           </Link>
         </div>
       </section>
@@ -166,13 +164,13 @@ export default function HomePage() {
       {/* 8. Preguntas Frecuentes (FAQs) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs md:text-sm uppercase tracking-[0.25em] font-bold text-dalia-gold-dark block mb-2">
+          <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
             Claridad y Confianza
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-dalia-navy tracking-tight">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
             Preguntas Frecuentes
           </h2>
-          <p className="text-base text-dalia-graphite mt-2">
+          <p className="text-lg text-dalia-graphite mt-2">
             Respuestas rápidas a las consultas más comunes de nuestros pacientes.
           </p>
         </div>
@@ -184,34 +182,34 @@ export default function HomePage() {
       <section id="contacto" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 space-y-6">
-            <span className="text-xs md:text-sm uppercase tracking-[0.25em] font-bold text-dalia-gold-dark block">
+            <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block">
               Sede Las Condes
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-dalia-navy tracking-tight">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
               Tu Nueva Sonrisa Comienza Aquí
             </h2>
-            <p className="text-base text-dalia-graphite leading-relaxed">
+            <p className="text-lg md:text-xl text-dalia-graphite leading-relaxed">
               Agenda tu consulta de evaluación y déjanos asesorarte con profesionalismo, delicadeza y tecnología de vanguardia.
             </p>
 
-            <div className="space-y-3 pt-2">
-              <div className="p-4 rounded-2xl bg-white border border-dalia-gold/20 shadow-xs flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-xl bg-dalia-rose/40 text-dalia-navy flex items-center justify-center shrink-0">
-                  <Calendar size={20} className="text-dalia-gold-dark" />
+            <div className="space-y-3.5 pt-2">
+              <div className="p-4.5 rounded-2xl bg-white border border-dalia-gold/30 shadow-xs flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-dalia-rose/40 text-dalia-navy flex items-center justify-center shrink-0">
+                  <Calendar size={22} className="text-dalia-gold-dark" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-dalia-navy">Citas Flexibles & Urgencias</p>
-                  <p className="text-xs text-dalia-graphite">Horarios continuados de lunes a sábado con atención prioritaria.</p>
+                  <p className="text-base font-bold text-dalia-navy">Citas Flexibles & Urgencias</p>
+                  <p className="text-sm text-dalia-graphite">Horarios continuados de lunes a sábado con atención prioritaria.</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-white border border-dalia-gold/20 shadow-xs flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-xl bg-dalia-navy text-white flex items-center justify-center shrink-0">
-                  <ShieldCheck size={20} className="text-dalia-gold" />
+              <div className="p-4.5 rounded-2xl bg-white border border-dalia-gold/30 shadow-xs flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-dalia-navy text-white flex items-center justify-center shrink-0">
+                  <ShieldCheck size={22} className="text-dalia-gold" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-dalia-navy">Presupuestos Claros Sin Sorpresas</p>
-                  <p className="text-xs text-dalia-graphite">Facilidades de pago en cuotas y convenios de reembolso.</p>
+                  <p className="text-base font-bold text-dalia-navy">Presupuestos Claros Sin Sorpresas</p>
+                  <p className="text-sm text-dalia-graphite">Facilidades de pago en cuotas y convenios de reembolso.</p>
                 </div>
               </div>
             </div>
@@ -221,7 +219,7 @@ export default function HomePage() {
                 href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20quisiera%20agendar%20una%20hora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 btn-navy px-7 py-4 rounded-2xl text-base font-semibold"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 btn-navy px-8 py-4.5 rounded-2xl text-lg font-bold shadow-lg"
               >
                 <span>Chatear por WhatsApp con Coordinación</span>
               </a>
