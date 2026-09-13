@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Sparkles,
@@ -17,6 +18,7 @@ import {
   CheckCircle2,
   Calendar,
   Clock,
+  Info,
 } from "lucide-react";
 import { servicesData, Service } from "@/data/services";
 
@@ -34,20 +36,20 @@ export default function ServicesGrid({
   const [filter, setFilter] = useState("all");
 
   const iconMap: Record<string, React.ReactNode> = {
-    Sparkles: <Sparkles size={24} />,
-    ShieldAlert: <ShieldAlert size={24} />,
-    Activity: <Activity size={24} />,
-    Smile: <Smile size={24} />,
-    Gem: <Gem size={24} />,
-    Stethoscope: <Stethoscope size={24} />,
-    HeartHandshake: <HeartHandshake size={24} />,
-    Layers: <Layers size={24} />,
-    Scan: <Scan size={24} />,
-    Sparkle: <Sparkle size={24} />,
+    Sparkles: <Sparkles size={20} />,
+    ShieldAlert: <ShieldAlert size={20} />,
+    Activity: <Activity size={20} />,
+    Smile: <Smile size={20} />,
+    Gem: <Gem size={20} />,
+    Stethoscope: <Stethoscope size={20} />,
+    HeartHandshake: <HeartHandshake size={20} />,
+    Layers: <Layers size={20} />,
+    Scan: <Scan size={20} />,
+    Sparkle: <Sparkle size={20} />,
   };
 
   const filterCategories = [
-    { id: "all", label: "Todas las Especialidades" },
+    { id: "all", label: "Todas las Especialidades (10)" },
     { id: "estetica", label: "Estética y Armonización" },
     { id: "rehabilitacion", label: "Ortodoncia e Implantes" },
     { id: "prevencion", label: "Prevención y Familia" },
@@ -68,17 +70,17 @@ export default function ServicesGrid({
 
   return (
     <div className="w-full">
-      {/* Category Filter Pills */}
+      {/* Category Filter Pills - Intuitive & Didactic */}
       {showFilters && (
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10">
           {filterCategories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setFilter(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs md:text-sm font-medium transition-all ${
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
                 filter === cat.id
-                  ? "bg-dalia-navy text-white shadow-md border-transparent"
-                  : "bg-white text-dalia-graphite border border-dalia-warm hover:bg-dalia-warm-light"
+                  ? "bg-dalia-navy text-white shadow-md ring-2 ring-dalia-gold/40 scale-105"
+                  : "bg-white text-dalia-graphite border border-dalia-warm hover:border-dalia-gold hover:text-dalia-navy"
               }`}
             >
               {cat.label}
@@ -87,65 +89,84 @@ export default function ServicesGrid({
         </div>
       )}
 
-      {/* Grid of Service Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Grid of Didactic Visual Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {displayedServices.map((service) => (
           <div
             key={service.id}
-            className="group relative bg-white rounded-3xl p-7 border border-dalia-gold/20 shadow-luxury hover:shadow-luxury-hover hover:border-dalia-gold/50 transition-all duration-300 flex flex-col justify-between"
+            className="group bg-white rounded-3xl overflow-hidden border border-dalia-gold/25 shadow-luxury hover:shadow-luxury-hover hover:border-dalia-gold transition-all duration-300 flex flex-col justify-between"
           >
-            {/* Top Accent Ribbon */}
+            {/* 1. Visual Card Header with Photo */}
             <div>
-              <div className="flex items-center justify-between gap-2 mb-5">
-                <div className="w-13 h-13 rounded-2xl bg-dalia-rose/30 text-dalia-navy p-3 flex items-center justify-center group-hover:bg-dalia-navy group-hover:text-dalia-gold transition-all duration-300">
-                  {iconMap[service.icon] || <Sparkles size={24} />}
+              <div className="relative h-52 w-full overflow-hidden bg-dalia-warm">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/80 via-dalia-navy/20 to-transparent" />
+
+                {/* Floating Tag */}
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-dalia-navy text-xs font-bold px-3 py-1.5 rounded-full border border-dalia-gold/40 shadow-sm flex items-center gap-1.5">
+                  <span className="text-dalia-gold">
+                    {iconMap[service.icon] || <Sparkles size={14} />}
+                  </span>
+                  <span>{service.tag}</span>
                 </div>
-                <span className="text-[11px] uppercase tracking-wider font-bold px-3 py-1 rounded-full bg-dalia-warm-light text-dalia-graphite border border-dalia-warm group-hover:border-dalia-gold/40 transition-colors">
-                  {service.tag}
-                </span>
+
+                {/* Duration Badge */}
+                <div className="absolute top-4 right-4 bg-dalia-navy/85 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-1 rounded-full border border-white/20 flex items-center gap-1">
+                  <Clock size={12} className="text-dalia-gold" />
+                  <span>{service.duration}</span>
+                </div>
+
+                {/* Quick Highlight Text on Image */}
+                <div className="absolute bottom-3 left-4 right-4 text-white">
+                  <p className="text-xs text-dalia-rose-light font-medium tracking-wide">
+                    {service.highlight}
+                  </p>
+                </div>
               </div>
 
-              {/* Title & Short Desc */}
-              <h3 className="font-serif text-xl font-bold text-dalia-navy group-hover:text-dalia-navy-light transition-colors mb-2.5">
-                {service.title}
-              </h3>
-              <p className="text-sm text-dalia-graphite leading-relaxed mb-4">
-                {service.shortDescription}
-              </p>
+              {/* 2. Card Body: Clean, Readable & Without Clutter */}
+              <div className="p-6 space-y-4">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-dalia-navy group-hover:text-dalia-gold-dark transition-colors">
+                  {service.title}
+                </h3>
 
-              {/* Quick Info (Duration) */}
-              <div className="flex items-center gap-2 text-xs text-dalia-slate-dark mb-5 pb-4 border-b border-dalia-warm/60">
-                <Clock size={14} className="text-dalia-gold" />
-                <span>Duración habitual: {service.duration}</span>
-              </div>
+                <p className="text-sm md:text-base text-dalia-graphite leading-relaxed">
+                  {service.shortDescription}
+                </p>
 
-              {/* Top 3 Benefits */}
-              <div className="space-y-2 mb-6">
-                {service.benefits.slice(0, 3).map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-2 text-xs text-dalia-graphite">
-                    <CheckCircle2 size={14} className="text-dalia-gold shrink-0 mt-0.5" />
-                    <span>{benefit}</span>
-                  </div>
-                ))}
+                {/* 3 Didactic Key Benefits */}
+                <div className="pt-2 border-t border-dalia-warm/60 space-y-2">
+                  {service.benefits.slice(0, 3).map((benefit, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-xs md:text-sm text-dalia-navy font-medium">
+                      <CheckCircle2 size={15} className="text-dalia-gold shrink-0" />
+                      <span>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Actions */}
-            <div className="pt-4 border-t border-dalia-warm/50 flex items-center justify-between gap-3">
+            {/* 3. Card Footer Actions: Agendar Cita + Ver Detalles */}
+            <div className="p-6 pt-0 border-t border-dalia-warm/40 mt-4 flex items-center justify-between gap-3">
               <Link
                 href={`/servicios/${service.slug}`}
-                className="inline-flex items-center gap-1 text-xs font-semibold text-dalia-navy hover:text-dalia-gold transition-colors"
+                className="text-xs md:text-sm font-semibold text-dalia-navy hover:text-dalia-gold flex items-center gap-1.5 transition-colors group/link"
               >
-                <span>Conocer más</span>
-                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
+                <span>Ver detalles</span>
+                <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
               </Link>
 
               {onSelectService && (
                 <button
                   onClick={() => onSelectService(service.id)}
-                  className="btn-gold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5"
+                  className="btn-gold text-xs md:text-sm px-4 py-2.5 rounded-xl flex items-center gap-1.5 font-semibold"
                 >
-                  <Calendar size={13} />
+                  <Calendar size={14} />
                   <span>Agendar Cita</span>
                 </button>
               )}

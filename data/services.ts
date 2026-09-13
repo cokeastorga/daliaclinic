@@ -10,6 +10,8 @@ export interface Service {
   tag: string;
   duration: string;
   suitableFor: string;
+  image: string;
+  highlight: string;
   faqs: { question: string; answer: string }[];
 }
 
@@ -18,14 +20,13 @@ export const servicesData: Service[] = [
     id: "limpieza-dental",
     slug: "limpieza-dental",
     title: "Limpieza Dental Avanzada",
-    shortDescription: "Profilaxis integral con tecnología ultrasónica y aeropulidor para una eliminación profunda de sarro, placa bacteriana y manchas.",
+    shortDescription: "Profilaxis profunda con ultrasonido suave y aeropulidor. Elimina manchas y sarro sin desgastar el esmalte.",
     fullDescription: "Nuestra limpieza dental profesional va más allá de un procedimiento convencional. Utilizamos ultrasonido piezoeléctrico de última generación que desintegra el cálculo subgingival y supragingival con máxima suavidad, complementado con tecnología de aeropulidor de micropulido con glicina que devuelve el brillo natural sin desgastar el esmalte ni provocar sensibilidad.",
     benefits: [
-      "Eliminación del 100% de la placa bacteriana y sarro calcificado",
-      "Prevención activa de gingivitis y periodontitis",
-      "Eliminación de manchas provocadas por café, té, tabaco o vino",
-      "Aliento fresco prolongado y sensación inigualable de pureza",
-      "Procedimiento indoloro y respetuoso con encías sensibles"
+      "Eliminación profunda de sarro y placa",
+      "Desmanchado suave sin daño al esmalte",
+      "Aliento fresco y encías sanas",
+      "Procedimiento 100% indoloro"
     ],
     process: [
       { step: 1, title: "Diagnóstico y tinción", desc: "Evaluación visual y aplicación de revelador de placa para identificar zonas críticas." },
@@ -34,9 +35,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Fluorización remineralizante", desc: "Aplicación de barniz de flúor de alta potencia para sellar túbulos dentinarios y prevenir sensibilidad." }
     ],
     icon: "Sparkles",
-    tag: "Prevención Esencial",
-    duration: "45 a 60 minutos",
-    suitableFor: "Todos los pacientes, recomendado cada 6 meses.",
+    tag: "Prevención & Brillo",
+    duration: "45 a 60 min",
+    suitableFor: "Recomendado cada 6 meses para toda la familia.",
+    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
+    highlight: "Ultrasonido sin dolor + aeropulidor",
     faqs: [
       { question: "¿La limpieza dental desgasta o debilita el esmalte?", answer: "No. Nuestras puntas ultrasónicas y pulidores de glicina actúan por vibración armónica y no por fricción agresiva, respetando al 100% la estructura cristalina del esmalte." },
       { question: "¿Duele el procedimiento?", answer: "En Dalia Clinic aplicamos protocolos de confort. Si presentas encías inflamadas o sensibilidad previa, aplicamos geles anestésicos tópicos para una experiencia totalmente placentera." }
@@ -46,14 +49,13 @@ export const servicesData: Service[] = [
     id: "extracciones",
     slug: "extracciones",
     title: "Cirugía Oral y Extracciones",
-    shortDescription: "Cirugía dental mínimamente invasiva y extracción atraumática de terceros molares (muelas del juicio) con rápida recuperación.",
+    shortDescription: "Cirugía mínimamente invasiva y extracción atraumática de muelas del juicio con recuperación acelerada.",
     fullDescription: "Realizamos procedimientos quirúrgicos dentales bajo estándares de excelencia y preservación tisular. Desde la extracción programada de cordales impactados o retenidos hasta cirugías preprotésicas, empleamos instrumental piezoquirúrgico y anestesia computarizada para garantizar cero dolor, mínima inflamación y una cicatrización acelerada con concentrados plaquetarios (PRF).",
     benefits: [
-      "Técnica atraumática que preserva el hueso y los tejidos circundantes",
-      "Manejo avanzado de muelas del juicio complejas e impactadas",
-      "Planificación digital 3D previa con tomografía computarizada",
-      "Posibilidad de sedación consciente para pacientes ansiosos",
-      "Protocolo postoperatorio con analgésicos de última generación"
+      "Técnica atraumática sin fuerza nociva",
+      "Planificación 3D con tomografía previa",
+      "Anestesia guiada indolora",
+      "Opción de sedación para cero ansiedad"
     ],
     process: [
       { step: 1, title: "Tomografía 3D de alta resolución", desc: "Localización exacta de raíces, nervio dentario inferior y seno maxilar." },
@@ -63,8 +65,10 @@ export const servicesData: Service[] = [
     ],
     icon: "ShieldAlert",
     tag: "Cirugía Atraumática",
-    duration: "30 a 60 minutos por pieza",
-    suitableFor: "Pacientes con muelas del juicio retenidas, piezas no restaurables o por indicación ortodóntica.",
+    duration: "30 a 60 min",
+    suitableFor: "Muelas del juicio retenidas o piezas no restaurables.",
+    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+    highlight: "Cero dolor y rápida cicatrización",
     faqs: [
       { question: "¿Cuánto tiempo dura el reposo tras una extracción?", answer: "Recomendamos reposo relativo de 24 a 48 horas, evitando esfuerzos intensos y comidas calientes. La mayoría de nuestros pacientes retoman sus labores habituales al día siguiente." }
     ]
@@ -73,14 +77,13 @@ export const servicesData: Service[] = [
     id: "endodoncia",
     slug: "endodoncia",
     title: "Endodoncia Microscópica",
-    shortDescription: "Tratamiento de conductos guiado por microscopio para salvar dientes dañados, eliminando la infección y el dolor en una sola sesión.",
+    shortDescription: "Tratamiento de conductos guiado por microscopio. Salva tu diente original y alivia el dolor en una sola sesión.",
     fullDescription: "La endodoncia en Dalia Clinic se realiza con magnificación microscópica y localizadores apicales electrónicos. Esto nos permite limpiar, desinfectar y sellar tridimensionalmente los conductos radiculares con una tasa de éxito superior al 98%, preservando tu diente natural y devolviéndole su función masticatoria sin ninguna molestia.",
     benefits: [
-      "Salva tu diente natural evitando extracciones e implantes prematuros",
-      "Alivio inmediato y definitivo del dolor dental agudo",
-      "Visualización milimétrica bajo microscopio clínico",
-      "Sistemas rotatorios de níquel-titanio de máxima flexibilidad",
-      "Completado generalmente en una única sesión cómoda"
+      "Salva tu diente natural para siempre",
+      "Alivio inmediato del dolor agudo",
+      "Precisión milimétrica bajo microscopio",
+      "Completado en 1 sola sesión cómoda"
     ],
     process: [
       { step: 1, title: "Aislamiento absoluto estéril", desc: "Protección con dique de goma para garantizar campo 100% aséptico." },
@@ -90,8 +93,10 @@ export const servicesData: Service[] = [
     ],
     icon: "Activity",
     tag: "Conservación Dental",
-    duration: "60 a 90 minutos",
-    suitableFor: "Caries profundas, pulpitis, necrosis pulpar o traumatismos con afectación del nervio.",
+    duration: "60 a 90 min",
+    suitableFor: "Dientes con dolor agudo, caries profundas o infección.",
+    image: "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=800",
+    highlight: "Magnificación óptica Zeiss • 1 sesión",
     faqs: [
       { question: "¿El tratamiento de conducto es doloroso?", answer: "Es un mito del pasado. Con nuestras técnicas anestésicas contemporáneas y magnificación óptica, el procedimiento es completamente indoloro." }
     ]
@@ -99,15 +104,14 @@ export const servicesData: Service[] = [
   {
     id: "ortodoncias",
     slug: "ortodoncias",
-    title: "Ortodoncia Digital y Alineadores Invisibles",
-    shortDescription: "Alineación dental de alta precisión mediante alineadores transparentes invisibles, brackets de zafiro estéticos y sistemas de autoligado.",
+    title: "Ortodoncia y Alineadores Invisibles",
+    shortDescription: "Alineación estética sin brackets visibles mediante alineadores transparentes cómodos y removibles.",
     fullDescription: "Diseñamos sonrisas armónicas respetando la biomecánica craneofacial. Somos especialistas en ortodoncia invisible con alineadores transparentes removibles, diseñados a partir de un escaneo intraoral 3D donde puedes visualizar el resultado final antes de comenzar. También ofrecemos brackets de cristal de zafiro de máxima discreción y ortodoncia interceptiva.",
     benefits: [
-      "Planificación virtual 3D del movimiento de cada diente (ClinCheck)",
-      "Alineadores 100% transparentes, cómodos y removibles para comer",
-      "Sin alambres que pinchen ni urgencias por brackets despegados",
-      "Menor tiempo total de tratamiento gracias a fuerzas continuas biológicas",
-      "Higiene oral diaria sin complicaciones"
+      "Férulas transparentes casi imperceptibles",
+      "Removibles para comer y cepillarte",
+      "Simulación 3D de resultados antes de empezar",
+      "Sin alambres que pinchen ni llagas"
     ],
     process: [
       { step: 1, title: "Escaneo intraoral 3D", desc: "Mapeo digital de la arcada completa en 2 minutos sin incómodas pastas." },
@@ -116,9 +120,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Revisiones de control digital", desc: "Monitoreo periódico para garantizar la perfecta evolución de tu mordida." }
     ],
     icon: "Smile",
-    tag: "Tecnología Invisible",
-    duration: "Planes de 6 a 18 meses según complejidad",
-    suitableFor: "Apiñamiento, mordidas cruzadas, diastemas y desalineaciones a cualquier edad.",
+    tag: "Ortodoncia Invisible",
+    duration: "6 a 18 meses",
+    suitableFor: "Dientes desalineados, mordidas complejas o apiñamiento.",
+    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800",
+    highlight: "Simulación 3D previa • 100% estética",
     faqs: [
       { question: "¿Cuántas horas al día debo llevar los alineadores?", answer: "Deben usarse 22 horas al día, retirándolos únicamente para comer y cepillarte los dientes." }
     ]
@@ -127,14 +133,13 @@ export const servicesData: Service[] = [
     id: "estetica-oral",
     slug: "estetica-oral",
     title: "Estética Oral y Diseño de Sonrisa",
-    shortDescription: "Transformación artística de tu sonrisa con carillas de porcelana ultrafinas, microcarillas de resina y blanqueamiento dental de alta gama.",
+    shortDescription: "Carillas de porcelana ultrafinas, microcarillas y blanqueamiento LED para una sonrisa luminosa y natural.",
     fullDescription: "En Dalia Clinic concebimos la estética dental como una obra de arte respaldada por la ciencia. Mediante el Diseño Digital de Sonrisa (DSD), analizamos las proporciones de tu rostro, labios y encías para crear carillas de porcelana estratificadas a mano o carillas de resina inyectada que irradian luminosidad, naturalidad y perfección milimétrica.",
     benefits: [
-      "Simulación previa de tu nueva sonrisa en tu rostro antes de tocar tus dientes",
-      "Carillas de porcelana feldespática o disilicato de litio de 0.3 mm",
-      "Blanqueamiento dental combinado (clínica + férula en casa) hasta 8 tonos más claro",
-      "Corrección instantánea de forma, tamaño, posición y color",
-      "Resultados armónicos y duraderos que resisten manchas y desgaste"
+      "Carillas cerámicas ultradelgadas (0.3 mm)",
+      "Prueba previa en tu rostro (Mock-up)",
+      "Blanqueamiento LED hasta 8 tonos más claro",
+      "Resultados armónicos que no se manchan"
     ],
     process: [
       { step: 1, title: "Estudio fotográfico y escaneo DSD", desc: "Sesión fotográfica profesional y análisis morfológico de proporciones áureas." },
@@ -143,9 +148,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Cementado adhesivo de alta precisión", desc: "Fijación definitiva con resinas fotoactivadas de máxima estabilidad cromática." }
     ],
     icon: "Gem",
-    tag: "Alta Gama y Lujo",
-    duration: "2 a 3 citas para diseño integral",
-    suitableFor: "Dientes desgastados, pigmentados, con diastemas o asimetrías estéticas.",
+    tag: "Lujo y Naturalidad",
+    duration: "2 a 3 citas",
+    suitableFor: "Dientes desgastados, pigmentados o con forma irregular.",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
+    highlight: "Diseño Digital DSD + Carillas ultrafinas",
     faqs: [
       { question: "¿Las carillas se ven artificiales?", answer: "Absolutamente no. Nuestro laboratorio artesanal reproduce las translucideces, mamelones y texturas del diente natural para que nadie note que llevas carillas." }
     ]
@@ -154,14 +161,13 @@ export const servicesData: Service[] = [
     id: "odontologia-general",
     slug: "odontologia-general",
     title: "Odontología General y Restauradora",
-    shortDescription: "Cuidado preventivo integral, curaciones estéticas biomiméticas con resinas nano-híbridas y tratamiento del bruxismo.",
+    shortDescription: "Revisiones preventivas, curaciones estéticas invisibles con resinas nanohíbridas y férulas de bruxismo.",
     fullDescription: "La base de una sonrisa saludable es una odontología general rigurosa y preventiva. Diagnosticamos precozmente cualquier patología con cámaras intraorales de alta definición y restauramos piezas mediante técnicas biomiméticas que devuelven la anatomía exacta de tus cúspides con materiales que imitan la elasticidad y color de los dientes naturales.",
     benefits: [
-      "Diagnóstico precoz de microcaries antes de que causen dolor",
-      "Empastes invisibles de composite nanohíbrido libres de mercurio",
-      "Férulas de descarga neuromiorrelajantes personalizadas para bruxismo",
-      "Protección contra el desgaste dental nocturno y dolor mandibular",
-      "Mantenimiento integral del equilibrio oclusal"
+      "Detección temprana con cámara 4K",
+      "Restauraciones estéticas del color del diente",
+      "Férulas a medida para el bruxismo",
+      "Cuidado integral para toda la familia"
     ],
     process: [
       { step: 1, title: "Examen integral y cámara intraoral", desc: "Visualización en pantalla 4K del estado de cada pieza dental." },
@@ -170,9 +176,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Ajuste oclusal milimétrico", desc: "Control de contactos de mordida y pulido brillante final." }
     ],
     icon: "Stethoscope",
-    tag: "Salud Integral",
-    duration: "30 a 60 minutos",
-    suitableFor: "Toda la familia para revisiones periódicas y restauraciones de calidad.",
+    tag: "Salud & Bienestar",
+    duration: "30 a 60 min",
+    suitableFor: "Revisiones periódicas y curaciones preventivas.",
+    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=800",
+    highlight: "Resinas nanohíbridas invisibles",
     faqs: [
       { question: "¿Por qué debería cambiar mis amalgamas oscuras metálicas?", answer: "Las amalgamas antiguas contienen mercurio y no se adhieren químicamente al diente, lo que puede provocar microfisuras. Las resinas modernas devuelven la estética natural y refuerzan la estructura dental." }
     ]
@@ -181,14 +189,13 @@ export const servicesData: Service[] = [
     id: "atencion-infantil",
     slug: "atencion-infantil",
     title: "Atención Infantil (Odontopediatría)",
-    shortDescription: "Cuidado dental cálido, lúdico y sin miedos para bebés, niños y adolescentes, fomentando hábitos saludables de por vida.",
+    shortDescription: "Odontología lúdica, respetuosa y sin lágrimas para niños y adolescentes. Experiencia mágica y sin miedos.",
     fullDescription: "En Dalia Clinic creamos experiencias mágicas para los más pequeños. Nuestra área de odontopediatría cuenta con profesionales especializados en psicología infantil y técnicas de manejo de conducta positivas (decir-mostrar-hacer). Protegemos la dentición temporal ('de leche') y mixta para garantizar un desarrollo maxilofacial óptimo.",
     benefits: [
-      "Ambiente adaptado, acogedor y sin estímulos invasivos",
-      "Técnicas de odontología positiva que previenen la fobia dental",
-      "Sellantes de fosas y fisuras que evitan el 85% de las caries infantiles",
-      "Control del recambio dental y detección temprana de problemas ortodóncicos",
-      "Educación interactiva y premios por valentía"
+      "Ambiente lúdico y sin instrumental invasivo",
+      "Técnicas positivas: adiós al miedo al dentista",
+      "Sellantes protectores contra caries",
+      "Diploma y refuerzo de valentía para el niño"
     ],
     process: [
       { step: 1, title: "Adaptación lúdica", desc: "Presentación de los instrumentos como 'el espejito mágico' y 'el soplador de viento'." },
@@ -197,9 +204,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Refuerzo positivo", desc: "Felicidades al pequeño paciente y diploma de sonrisa Dalia." }
     ],
     icon: "HeartHandshake",
-    tag: "Odontopediatría Respetuosa",
-    duration: "30 a 45 minutos",
-    suitableFor: "Bebés desde el primer diente hasta adolescentes de 16 años.",
+    tag: "Odontología Respetuosa",
+    duration: "30 a 45 min",
+    suitableFor: "Bebés desde el primer diente hasta jóvenes de 16 años.",
+    image: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&q=80&w=800",
+    highlight: "Cero traumas • Juegos y refuerzo positivo",
     faqs: [
       { question: "¿A qué edad debe ser la primera visita al dentista?", answer: "La Academia Internacional de Odontopediatría recomienda la primera visita al brotar el primer diente o antes del primer año de vida, para orientar a los padres en higiene y lactancia." }
     ]
@@ -208,14 +217,13 @@ export const servicesData: Service[] = [
     id: "rehabilitacion-oral",
     slug: "rehabilitacion-oral",
     title: "Rehabilitación Oral e Implantes",
-    shortDescription: "Recuperación completa de piezas dentales perdidas con implantes dentales de titanio biocompatible, coronas de circonio y prótesis fijas.",
+    shortDescription: "Recupera tus dientes perdidos con implantes dentales de titanio biocompatible y coronas de circonio 3D.",
     fullDescription: "La rehabilitación oral combina la precisión biomecánica con la estética más refinada para devolverte la capacidad de masticar, sonreír y hablar con total seguridad. Utilizamos implantes dentales de titanio grado médico o circonio con cirugía guiada por ordenador en 3D, garantizando una osteointegración perfecta y coronas cerámicas indistinguibles de los dientes biológicos.",
     benefits: [
-      "Implantes dentales con garantía de por vida y tasas de éxito del 99%",
-      "Cirugía guiada por ordenador mínimamente invasiva (sin incisiones grandes)",
-      "Coronas libres de metal en Disilicato de Litio y Zirconio ultra resistente",
-      "Posibilidad de carga inmediata (dientes fijos en el mismo día)",
-      "Recuperación total de la masticación y armonía del tercio inferior del rostro"
+      "Dientes fijos con aspecto 100% natural",
+      "Cirugía guiada por ordenador en 3D",
+      "Opción de dientes en el mismo día",
+      "Garantía clínica y máxima masticación"
     ],
     process: [
       { step: 1, title: "Estudio tomográfico óseo 3D", desc: "Medición exacta de la densidad y volumen óseo para planificación virtual del implante." },
@@ -224,9 +232,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Corona definitiva personalizada", desc: "Diseño y fresado CAD/CAM de la corona de circonio con ajuste perfecto." }
     ],
     icon: "Layers",
-    tag: "Recuperación Completa",
-    duration: "2 a 4 meses según fase biológica",
-    suitableFor: "Personas con pérdida de uno, varios o todos los dientes.",
+    tag: "Recuperación Total",
+    duration: "2 a 4 meses",
+    suitableFor: "Pérdida de uno o varios dientes, o prótesis removibles incómodas.",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800",
+    highlight: "Implantes 3D • Cirugía guiada por ordenador",
     faqs: [
       { question: "¿Existe rechazo en los implantes dentales?", answer: "El titanio y el zirconio son materiales 100% biocompatibles reconocidos por el organismo. No existe el 'rechazo' alérgico, y nuestras tasas de osteointegración superan el 98%." }
     ]
@@ -234,15 +244,14 @@ export const servicesData: Service[] = [
   {
     id: "radiologia",
     slug: "radiologia",
-    title: "Radiología y Diagnóstico Digital 3D",
-    shortDescription: "Tecnología de imagenología diagnóstica de máxima resolución con tomografía computarizada Cone Beam (CBCT) y mínima radiación.",
+    title: "Radiología y Diagnóstico 3D",
+    shortDescription: "Tomografía computarizada Cone Beam (CBCT) y radiografías panorámicas con hasta 80% menos radiación.",
     fullDescription: "En Dalia Clinic contamos con centro radiológico digital propio dentro de nuestras instalaciones. Esto nos permite obtener radiografías panorámicas (ortopantomografías), telerradiografías de perfil y tomografías tridimensionales Cone Beam (CBCT) en segundos, reduciendo la exposición a la radiación hasta en un 80% respecto a sistemas antiguos y facilitando diagnósticos certeros inmediatos.",
     benefits: [
-      "Diagnósticos inmediatos sin necesidad de derivaciones a centros externos",
-      "Tomografía volumétrica 3D Cone Beam de altísima nitidez milimétrica",
-      "Tecnología Green Sensor con hasta un 80% menos de dosis radiológica",
-      "Visualización tridimensional de nervios, senos paranasales y calidad ósea",
-      "Entrega digital instantánea y visualización en pantallas clínicas"
+      "Diagnósticos inmediatos en la misma clínica",
+      "Tomografía 3D de altísima resolución",
+      "80% menos radiación (Green Sensor)",
+      "Entrega digital instantánea"
     ],
     process: [
       { step: 1, title: "Posicionamiento guiado por láser", desc: "Alineación ergonómica y cómoda en nuestra cabina abierta radiológica." },
@@ -251,9 +260,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Informe clínico y planificación", desc: "Explicación detallada al paciente de su diagnóstico en pantalla de alta resolución." }
     ],
     icon: "Scan",
-    tag: "Diagnóstico 3D",
-    duration: "5 a 10 minutos",
-    suitableFor: "Planificación de implantes, cirugías, ortodoncias y endodoncias.",
+    tag: "Diagnóstico Digital",
+    duration: "5 a 10 min",
+    suitableFor: "Planificación de implantes, cirugías, ortodoncias y chequeo.",
+    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800",
+    highlight: "En la misma clínica • Entrega inmediata",
     faqs: [
       { question: "¿Es peligrosa la radiación de una radiografía dental moderna?", answer: "No. La radiación de una radiografía digital actual en Dalia Clinic equivale a unas pocas horas de exposición a la radiación natural de fondo o a un vuelo corto en avión." }
     ]
@@ -262,14 +273,13 @@ export const servicesData: Service[] = [
     id: "armonizacion-facial",
     slug: "armonizacion-facial",
     title: "Armonización Facial Médica",
-    shortDescription: "Tratamientos estéticos faciales no quirúrgicos con ácido hialurónico, toxina botulínica y bioestimuladores para resaltar tu belleza natural.",
+    shortDescription: "Rejuvenecimiento orofacial sin cirugía: perfilado labial con ácido hialurónico, toxina botulínica y bioestimuladores.",
     fullDescription: "La armonización facial es el complemento perfecto de una sonrisa radiante. Como reza nuestro lema corporativo, 'Odontología Integral y Armonización Facial', nuestros médicos y odontólogos especialistas en estética facial analizan la dinámica muscular y los tercios del rostro para restaurar volúmenes, atenuar líneas de expresión y definir contornos con sutileza, elegancia y естественность.",
     benefits: [
-      "Perfilado e hidratación labial con ácido hialurónico de reticulación premium",
-      "Suavizado de arrugas dinámicas en frente, entrecejo y patas de gallo con toxina botulínica",
-      "Rinomodelación sin cirugía para corregir ángulos nasales",
-      "Marcado mandibular y proyección del mentón para un perfil estilizado",
-      "Bioestimuladores de colágeno (Radiesse, Sculptra) que devuelven la firmeza dérmica"
+      "Perfilado e hidratación labial elegante",
+      "Suavizado de arrugas (patas de gallo, frente)",
+      "Marcado mandibular y mentón estilizado",
+      "Efecto natural y rejuvenecido sin cirugía"
     ],
     process: [
       { step: 1, title: "Análisis facial antropométrico", desc: "Evaluación minuciosa de proporciones, simetría y planos de envejecimiento facial." },
@@ -278,9 +288,11 @@ export const servicesData: Service[] = [
       { step: 4, title: "Masaje de integración y revisión a los 15 días", desc: "Verificación de los resultados finales y simetría armónica." }
     ],
     icon: "Sparkle",
-    tag: "Exclusividad y Armonía",
-    duration: "45 a 60 minutos",
-    suitableFor: "Personas que buscan rejuvenecimiento, simetría y realce facial sin someterse a cirugías agresivas.",
+    tag: "Armonización Facial",
+    duration: "45 a 60 min",
+    suitableFor: "Quienes buscan realzar su belleza natural y juventud orofacial.",
+    image: "https://images.unsplash.com/photo-1512290900672-1f02307df0ea?auto=format&fit=crop&q=80&w=800",
+    highlight: "Ácido hialurónico premium • Resultados sutiles",
     faqs: [
       { question: "¿Los resultados se ven artificiales o congelados?", answer: "Jamás. Nuestra filosofía médica prioriza la elegancia y la naturalidad: que todos noten que luces radiante y descansada, pero sin que nadie adivine qué procedimiento te realizaste." }
     ]
