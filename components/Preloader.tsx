@@ -78,11 +78,11 @@ export default function Preloader() {
           </span>
 
           <div className="flex items-center justify-center gap-2.5 mt-4 px-2">
-            <div className="h-[1px] w-5 sm:w-7 bg-dalia-gold shrink-0" />
-            <p className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.2em] text-dalia-gold-dark uppercase text-center leading-relaxed">
+            <div className="h-[1px] w-5 sm:w-7 bg-dalia-gold/70 shrink-0" />
+            <p className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.2em] text-dalia-navy uppercase text-center leading-relaxed">
               Odontología Integral y Armonización Facial
             </p>
-            <div className="h-[1px] w-5 sm:w-7 bg-dalia-gold shrink-0" />
+            <div className="h-[1px] w-5 sm:w-7 bg-dalia-gold/70 shrink-0" />
           </div>
         </div>
 

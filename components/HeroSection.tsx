@@ -29,9 +29,13 @@ export default function HeroSection() {
 
             {/* Main Headline */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dalia-navy tracking-tight leading-[1.14]">
-              Donde la armonía florece en{" "}
+              Donde la{" "}
               <span className="text-gold-gradient italic font-normal">
-                cada sonrisa
+                armonía
+              </span>{" "}
+              florece en cada{" "}
+              <span className="text-gold-gradient italic font-normal">
+                sonrisa
               </span>
             </h1>
 
