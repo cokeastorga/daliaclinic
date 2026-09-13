@@ -25,25 +25,7 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <HeroSection />
 
-      {/* 2. Los 5 Pilares Dalia: Tarjetas Didácticas e Interactivas */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
-            Nuestra Identidad & Propósito
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
-            La Experiencia Dalia Clinic
-          </h2>
-          <p className="text-lg md:text-xl text-dalia-graphite mt-3 leading-relaxed">
-            Selecciona cada pilar para descubrir cómo combinamos ciencia, arte y exclusividad en cada tratamiento.
-          </p>
-        </div>
-
-        {/* Componente Interactivo con Fotos y Pestañas */}
-        <InteractivePillars />
-      </section>
-
-      {/* 3. Especialidades Clínicas: Tarjetas Visuales con Fotografía */}
+      {/* 2. Especialidades Clínicas: Tarjetas Visuales con Fotografía */}
       <section id="servicios" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
@@ -68,6 +50,24 @@ export default function HomePage() {
 
         {/* Cuadrícula Didáctica con Imágenes */}
         <ServicesGrid onSelectService={(serviceId) => openAppointment(serviceId)} />
+      </section>
+
+      {/* 3. Los 5 Pilares Dalia: Tarjetas Didácticas e Interactivas (Elegancia Natural) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
+            Nuestra Identidad & Propósito
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
+            La Experiencia Dalia Clinic
+          </h2>
+          <p className="text-lg md:text-xl text-dalia-graphite mt-3 leading-relaxed">
+            Selecciona cada pilar para descubrir cómo combinamos ciencia, arte y exclusividad en cada tratamiento.
+          </p>
+        </div>
+
+        {/* Componente Interactivo con Fotos y Pestañas */}
+        <InteractivePillars />
       </section>
 
       {/* 4. Comparador Interactivo Antes y Después */}
