@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "ortodoncia invisible Santiago",
     "estetica oral diseno de sonrisa",
     "odontologia general",
-    "odontopediatria Las Condes",
+    "odontopediatria Quilicura",
     "rehabilitacion oral implantes",
     "radiologia dental 3d",
     "armonizacion facial acido hialuronico"
@@ -30,7 +30,7 @@ export default function ServiciosPage() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dalia-rose/30 text-dalia-navy text-xs font-semibold border border-dalia-rose/50">
             <Sparkles size={14} className="text-dalia-gold" />
-            <span>Atención Multidisciplinaria en Las Condes</span>
+            <span>Atención Multidisciplinaria en Quilicura</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dalia-navy tracking-tight leading-tight">
             Nuestras Especialidades & Tratamientos

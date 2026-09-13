@@ -6,7 +6,7 @@ import { Sparkles, ShieldCheck, Heart, Award, Microscope, Clock, CheckCircle2, A
 export const metadata: Metadata = {
   title: "Quiénes Somos | Filosofía y Trayectoria",
   description:
-    "Conoce la historia, propósito y filosofía de Dalia Clinic. Una clínica odontológica y centro de armonización facial en Las Condes que fusiona ciencia digital 3D, calidez humana y elegancia natural.",
+    "Conoce la historia, propósito y filosofía de Dalia Clinic. Una clínica odontológica y centro de armonización facial en Quilicura que fusiona ciencia digital 3D, calidez humana y elegancia natural.",
 };
 
 export default function QuienesSomosPage() {
@@ -38,7 +38,7 @@ export default function QuienesSomosPage() {
             <div className="relative h-[420px] md:h-[500px] rounded-3xl overflow-hidden shadow-luxury border-2 border-dalia-gold/30">
               <Image
                 src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=1000"
-                alt="Instalaciones boutique de Dalia Clinic en Las Condes"
+                alt="Instalaciones boutique de Dalia Clinic en Quilicura"
                 fill
                 className="object-cover"
               />

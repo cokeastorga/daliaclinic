@@ -38,7 +38,7 @@ Basado fielmente en el manual de identidad del cliente:
 - **Schema.org JSON-LD**:
   - `MedicalClinic` / `Dentist` / `MedicalBusiness`
   - Catálogo de procedimientos clínicos (`MedicalProcedure`)
-  - Horarios de atención, geolocalización en Las Condes y datos de contacto.
+  - Horarios de atención, geolocalización en Quilicura y datos de contacto.
 - **Sitemap Dinámico (`/sitemap.xml`)** y **Robots (`/robots.txt`)**.
 - **OpenGraph y Twitter Cards** para previsualizaciones elegantes en redes sociales y WhatsApp.
 

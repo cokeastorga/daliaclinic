@@ -55,7 +55,7 @@ export default function TechnologyShowcase() {
             Tecnología al Servicio de tu Tranquilidad
           </h2>
           <p className="text-lg md:text-xl text-dalia-slate-light leading-relaxed">
-            Eliminamos las molestias del pasado mediante equipamiento digital de última generación en nuestra sede de Las Condes.
+            Eliminamos las molestias del pasado mediante equipamiento digital de última generación en nuestra sede de Quilicura.
           </p>
         </div>
 

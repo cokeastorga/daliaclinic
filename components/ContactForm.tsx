@@ -39,7 +39,7 @@ export default function ContactForm() {
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-      window.open(`https://wa.me/56987654321?text=${whatsappText}`, "_blank");
+      window.open(`https://wa.me/56975384019?text=${whatsappText}`, "_blank");
     }, 600);
   };
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
           Reserva tu Consulta de Evaluación
         </h3>
         <p className="text-sm sm:text-base text-dalia-graphite mt-1.5 font-medium">
-          Atención personalizada en Las Condes con tecnología 3D y confort sin dolor.
+          Atención personalizada en Quilicura con tecnología 3D y confort sin dolor.
         </p>
       </div>
 

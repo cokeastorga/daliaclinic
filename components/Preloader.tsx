@@ -81,7 +81,7 @@ export default function Preloader() {
             <div className="h-[1px] w-6 bg-dalia-gold" />
           </div>
           <p className="font-sans text-[11px] font-semibold text-dalia-graphite tracking-widest uppercase mt-1">
-            Armonización Facial • Las Condes
+            Armonización Facial • Quilicura
           </p>
         </div>
 

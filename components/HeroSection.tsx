@@ -24,7 +24,7 @@ export default function HeroSection() {
               <span className="w-3 h-3 rounded-full bg-dalia-gold animate-pulse" />
               <span>Odontología Integral y Armonización Facial</span>
               <div className="h-4 w-[1px] bg-dalia-gold/40" />
-              <span className="text-dalia-gold-dark font-semibold hidden sm:inline">Las Condes, Santiago</span>
+              <span className="text-dalia-gold-dark font-semibold hidden sm:inline">Quilicura, Santiago</span>
             </div>
 
             {/* Main Headline */}

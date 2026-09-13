@@ -10,7 +10,7 @@ export const faqsData: FAQ[] = [
     id: "faq-1",
     category: "citas",
     question: "¿Cómo puedo agendar mi primera cita de valoración?",
-    answer: "Puedes agendar fácilmente a través de nuestro formulario en línea en esta web, haciendo clic en el botón de WhatsApp para hablar directamente con nuestra coordinadora de pacientes, o llamándonos al +56 9 8765 4321. Te asignaremos un turno prioritario según tu disponibilidad."
+    answer: "Puedes agendar fácilmente a través de nuestro formulario en línea en esta web, haciendo clic en el botón de WhatsApp para hablar directamente con nuestra coordinadora de pacientes, o llamándonos al +56 9 7538 4019. Te asignaremos un turno prioritario según tu disponibilidad."
   },
   {
     id: "faq-2",

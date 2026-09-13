@@ -54,11 +54,11 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
         <div className="max-w-7xl mx-auto flex justify-between items-center whitespace-nowrap">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+56987654321"
+              href="tel:+56975384019"
               className="flex items-center gap-1.5 hover:text-dalia-rose transition-colors font-medium"
             >
               <Phone size={13} className="text-dalia-gold" />
-              <span>+56 9 8765 4321</span>
+              <span>+56 9 7538 4019</span>
             </a>
             <div className="flex items-center gap-1.5 text-dalia-slate-light font-medium">
               <Clock size={13} className="text-dalia-gold" />
@@ -66,7 +66,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
             </div>
             <div className="flex items-center gap-1.5 text-dalia-slate-light font-medium">
               <MapPin size={13} className="text-dalia-gold" />
-              <span>Av. Las Condes 12345</span>
+              <span>Del Trigal 0174, Quilicura</span>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
               <span>Diagnóstico 3D en tu primera visita</span>
             </span>
             <a
-              href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20quisiera%20solicitar%20información%20para%20una%20cita"
+              href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20quisiera%20solicitar%20información%20para%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-dalia-rose hover:text-white transition-colors font-bold text-xs"
@@ -192,7 +192,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
           {/* Action CTAs Desktop */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <a
-              href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
+              href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl border border-dalia-gold/40 text-dalia-navy hover:bg-dalia-rose hover:border-dalia-rose transition-all"
@@ -267,13 +267,13 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                 <span>Agendar Cita de Valoración</span>
               </button>
               <a
-                href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
+                href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full btn-navy py-3 rounded-2xl text-center font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:bg-dalia-rose hover:text-dalia-navy transition-all"
               >
                 <MessageCircle size={16} />
-                <span>WhatsApp Directo (+56 9 8765 4321)</span>
+                <span>WhatsApp Directo (+56 9 7538 4019)</span>
               </a>
             </div>
           </div>

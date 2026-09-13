@@ -15,18 +15,18 @@ import {
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes | Dalia Clinic Odontología y Armonización Facial",
   description:
-    "Resolvemos todas tus consultas sobre tratamientos odontológicos, ortodoncia invisible, implantes 3D, armonización facial, facilidades de pago y protocolos de cero dolor en Las Condes.",
+    "Resolvemos todas tus consultas sobre tratamientos odontológicos, ortodoncia invisible, implantes 3D, armonización facial, facilidades de pago y protocolos de cero dolor en Quilicura.",
   keywords: [
     "preguntas frecuentes dentista",
     "dudas ortodoncia invisible santiago",
-    "dolor implante dental las condes",
+    "dolor implante dental quilicura",
     "cuanto dura carillas dentales",
     "sedacion consciente dentista chile",
     "facilidades de pago clinica dental",
     "urgencias dentales santiago"
   ],
   openGraph: {
-    title: "Preguntas Frecuentes | Dalia Clinic Las Condes",
+    title: "Preguntas Frecuentes | Dalia Clinic Quilicura",
     description: "Respuestas claras sobre tratamientos, financiamiento, tecnología digital y bioseguridad en Dalia Clinic.",
     url: "https://daliaclinic.cl/preguntas-frecuentes",
     siteName: "Dalia Clinic",
@@ -92,7 +92,7 @@ export default function PreguntasFrecuentesPage() {
                 Nuestro equipo médico está para escucharte y orientarte
               </h2>
               <p className="text-base text-dalia-graphite leading-relaxed">
-                Escríbenos directamente o agenda tu hora de valoración diagnóstica con escaneo 3D en nuestra sede en Las Condes.
+                Escríbenos directamente o agenda tu hora de valoración diagnóstica con escaneo 3D en nuestra sede en Quilicura.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
@@ -113,7 +113,7 @@ export default function PreguntasFrecuentesPage() {
 
             <div className="lg:col-span-4 flex flex-col gap-3 justify-center">
               <a
-                href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20tengo%20una%20consulta%20antes%20de%20agendar"
+                href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20tengo%20una%20consulta%20antes%20de%20agendar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full btn-gold py-4 rounded-2xl text-center text-sm font-bold flex items-center justify-center gap-2 shadow-md hover:ring-2 hover:ring-dalia-rose"

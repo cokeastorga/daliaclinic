@@ -6,7 +6,7 @@ import { MessageCircle, X, Sparkles } from "lucide-react";
 export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const phoneNumber = "56987654321";
+  const phoneNumber = "56975384019";
   const defaultMessage = encodeURIComponent(
     "Hola Dalia Clinic, me gustaría solicitar información y agendar una cita de valoración dental/estética."
   );

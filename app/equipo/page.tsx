@@ -7,7 +7,7 @@ import { Sparkles, Award, GraduationCap, ShieldCheck, Calendar, ArrowRight, Inst
 export const metadata: Metadata = {
   title: "Nuestro Equipo Médico | Especialistas Colegiados",
   description:
-    "Conoce a los cirujanos dentistas y especialistas de Dalia Clinic en Las Condes: implantólogos, ortodoncistas digitales, endodoncistas, odontopediatras y médicos en armonización facial.",
+    "Conoce a los cirujanos dentistas y especialistas de Dalia Clinic en Quilicura: implantólogos, ortodoncistas digitales, endodoncistas, odontopediatras y médicos en armonización facial.",
 };
 
 export default function EquipoPage() {

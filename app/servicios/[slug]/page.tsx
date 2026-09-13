@@ -39,12 +39,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!service) return { title: "Servicio No Encontrado | Dalia Clinic" };
 
   return {
-    title: `${service.title} en Las Condes | Dalia Clinic`,
+    title: `${service.title} en Quilicura | Dalia Clinic`,
     description: service.shortDescription,
     keywords: [
       service.title,
       `${service.title} Santiago`,
-      `${service.title} Las Condes`,
+      `${service.title} Quilicura`,
       "Dalia Clinic",
       service.tag,
       "odontología avanzada",
@@ -90,7 +90,7 @@ export default function ServiceDetailPage({ params }: PageProps) {
       "@type": "Dentist",
       name: "Dalia Clinic",
       url: "https://daliaclinic.cl",
-      telephone: "+56987654321",
+      telephone: "+56975384019",
     },
   };
 
@@ -158,10 +158,10 @@ export default function ServiceDetailPage({ params }: PageProps) {
                 Reserva tu Turno
               </p>
               <p className="text-xs text-dalia-graphite-light">
-                Evaluación clínica y diagnóstico 3D con especialista en Las Condes.
+                Evaluación clínica y diagnóstico 3D con especialista en Quilicura.
               </p>
               <a
-                href={`https://wa.me/56987654321?text=${whatsappMessage}`}
+                href={`https://wa.me/56975384019?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full btn-gold py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2"

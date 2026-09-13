@@ -133,10 +133,10 @@ export default function Footer() {
                 Atención prioritaria para dolores agudos y traumatismos.
               </p>
               <a
-                href="tel:+56987654321"
+                href="tel:+56975384019"
                 className="text-xs text-dalia-rose hover:underline font-semibold block mt-1"
               >
-                Llamar Urgencias: +56 9 8765 4321
+                Llamar Urgencias: +56 9 7538 4019
               </a>
             </div>
           </div>
@@ -151,13 +151,13 @@ export default function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin size={18} className="text-dalia-gold shrink-0 mt-0.5" />
                 <span>
-                  Av. Las Condes 12345, Oficina 602<br />
-                  Edificio Médico Titanium, Las Condes, Santiago
+                  Del Trigal 0174<br />
+                  Quilicura, Santiago
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone size={17} className="text-dalia-gold shrink-0" />
-                <span>+56 9 8765 4321 / (2) 2345 6789</span>
+                <span>+56 9 7538 4019</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail size={17} className="text-dalia-gold shrink-0" />

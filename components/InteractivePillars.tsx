@@ -76,7 +76,7 @@ const pillars: Pillar[] = [
   {
     id: "lujo",
     title: "Exclusividad",
-    subtitle: "Tu Espacio Privado en Las Condes",
+    subtitle: "Tu Espacio Privado en Quilicura",
     tag: "Sede Boutique",
     description: "Instalaciones diseñadas para brindarte tranquilidad absoluta desde el primer instante, con boxes individuales esterilizados y atención de alto nivel concierge.",
     image: "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=900",
@@ -196,7 +196,7 @@ export default function InteractivePillars() {
                 Compromiso Dalia Clinic
               </p>
               <p className="text-xs sm:text-sm text-dalia-graphite mt-0.5 font-medium leading-normal">
-                Cada procedimiento es planificado con dedicación exclusiva y atención personalizada en Las Condes.
+                Cada procedimiento es planificado con dedicación exclusiva y atención personalizada en Quilicura.
               </p>
             </div>
           </div>

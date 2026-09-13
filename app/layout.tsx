@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     template: "%s | DALIA CLINIC",
   },
   description:
-    "Clínica dental de alta gama y medicina estética facial en Las Condes. Especialistas en diseño de sonrisa, carillas cerámicas, ortodoncia invisible, implantes 3D, endodoncia microscópica y estética orofacial sin dolor.",
+    "Clínica dental de alta gama y medicina estética facial en Quilicura. Especialistas en diseño de sonrisa, carillas cerámicas, ortodoncia invisible, implantes 3D, endodoncia microscópica y estética orofacial sin dolor.",
   keywords: [
     "Dalia Clinic",
-    "clínica dental Las Condes",
+    "clínica dental Quilicura",
     "odontología integral",
     "armonización facial",
     "diseño de sonrisa Santiago",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DALIA CLINIC | Odontología Integral y Armonización Facial",
     description:
-      "La armonía perfecta entre ciencia odontológica y estética facial. Diagnóstico 3D, confort total y resultados de excelencia en Las Condes.",
+      "La armonía perfecta entre ciencia odontológica y estética facial. Diagnóstico 3D, confort total y resultados de excelencia en Quilicura.",
     url: "https://daliaclinic.cl",
     siteName: "DALIA CLINIC",
     locale: "es_CL",
@@ -106,18 +106,18 @@ export default function RootLayout({
     "@id": "https://daliaclinic.cl/#clinic",
     name: "DALIA CLINIC - Odontología Integral y Armonización Facial",
     description:
-      "Clínica odontológica de alta gama y centro de medicina estética orofacial en Las Condes, Santiago. Especialistas en diseño de sonrisa, ortodoncia invisible, implantes 3D y armonización facial.",
+      "Clínica odontológica de alta gama y centro de medicina estética orofacial en Quilicura, Santiago. Especialistas en diseño de sonrisa, ortodoncia invisible, implantes 3D y armonización facial.",
     url: "https://daliaclinic.cl",
-    telephone: "+56987654321",
+    telephone: "+56975384019",
     email: "contacto@daliaclinic.cl",
     image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200",
     priceRange: "$$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Av. Las Condes 12345, Oficina 602",
-      addressLocality: "Las Condes",
+      streetAddress: "Del Trigal 0174",
+      addressLocality: "Quilicura",
       addressRegion: "Región Metropolitana",
-      postalCode: "7550000",
+      postalCode: "8700000",
       addressCountry: "CL",
     },
     geo: {

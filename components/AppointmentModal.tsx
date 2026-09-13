@@ -71,7 +71,7 @@ export default function AppointmentModal({
 
     // Open WhatsApp in new tab after 1.2 seconds if desired, or provide button
     setTimeout(() => {
-      window.open(`https://wa.me/56987654321?text=${msg}`, "_blank");
+      window.open(`https://wa.me/56975384019?text=${msg}`, "_blank");
     }, 800);
   };
 
@@ -132,7 +132,7 @@ export default function AppointmentModal({
                   Reserva tu Cita de Valoración
                 </h2>
                 <p className="text-xs md:text-sm text-dalia-graphite-light mt-1">
-                  Evaluación clínica integral y diagnóstico 3D con nuestros especialistas en Las Condes.
+                  Evaluación clínica integral y diagnóstico 3D con nuestros especialistas en Quilicura.
                 </p>
               </div>
 

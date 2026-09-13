@@ -47,8 +47,8 @@ export default function HomePage() {
       <section id="servicios" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
-            <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
-              Tratamientos Integrales en Las Condes
+            <span className="text-xs uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
+              Tratamientos Integrales en Quilicura
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
               Especialidades y Servicios
@@ -164,7 +164,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 space-y-6">
             <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block">
-              Sede Las Condes
+              Sede Quilicura
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
               Tu Nueva Sonrisa Comienza Aquí
@@ -197,7 +197,7 @@ export default function HomePage() {
 
             <div className="pt-2">
               <a
-                href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20quisiera%20agendar%20una%20hora"
+                href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20quisiera%20agendar%20una%20hora"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 btn-navy px-8 py-4.5 rounded-2xl text-lg font-bold shadow-lg hover:bg-dalia-rose hover:text-dalia-navy transition-all"

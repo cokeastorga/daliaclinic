@@ -4,9 +4,9 @@ import FaqAccordion from "@/components/FaqAccordion";
 import { Sparkles, MapPin, Phone, Mail, Clock, ShieldCheck, MessageCircle, Car, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contacto y Agendamiento de Citas | Dalia Clinic Las Condes",
+  title: "Contacto y Agendamiento de Citas | Dalia Clinic Quilicura",
   description:
-    "Agenda tu hora de odontología o armonización facial en Dalia Clinic. Ubicados en Av. Las Condes 12345, Santiago. Teléfono +56 9 8765 4321. Horarios continuados y urgencias dentales.",
+    "Agenda tu hora de odontología o armonización facial en Dalia Clinic. Ubicados en Del Trigal 0174, Quilicura, Santiago. Teléfono +56 9 7538 4019. Horarios continuados y urgencias dentales.",
 };
 
 export default function ContactoPage() {
@@ -23,7 +23,7 @@ export default function ContactoPage() {
             Contacto & Ubicación
           </h1>
           <p className="text-base sm:text-lg text-dalia-graphite leading-relaxed">
-            Visítanos en nuestra clínica boutique en Las Condes o escríbenos directamente. Tu bienestar y comodidad son nuestra prioridad desde el primer contacto.
+            Visítanos en nuestra clínica en Quilicura o escríbenos directamente. Tu bienestar y comodidad son nuestra prioridad desde el primer contacto.
           </p>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function ContactoPage() {
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-dalia-navy text-white rounded-3xl p-8 border border-dalia-gold/30 shadow-luxury space-y-6">
               <h2 className="font-serif text-2xl font-bold text-dalia-gold">
-                Sede Las Condes
+                Sede Quilicura
               </h2>
 
               <div className="space-y-4 text-sm text-dalia-slate-light">
@@ -49,8 +49,8 @@ export default function ContactoPage() {
                   <div>
                     <strong className="text-white block">Dirección:</strong>
                     <span>
-                      Av. Las Condes 12345, Oficina 602<br />
-                      Edificio Médico Titanium, Las Condes, Santiago
+                      Del Trigal 0174<br />
+                      Quilicura, Santiago
                     </span>
                   </div>
                 </div>
@@ -58,8 +58,8 @@ export default function ContactoPage() {
                 <div className="flex items-start gap-3">
                   <Phone size={20} className="text-dalia-gold shrink-0 mt-0.5" />
                   <div>
-                    <strong className="text-white block">Teléfonos:</strong>
-                    <span>+56 9 8765 4321 / (2) 2345 6789</span>
+                    <strong className="text-white block">Teléfono:</strong>
+                    <span>+56 9 7538 4019</span>
                   </div>
                 </div>
 
@@ -84,14 +84,14 @@ export default function ContactoPage() {
                   <Car size={20} className="text-dalia-gold shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block">Estacionamiento & Accesibilidad:</strong>
-                    <p className="text-xs">Estacionamiento subterráneo para pacientes en el nivel -1 con acceso directo a ascensores.</p>
+                    <p className="text-xs">Estacionamiento para pacientes y fácil acceso vehicular y peatonal.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-2">
                 <a
-                  href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
+                  href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full btn-gold py-3.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-2"
@@ -113,10 +113,10 @@ export default function ContactoPage() {
                   Disponemos de turnos de urgencia prioritarios todos los días. Escríbenos directamente o llámanos para asistirte sin esperas.
                 </p>
                 <a
-                  href="tel:+56987654321"
+                  href="tel:+56975384019"
                   className="inline-block mt-2 text-xs font-bold text-dalia-navy hover:text-dalia-gold transition-colors"
                 >
-                  Llamar ahora: +56 9 8765 4321 →
+                  Llamar ahora: +56 9 7538 4019 →
                 </a>
               </div>
             </div>
