@@ -69,20 +69,21 @@ export default function Preloader() {
         </div>
 
         {/* Brand Name & Typography */}
-        <div className="mt-7 space-y-1.5">
-          <h1 className="font-serif text-3xl sm:text-4xl font-extrabold tracking-[0.24em] text-dalia-navy uppercase leading-tight">
-            DALIA CLINIC
-          </h1>
-          <div className="flex items-center justify-center gap-2">
-            <div className="h-[1px] w-6 bg-dalia-gold" />
-            <p className="font-sans text-xs sm:text-sm font-bold tracking-[0.25em] text-dalia-gold-dark uppercase">
-              Odontología Integral
+        <div className="mt-7 flex flex-col items-center select-none">
+          <span className="font-serif text-3xl sm:text-4xl font-extrabold tracking-[0.24em] text-dalia-navy uppercase leading-none">
+            DALIA
+          </span>
+          <span className="font-serif text-2xl sm:text-3xl font-extrabold tracking-[0.28em] text-dalia-gold-dark uppercase leading-none mt-2">
+            CLINIC
+          </span>
+
+          <div className="flex items-center justify-center gap-2.5 mt-4 px-2">
+            <div className="h-[1px] w-5 sm:w-7 bg-dalia-gold shrink-0" />
+            <p className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.2em] text-dalia-gold-dark uppercase text-center leading-relaxed">
+              Odontología Integral y Armonización Facial
             </p>
-            <div className="h-[1px] w-6 bg-dalia-gold" />
+            <div className="h-[1px] w-5 sm:w-7 bg-dalia-gold shrink-0" />
           </div>
-          <p className="font-sans text-[11px] font-semibold text-dalia-graphite tracking-widest uppercase mt-1">
-            Armonización Facial • Quilicura
-          </p>
         </div>
 
         {/* Refined Loading Progress Bar */}

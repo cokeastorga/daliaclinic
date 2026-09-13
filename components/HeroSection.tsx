@@ -29,9 +29,9 @@ export default function HeroSection() {
 
             {/* Main Headline */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dalia-navy tracking-tight leading-[1.14]">
-              Donde la Ciencia Odontológica se Funde con la{" "}
+              Donde la armonía florece en{" "}
               <span className="text-gold-gradient italic font-normal">
-                Armonía Facial
+                cada sonrisa
               </span>
             </h1>
 
@@ -82,10 +82,10 @@ export default function HeroSection() {
               {/* Main Image Container */}
               <div className="relative h-[460px] sm:h-[520px] w-full rounded-3xl overflow-hidden border-2 border-dalia-gold/40 shadow-luxury hover:border-dalia-rose transition-all duration-300">
                 <Image
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000"
-                  alt="Instalaciones de primer nivel en Dalia Clinic Odontología y Armonización Facial"
+                  src="/hero-smile.jpg"
+                  alt="Dalia Clinic - Donde la armonía florece en cada sonrisa"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-transparent to-transparent" />
