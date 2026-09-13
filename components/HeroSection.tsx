@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, Calendar, ShieldCheck, ArrowRight, Star, Heart, CheckCircle2 } from "lucide-react";
+import { Sparkles, Calendar, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useAppointmentModal } from "./ClientLayoutWrapper";
 
 export default function HeroSection() {
@@ -74,38 +74,6 @@ export default function HeroSection() {
                 Explorar Tratamientos
               </Link>
             </div>
-
-            {/* Social Proof */}
-            <div className="pt-4 flex items-center justify-center lg:justify-start gap-4 border-t border-dalia-warm/60">
-              <div className="flex -space-x-2.5 overflow-hidden">
-                <img
-                  className="inline-block h-11 w-11 rounded-full ring-2 ring-white object-cover"
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=120"
-                  alt="Paciente Dalia Clinic"
-                />
-                <img
-                  className="inline-block h-11 w-11 rounded-full ring-2 ring-white object-cover"
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120"
-                  alt="Paciente Dalia Clinic"
-                />
-                <img
-                  className="inline-block h-11 w-11 rounded-full ring-2 ring-white object-cover"
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=120"
-                  alt="Paciente Dalia Clinic"
-                />
-              </div>
-              <div className="text-left">
-                <div className="flex items-center gap-1 text-dalia-gold">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} fill="currentColor" />
-                  ))}
-                  <span className="font-extrabold text-dalia-navy ml-1.5 text-lg">5.0</span>
-                </div>
-                <p className="text-dalia-graphite font-medium text-sm sm:text-base mt-0.5">
-                  Más de <strong className="text-dalia-navy font-bold">5,000 pacientes</strong> felices en Santiago
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Visual Luxury Showcase */}
@@ -138,28 +106,6 @@ export default function HeroSection() {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Floating Badge Top Right */}
-              <div className="absolute -top-4 -right-4 bg-dalia-navy text-white p-4.5 rounded-2xl shadow-luxury border border-dalia-gold/50 max-w-[230px] hidden sm:block">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <ShieldCheck size={20} className="text-dalia-gold" />
-                  <span className="text-sm font-bold">Bioseguridad 100%</span>
-                </div>
-                <p className="text-sm text-dalia-slate-light leading-snug">
-                  Esterilización clase B y filtros de aire HEPA hospitalarios.
-                </p>
-              </div>
-
-              {/* Floating Badge Bottom Left */}
-              <div className="absolute -bottom-4 -left-4 bg-white text-dalia-navy p-4.5 rounded-2xl shadow-luxury border border-dalia-rose max-w-[230px] hidden sm:block">
-                <div className="flex items-center gap-2 mb-1.5 text-dalia-gold-dark">
-                  <Heart size={20} className="text-dalia-rose-dark" />
-                  <span className="text-sm font-bold">Sedación Consciente</span>
-                </div>
-                <p className="text-sm text-dalia-graphite leading-snug">
-                  Atención relajada y confortable para pacientes con ansiedad.
-                </p>
               </div>
             </div>
           </div>
