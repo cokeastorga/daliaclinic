@@ -57,13 +57,13 @@ export default function Preloader() {
 
       {/* Main Luxury Brand Presentation */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 animate-in fade-in zoom-in-95 duration-700 max-w-sm">
-        {/* Official Dalia Clinic Logo */}
-        <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden bg-white shadow-luxury p-3 border border-dalia-gold/35">
+        {/* Official Dalia Clinic Flower Isotype */}
+        <div className="relative w-44 h-44 sm:w-52 sm:h-52 drop-shadow-xl">
           <Image
-            src="/logo.jpg"
-            alt="Dalia Clinic Logo Oficial"
+            src="/isotipo.png"
+            alt="Dalia Clinic Isotipo Oficial"
             fill
-            className="object-contain p-2"
+            className="object-contain"
             priority
           />
         </div>
