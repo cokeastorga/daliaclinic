@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #133853;
+  --color-slate: #90A1B2;
+  --color-warm: #E2DFE0;
+  --color-rose: #EFD3D0;
+  --color-gold: #C9A876;
+  --color-graphite: #40454F;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: var(--color-graphite);
+  background-color: #FAF8F7;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Luxury Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFEA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A876;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A88755;
+}
+
+/* Custom Text Highlight */
+::selection {
+  background: #EFD3D0;
+  color: #133853;
+}
+
+@layer components {
+  /* Luxury Glassmorphism card */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(201, 168, 118, 0.22);
+    box-shadow: 0 15px 35px -10px rgba(19, 56, 83, 0.06);
+  }
+
+  .glass-card-hover {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 45px -10px rgba(19, 56, 83, 0.12);
+    border-color: rgba(201, 168, 118, 0.5);
+  }
+
+  /* Deep luxury card for dark sections */
+  .glass-dark {
+    background: rgba(19, 56, 83, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(201, 168, 118, 0.28);
+  }
+
+  /* Gold Shimmer Text Gradient */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #A88755 0%, #C9A876 50%, #E4CBA4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-navy-gradient {
+    background: linear-gradient(135deg, #133853 0%, #1C4E72 70%, #0D2538 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Luxury Gold Button */
+  .btn-gold {
+    background: linear-gradient(135deg, #C9A876 0%, #D8BE93 50%, #B89662 100%);
+    color: #133853;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 18px rgba(201, 168, 118, 0.35);
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #D8BE93 0%, #E4CBA4 50%, #C9A876 100%);
+    box-shadow: 0 6px 24px rgba(201, 168, 118, 0.5);
+    transform: translateY(-1px);
+  }
+
+  /* Luxury Navy Button */
+  .btn-navy {
+    background: #133853;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 16px rgba(19, 56, 83, 0.25);
+    transition: all 0.3s ease;
+  }
+
+  .btn-navy:hover {
+    background: #1C4E72;
+    box-shadow: 0 6px 22px rgba(19, 56, 83, 0.35);
+    transform: translateY(-1px);
+  }
+}
