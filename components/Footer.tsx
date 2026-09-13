@@ -118,7 +118,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contacto#faq" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
+                <Link href="/preguntas-frecuentes" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
                   Preguntas Frecuentes (FAQs)
                 </Link>
               </li>

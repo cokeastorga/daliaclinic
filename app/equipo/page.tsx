@@ -39,11 +39,12 @@ export default function EquipoPage() {
             >
               <div>
                 {/* Photo */}
-                <div className="relative h-80 w-full bg-dalia-warm overflow-hidden">
+                <div className="relative h-80 sm:h-96 min-h-[320px] w-full bg-dalia-warm overflow-hidden">
                   <Image
                     src={doctor.image}
                     alt={`Doctor ${doctor.name}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-transparent to-transparent" />

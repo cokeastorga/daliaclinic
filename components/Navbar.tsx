@@ -43,6 +43,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
       hasDropdown: true,
     },
     { name: "Nuestro Equipo", href: "/equipo" },
+    { name: "Preguntas Frecuentes", href: "/preguntas-frecuentes" },
     { name: "Contacto", href: "/contacto" },
   ];
 
@@ -116,7 +117,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                   >
                     <Link
                       href={link.href}
-                      className={`px-3 py-2 rounded-xl text-sm font-semibold tracking-wide flex items-center gap-1 transition-all whitespace-nowrap ${
+                      className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide flex items-center gap-1 transition-all whitespace-nowrap ${
                         isActive
                           ? "text-dalia-navy bg-dalia-rose font-bold"
                           : "text-dalia-navy hover:bg-dalia-rose/50 hover:text-dalia-navy"
@@ -174,7 +175,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-xl text-sm font-semibold tracking-wide transition-all whitespace-nowrap ${
+                  className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide transition-all whitespace-nowrap ${
                     isActive
                       ? "text-dalia-navy bg-dalia-rose font-bold"
                       : "text-dalia-navy hover:bg-dalia-rose/50 hover:text-dalia-navy"

@@ -164,42 +164,6 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Metrics Counter Bar */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 p-7 bg-white rounded-3xl border border-dalia-gold/30 shadow-luxury">
-          <div className="text-center p-3 border-r border-dalia-warm/60 last:border-none">
-            <span className="font-serif text-4xl md:text-5xl font-extrabold text-dalia-navy block">
-              14+
-            </span>
-            <span className="text-sm sm:text-base text-dalia-navy font-bold tracking-wide mt-1.5 block">
-              Años de Trayectoria
-            </span>
-          </div>
-          <div className="text-center p-3 border-r border-dalia-warm/60 last:border-none">
-            <span className="font-serif text-4xl md:text-5xl font-extrabold text-dalia-navy block">
-              +5,000
-            </span>
-            <span className="text-sm sm:text-base text-dalia-navy font-bold tracking-wide mt-1.5 block">
-              Pacientes Atendidos
-            </span>
-          </div>
-          <div className="text-center p-3 border-r border-dalia-warm/60 last:border-none">
-            <span className="font-serif text-4xl md:text-5xl font-extrabold text-dalia-navy block">
-              100%
-            </span>
-            <span className="text-sm sm:text-base text-dalia-navy font-bold tracking-wide mt-1.5 block">
-              Flujo Digital 3D
-            </span>
-          </div>
-          <div className="text-center p-3">
-            <span className="font-serif text-4xl md:text-5xl font-extrabold text-dalia-navy block text-gold-gradient">
-              5.0 ★
-            </span>
-            <span className="text-sm sm:text-base text-dalia-navy font-bold tracking-wide mt-1.5 block">
-              Opiniones Verificadas
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

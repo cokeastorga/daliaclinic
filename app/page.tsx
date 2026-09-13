@@ -6,10 +6,8 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import InteractivePillars from "@/components/InteractivePillars";
-import TechnologyShowcase from "@/components/TechnologyShowcase";
 import SmileComparison from "@/components/SmileComparison";
 import Testimonials from "@/components/Testimonials";
-import FaqAccordion from "@/components/FaqAccordion";
 import ContactForm from "@/components/ContactForm";
 import { useAppointmentModal } from "@/components/ClientLayoutWrapper";
 import { doctorsData } from "@/data/doctors";
@@ -77,8 +75,6 @@ export default function HomePage() {
         <SmileComparison />
       </section>
 
-      {/* 5. Tecnología 3D y Cero Dolor: Tarjetas Didácticas */}
-      <TechnologyShowcase />
 
       {/* 6. Nuestro Equipo Médico: Tarjetas Limpias y Visuales */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,11 +97,12 @@ export default function HomePage() {
               className="bg-white rounded-3xl overflow-hidden border border-dalia-gold/30 shadow-luxury hover:shadow-luxury-hover hover:border-dalia-rose transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
-                <div className="relative h-76 w-full overflow-hidden bg-dalia-warm">
+                <div className="relative h-80 sm:h-96 min-h-[320px] w-full overflow-hidden bg-dalia-warm">
                   <Image
                     src={doctor.image}
                     alt={`Doctor ${doctor.name}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-transparent to-transparent" />
@@ -161,22 +158,6 @@ export default function HomePage() {
       {/* 7. Testimonios */}
       <Testimonials />
 
-      {/* 8. Preguntas Frecuentes (FAQs) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
-            Claridad y Confianza
-          </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
-            Preguntas Frecuentes
-          </h2>
-          <p className="text-lg text-dalia-graphite mt-2">
-            Respuestas rápidas a las consultas más comunes de nuestros pacientes.
-          </p>
-        </div>
-
-        <FaqAccordion />
-      </section>
 
       {/* 9. Contacto & Agendamiento */}
       <section id="contacto" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
