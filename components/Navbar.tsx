@@ -36,14 +36,14 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
 
   const navLinks = [
     { name: "Inicio", href: "/" },
-    { name: "Quiénes Somos", href: "/quienes-somos" },
+    { name: "Quiénes Somos", shortName: "Nosotros", href: "/quienes-somos" },
     {
       name: "Especialidades",
       href: "/servicios",
       hasDropdown: true,
     },
-    { name: "Nuestro Equipo", href: "/equipo" },
-    { name: "Preguntas Frecuentes", href: "/preguntas-frecuentes" },
+    { name: "Nuestro Equipo", shortName: "Equipo", href: "/equipo" },
+    { name: "Preguntas Frecuentes", shortName: "FAQ", href: "/preguntas-frecuentes" },
     { name: "Contacto", href: "/contacto" },
   ];
 
@@ -95,12 +95,12 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
             : "bg-[#FAF8F7]/90 backdrop-blur-sm py-3.5 border-b border-dalia-warm/80"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 xl:gap-4">
           {/* Logo */}
           <Logo variant="horizontal" size={isScrolled ? "sm" : "md"} />
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -117,15 +117,16 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                   >
                     <Link
                       href={link.href}
-                      className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide flex items-center gap-1 transition-all whitespace-nowrap ${
+                      className={`px-2 xl:px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide flex items-center gap-1 transition-all whitespace-nowrap ${
                         isActive
                           ? "text-dalia-navy bg-dalia-rose font-bold"
                           : "text-dalia-navy hover:bg-dalia-rose/50 hover:text-dalia-navy"
                       }`}
                     >
-                      <span>{link.name}</span>
+                      <span className="hidden xl:inline">{link.name}</span>
+                      <span className="xl:hidden">{link.shortName || link.name}</span>
                       <ChevronDown
-                        size={15}
+                        size={14}
                         className={`transition-transform duration-200 ${
                           servicesDropdownOpen ? "rotate-180 text-dalia-gold" : ""
                         }`}
@@ -175,20 +176,21 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-2.5 xl:px-3.5 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide transition-all whitespace-nowrap ${
+                  className={`px-2 xl:px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide transition-all whitespace-nowrap ${
                     isActive
                       ? "text-dalia-navy bg-dalia-rose font-bold"
                       : "text-dalia-navy hover:bg-dalia-rose/50 hover:text-dalia-navy"
                   }`}
                 >
-                  {link.name}
+                  <span className="hidden xl:inline">{link.name}</span>
+                  <span className="xl:hidden">{link.shortName || link.name}</span>
                 </Link>
               );
             })}
           </nav>
 
           {/* Action CTAs Desktop */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <a
               href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
               target="_blank"
@@ -201,7 +203,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
 
             <button
               onClick={onOpenAppointment}
-              className="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 shadow-sm whitespace-nowrap hover:ring-2 hover:ring-dalia-rose"
+              className="btn-gold px-4 xl:px-5 py-2.5 rounded-xl text-xs xl:text-sm font-bold flex items-center gap-1.5 xl:gap-2 shadow-sm whitespace-nowrap hover:ring-2 hover:ring-dalia-rose"
             >
               <Calendar size={15} />
               <span>Agendar Cita</span>

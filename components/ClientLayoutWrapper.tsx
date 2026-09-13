@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 import AppointmentModal from "./AppointmentModal";
+import Preloader from "./Preloader";
 
 interface ModalContextType {
   openAppointment: (serviceId?: string) => void;
@@ -37,6 +38,7 @@ export default function ClientLayoutWrapper({
 
   return (
     <ModalContext.Provider value={{ openAppointment, closeAppointment }}>
+      <Preloader />
       <div className="flex flex-col min-h-screen">
         <Navbar onOpenAppointment={() => openAppointment()} />
         <main className="flex-grow">{children}</main>
