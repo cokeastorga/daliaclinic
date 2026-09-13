@@ -108,7 +108,7 @@ export default function ServicesGrid({
 
                 {/* Floating Tag */}
                 <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-dalia-navy text-sm font-extrabold px-3.5 py-1.5 rounded-full border border-dalia-rose shadow-sm flex items-center gap-2 group-hover:bg-dalia-rose transition-colors">
-                  <span className="text-dalia-rose-dark">
+                  <span className="text-dalia-gold">
                     {iconMap[service.icon] || <Sparkles size={16} />}
                   </span>
                   <span>{service.tag}</span>
@@ -130,7 +130,7 @@ export default function ServicesGrid({
 
               {/* Card Body */}
               <div className="p-7 space-y-4">
-                <h3 className="font-serif text-2xl font-extrabold text-dalia-navy group-hover:text-dalia-navy transition-colors">
+                <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-dalia-navy group-hover:text-dalia-navy transition-colors">
                   {service.title}
                 </h3>
 

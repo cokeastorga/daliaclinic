@@ -77,7 +77,7 @@ export default function SmileComparison({
             className="object-cover"
             priority
           />
-          <div className="absolute top-4 right-4 bg-dalia-navy/80 backdrop-blur-sm text-dalia-gold font-serif text-xs uppercase tracking-widest px-3 py-1.5 rounded-full border border-dalia-gold/40">
+          <div className="absolute top-4 right-4 bg-dalia-navy/80 backdrop-blur-sm text-dalia-gold font-sans text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-dalia-gold/40">
             Después (Dalia Clinic)
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function SmileComparison({
               className="object-cover"
               priority
             />
-            <div className="absolute top-4 left-4 bg-dalia-graphite-dark/80 backdrop-blur-sm text-white font-serif text-xs uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/20">
+            <div className="absolute top-4 left-4 bg-dalia-graphite-dark/80 backdrop-blur-sm text-white font-sans text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/20">
               Antes
             </div>
           </div>

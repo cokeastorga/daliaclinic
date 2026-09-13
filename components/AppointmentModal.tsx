@@ -91,7 +91,7 @@ export default function AppointmentModal({
         <div className="bg-dalia-navy px-6 py-4 flex items-center justify-between border-b border-dalia-gold/30">
           <div className="flex items-center gap-2.5 text-white">
             <Sparkles size={18} className="text-dalia-gold" />
-            <span className="font-serif tracking-wider font-semibold text-lg">
+            <span className="font-sans tracking-wide font-bold text-base sm:text-lg">
               DALIA CLINIC • Agendamiento
             </span>
           </div>

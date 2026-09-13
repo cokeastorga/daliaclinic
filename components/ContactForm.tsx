@@ -49,7 +49,7 @@ export default function ContactForm() {
         <div className="w-18 h-18 bg-dalia-rose/40 text-dalia-navy rounded-full flex items-center justify-center mx-auto shadow-inner">
           <CheckCircle2 size={42} className="text-dalia-rose-dark" />
         </div>
-        <h3 className="font-serif text-3xl font-bold text-dalia-navy">
+        <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-dalia-navy">
           ¡Tu Cita Ha Sido Solicitada!
         </h3>
         <p className="text-base sm:text-lg text-dalia-graphite max-w-md mx-auto leading-relaxed">
@@ -74,7 +74,7 @@ export default function ContactForm() {
         <span className="text-xs sm:text-sm font-extrabold text-dalia-gold-dark uppercase tracking-wider">
           Agendamiento Preferencial
         </span>
-        <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-dalia-navy mt-1">
+        <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-dalia-navy mt-1">
           Reserva tu Consulta de Evaluación
         </h3>
         <p className="text-sm sm:text-base text-dalia-graphite mt-1.5 font-medium">

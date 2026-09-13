@@ -113,7 +113,7 @@ export default function HomePage() {
                     <span className="text-sm font-bold text-dalia-gold uppercase tracking-wide block">
                       {doctor.specialty}
                     </span>
-                    <p className="font-serif text-2xl font-bold">{doctor.name}</p>
+                    <p className="font-sans text-xl sm:text-2xl font-extrabold">{doctor.name}</p>
                     <p className="text-sm text-dalia-slate-light font-medium">{doctor.licenseNumber}</p>
                   </div>
                 </div>

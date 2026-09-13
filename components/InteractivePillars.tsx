@@ -115,14 +115,14 @@ export default function InteractivePillars() {
               <div
                 className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                   isActive
-                    ? "bg-white text-dalia-navy shadow-sm border border-dalia-rose-dark/30"
-                    : "bg-dalia-rose/40 text-dalia-navy"
+                    ? "bg-white text-dalia-gold shadow-sm border border-dalia-gold/30"
+                    : "bg-white text-dalia-gold-dark border border-dalia-warm/80 shadow-xs"
                 }`}
               >
                 {p.icon}
               </div>
               <div className="min-w-0">
-                <p className="font-serif text-sm sm:text-base font-extrabold whitespace-nowrap leading-tight text-dalia-navy">
+                <p className="font-sans text-sm sm:text-base font-extrabold whitespace-nowrap leading-tight text-dalia-navy">
                   {p.title}
                 </p>
                 <p

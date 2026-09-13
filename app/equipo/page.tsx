@@ -55,7 +55,7 @@ export default function EquipoPage() {
                     <span className="text-[11px] font-semibold text-dalia-gold uppercase tracking-wider block">
                       {doctor.specialty}
                     </span>
-                    <h3 className="font-serif text-xl font-bold">{doctor.name}</h3>
+                    <h3 className="font-sans text-xl font-extrabold">{doctor.name}</h3>
                     <p className="text-xs text-dalia-slate-light">{doctor.licenseNumber}</p>
                   </div>
                 </div>

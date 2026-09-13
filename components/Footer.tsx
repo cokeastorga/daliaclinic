@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Col 2: Especialidades Clínicas */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-dalia-gold mb-4 flex items-center gap-2">
+            <h3 className="font-sans text-base font-bold text-dalia-gold mb-4 flex items-center gap-2">
               <span>Especialidades</span>
               <div className="h-[1px] w-6 bg-dalia-gold/40" />
             </h3>
@@ -87,7 +87,7 @@ export default function Footer() {
 
           {/* Col 3: Navegación & Pacientes */}
           <div>
-            <h3 className="font-serif text-lg font-semibold text-dalia-gold mb-4 flex items-center gap-2">
+            <h3 className="font-sans text-base font-bold text-dalia-gold mb-4 flex items-center gap-2">
               <span>Navegación</span>
               <div className="h-[1px] w-6 bg-dalia-gold/40" />
             </h3>
@@ -143,7 +143,7 @@ export default function Footer() {
 
           {/* Col 4: Ubicación y Horarios */}
           <div className="space-y-4">
-            <h3 className="font-serif text-lg font-semibold text-dalia-gold mb-4 flex items-center gap-2">
+            <h3 className="font-sans text-base font-bold text-dalia-gold mb-4 flex items-center gap-2">
               <span>Sede & Horarios</span>
               <div className="h-[1px] w-6 bg-dalia-gold/40" />
             </h3>

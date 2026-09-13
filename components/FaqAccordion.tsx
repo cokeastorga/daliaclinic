@@ -62,7 +62,7 @@ export default function FaqAccordion() {
                 aria-expanded={isOpen}
                 className="w-full px-7 py-5 text-left flex items-center justify-between gap-4 focus:outline-none"
               >
-                <span className="font-serif text-lg md:text-xl font-bold text-dalia-navy flex items-center gap-3">
+                <span className="font-sans text-base sm:text-lg font-bold text-dalia-navy flex items-center gap-3">
                   <HelpCircle
                     size={22}
                     className={`shrink-0 transition-colors ${
