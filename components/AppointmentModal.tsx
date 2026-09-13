@@ -141,7 +141,7 @@ export default function AppointmentModal({
                   {/* Nombre */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-dalia-navy flex items-center gap-1.5">
-                      <User size={13} className="text-dalia-gold" />
+                      <User size={13} className="text-dalia-rose-dark" />
                       <span>Nombre y Apellido *</span>
                     </label>
                     <input
@@ -150,14 +150,14 @@ export default function AppointmentModal({
                       placeholder="Ej. Constanza Silva"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all"
                     />
                   </div>
 
                   {/* Teléfono */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-dalia-navy flex items-center gap-1.5">
-                      <Phone size={13} className="text-dalia-gold" />
+                      <Phone size={13} className="text-dalia-rose-dark" />
                       <span>Teléfono / WhatsApp *</span>
                     </label>
                     <input
@@ -166,7 +166,7 @@ export default function AppointmentModal({
                       placeholder="+56 9 1234 5678"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all"
                     />
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function AppointmentModal({
                   {/* Email */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-dalia-navy flex items-center gap-1.5">
-                      <Mail size={13} className="text-dalia-gold" />
+                      <Mail size={13} className="text-dalia-rose-dark" />
                       <span>Correo Electrónico *</span>
                     </label>
                     <input
@@ -184,20 +184,20 @@ export default function AppointmentModal({
                       placeholder="tu.correo@ejemplo.cl"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all"
                     />
                   </div>
 
                   {/* Especialidad */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-dalia-navy flex items-center gap-1.5">
-                      <Sparkles size={13} className="text-dalia-gold" />
+                      <Sparkles size={13} className="text-dalia-rose-dark" />
                       <span>Especialidad de Interés *</span>
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all"
                     >
                       {servicesData.map((svc) => (
                         <option key={svc.id} value={svc.id}>
@@ -212,7 +212,7 @@ export default function AppointmentModal({
                   {/* Fecha Preferida */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-dalia-navy flex items-center gap-1.5">
-                      <Calendar size={13} className="text-dalia-gold" />
+                      <Calendar size={13} className="text-dalia-rose-dark" />
                       <span>Fecha Preferida</span>
                     </label>
                     <input
@@ -220,24 +220,24 @@ export default function AppointmentModal({
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                       min={new Date().toISOString().split("T")[0]}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all"
                     />
                   </div>
 
                   {/* Turno */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-semibold text-dalia-navy flex items-center gap-1.5">
-                      <Clock size={13} className="text-dalia-gold" />
+                      <Clock size={13} className="text-dalia-rose-dark" />
                       <span>Horario de Preferencia</span>
                     </label>
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         type="button"
                         onClick={() => setFormData({ ...formData, timeSlot: "morning" })}
-                        className={`py-2 px-3 rounded-xl text-xs font-medium border transition-all ${
+                        className={`py-2 px-3 rounded-xl text-xs font-bold border transition-all ${
                           formData.timeSlot === "morning"
-                            ? "bg-dalia-navy text-white border-dalia-navy"
-                            : "bg-white text-dalia-graphite border-dalia-warm hover:bg-dalia-warm-light"
+                            ? "bg-dalia-rose text-dalia-navy border-dalia-rose-dark font-extrabold shadow-sm ring-1 ring-dalia-rose"
+                            : "bg-white text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
                         }`}
                       >
                         Mañana (08:30-13h)
@@ -245,10 +245,10 @@ export default function AppointmentModal({
                       <button
                         type="button"
                         onClick={() => setFormData({ ...formData, timeSlot: "afternoon" })}
-                        className={`py-2 px-3 rounded-xl text-xs font-medium border transition-all ${
+                        className={`py-2 px-3 rounded-xl text-xs font-bold border transition-all ${
                           formData.timeSlot === "afternoon"
-                            ? "bg-dalia-navy text-white border-dalia-navy"
-                            : "bg-white text-dalia-graphite border-dalia-warm hover:bg-dalia-warm-light"
+                            ? "bg-dalia-rose text-dalia-navy border-dalia-rose-dark font-extrabold shadow-sm ring-1 ring-dalia-rose"
+                            : "bg-white text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
                         }`}
                       >
                         Tarde (14:00-20h)
@@ -260,7 +260,7 @@ export default function AppointmentModal({
                 {/* Motivo */}
                 <div className="space-y-1.5">
                   <label className="text-xs font-semibold text-dalia-navy flex items-center gap-1.5">
-                    <MessageSquare size={13} className="text-dalia-gold" />
+                    <MessageSquare size={13} className="text-dalia-rose-dark" />
                     <span>¿Alguna inquietud o síntoma en particular? (Opcional)</span>
                   </label>
                   <textarea
@@ -268,7 +268,7 @@ export default function AppointmentModal({
                     placeholder="Ej. Me interesa alinear mis dientes pero sin brackets visibles..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all resize-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-dalia-warm bg-white text-sm text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all resize-none"
                   />
                 </div>
 

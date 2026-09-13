@@ -86,7 +86,7 @@ export default function ContactForm() {
         {/* Nombre */}
         <div className="space-y-2">
           <label className="text-sm sm:text-base font-bold text-dalia-navy flex items-center gap-2">
-            <User size={16} className="text-dalia-gold" />
+            <User size={16} className="text-dalia-rose-dark" />
             <span>Nombre Completo *</span>
           </label>
           <input
@@ -102,7 +102,7 @@ export default function ContactForm() {
         {/* Teléfono */}
         <div className="space-y-2">
           <label className="text-sm sm:text-base font-bold text-dalia-navy flex items-center gap-2">
-            <Phone size={16} className="text-dalia-gold" />
+            <Phone size={16} className="text-dalia-rose-dark" />
             <span>Teléfono / WhatsApp *</span>
           </label>
           <input
@@ -120,7 +120,7 @@ export default function ContactForm() {
         {/* Email */}
         <div className="space-y-2">
           <label className="text-sm sm:text-base font-bold text-dalia-navy flex items-center gap-2">
-            <Mail size={16} className="text-dalia-gold" />
+            <Mail size={16} className="text-dalia-rose-dark" />
             <span>Correo Electrónico *</span>
           </label>
           <input
@@ -136,7 +136,7 @@ export default function ContactForm() {
         {/* Especialidad */}
         <div className="space-y-2">
           <label className="text-sm sm:text-base font-bold text-dalia-navy flex items-center gap-2">
-            <Sparkles size={16} className="text-dalia-gold" />
+            <Sparkles size={16} className="text-dalia-rose-dark" />
             <span>Especialidad o Servicio *</span>
           </label>
           <select
@@ -157,7 +157,7 @@ export default function ContactForm() {
         {/* Fecha */}
         <div className="space-y-2">
           <label className="text-sm sm:text-base font-bold text-dalia-navy flex items-center gap-2">
-            <Calendar size={16} className="text-dalia-gold" />
+            <Calendar size={16} className="text-dalia-rose-dark" />
             <span>Fecha Tentativa</span>
           </label>
           <input
@@ -169,10 +169,10 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Turno */}
+        {/* Turno - Selected in Rosa Empolvado */}
         <div className="space-y-2">
           <label className="text-sm sm:text-base font-bold text-dalia-navy flex items-center gap-2">
-            <Clock size={16} className="text-dalia-gold" />
+            <Clock size={16} className="text-dalia-rose-dark" />
             <span>Horario Preferido</span>
           </label>
           <div className="grid grid-cols-2 gap-2.5">
@@ -181,8 +181,8 @@ export default function ContactForm() {
               onClick={() => setFormData({ ...formData, timeSlot: "morning" })}
               className={`py-3 px-3 rounded-xl text-sm sm:text-base font-bold border transition-all ${
                 formData.timeSlot === "morning"
-                  ? "bg-dalia-navy text-white border-dalia-navy shadow-sm"
-                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
+                  ? "bg-dalia-rose text-dalia-navy border-dalia-rose-dark shadow-sm ring-1 ring-dalia-rose font-extrabold"
+                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose font-bold"
               }`}
             >
               Mañana (08:30-13h)
@@ -192,8 +192,8 @@ export default function ContactForm() {
               onClick={() => setFormData({ ...formData, timeSlot: "afternoon" })}
               className={`py-3 px-3 rounded-xl text-sm sm:text-base font-bold border transition-all ${
                 formData.timeSlot === "afternoon"
-                  ? "bg-dalia-navy text-white border-dalia-navy shadow-sm"
-                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
+                  ? "bg-dalia-rose text-dalia-navy border-dalia-rose-dark shadow-sm ring-1 ring-dalia-rose font-extrabold"
+                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose font-bold"
               }`}
             >
               Tarde (14:00-20h)
@@ -205,7 +205,7 @@ export default function ContactForm() {
       {/* Mensaje */}
       <div className="space-y-2">
         <label className="text-sm sm:text-base font-bold text-dalia-navy flex items-center gap-2">
-          <MessageSquare size={16} className="text-dalia-gold" />
+          <MessageSquare size={16} className="text-dalia-rose-dark" />
           <span>Comentario o consulta específica (Opcional)</span>
         </label>
         <textarea

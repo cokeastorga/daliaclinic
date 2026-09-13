@@ -69,7 +69,7 @@ export default function ServicesGrid({
 
   return (
     <div className="w-full">
-      {/* Category Filter Pills - Hover in Rosa Empolvado */}
+      {/* Category Filter Pills - Selected in Rosa Empolvado (#EFD3D0) */}
       {showFilters && (
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
           {filterCategories.map((cat) => (
@@ -78,7 +78,7 @@ export default function ServicesGrid({
               onClick={() => setFilter(cat.id)}
               className={`px-6 py-3 rounded-full text-base font-bold transition-all duration-200 ${
                 filter === cat.id
-                  ? "bg-dalia-navy text-white shadow-lg ring-2 ring-dalia-rose scale-105"
+                  ? "bg-dalia-rose text-dalia-navy font-extrabold shadow-md border-2 border-dalia-rose-dark scale-105 ring-2 ring-dalia-rose/60"
                   : "bg-white text-dalia-graphite border border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/40 hover:text-dalia-navy shadow-xs"
               }`}
             >
@@ -88,7 +88,7 @@ export default function ServicesGrid({
         </div>
       )}
 
-      {/* Grid of Didactic Visual Cards - Hover in Rosa Empolvado */}
+      {/* Grid of Didactic Visual Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
         {displayedServices.map((service) => (
           <div
@@ -107,8 +107,8 @@ export default function ServicesGrid({
                 <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-dalia-navy/20 to-transparent" />
 
                 {/* Floating Tag */}
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-dalia-navy text-sm font-extrabold px-3.5 py-1.5 rounded-full border border-dalia-gold/40 shadow-sm flex items-center gap-2 group-hover:border-dalia-rose transition-colors">
-                  <span className="text-dalia-gold">
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-dalia-navy text-sm font-extrabold px-3.5 py-1.5 rounded-full border border-dalia-rose shadow-sm flex items-center gap-2 group-hover:bg-dalia-rose transition-colors">
+                  <span className="text-dalia-rose-dark">
                     {iconMap[service.icon] || <Sparkles size={16} />}
                   </span>
                   <span>{service.tag}</span>
@@ -116,7 +116,7 @@ export default function ServicesGrid({
 
                 {/* Duration Badge */}
                 <div className="absolute top-4 right-4 bg-dalia-navy/90 backdrop-blur-md text-white text-xs sm:text-sm font-semibold px-3 py-1 rounded-full border border-white/25 flex items-center gap-1.5">
-                  <Clock size={14} className="text-dalia-gold" />
+                  <Clock size={14} className="text-dalia-rose" />
                   <span>{service.duration}</span>
                 </div>
 
@@ -142,7 +142,7 @@ export default function ServicesGrid({
                 <div className="pt-3 border-t border-dalia-warm/60 space-y-2.5">
                   {service.benefits.slice(0, 3).map((benefit, idx) => (
                     <div key={idx} className="flex items-center gap-2.5 text-sm sm:text-base text-dalia-navy font-bold">
-                      <CheckCircle2 size={18} className="text-dalia-gold shrink-0" />
+                      <CheckCircle2 size={18} className="text-dalia-rose-dark shrink-0" />
                       <span>{benefit}</span>
                     </div>
                   ))}

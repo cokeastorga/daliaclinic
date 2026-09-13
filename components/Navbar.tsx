@@ -230,15 +230,26 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-dalia-warm bg-[#FAF8F7] px-4 pt-3 pb-6 space-y-2.5 animate-in slide-in-from-top-4">
             <div className="flex flex-col space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="px-4 py-2.5 rounded-xl text-base font-bold text-dalia-navy hover:bg-dalia-rose/60 transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-4 py-2.5 rounded-xl text-base font-bold transition-colors ${
+                      isActive
+                        ? "bg-dalia-rose text-dalia-navy"
+                        : "text-dalia-navy hover:bg-dalia-rose/60"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="pt-3 flex flex-col gap-2">

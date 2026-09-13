@@ -27,7 +27,7 @@ export default function FaqAccordion() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      {/* Category Pills - Hover in Rosa Empolvado */}
+      {/* Category Pills - Selected in Rosa Empolvado */}
       <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
         {categories.map((cat) => (
           <button
@@ -35,7 +35,7 @@ export default function FaqAccordion() {
             onClick={() => setSelectedCategory(cat.id)}
             className={`px-5 py-2.5 rounded-full text-sm sm:text-base font-bold transition-all ${
               selectedCategory === cat.id
-                ? "bg-dalia-navy text-white shadow-md border-transparent scale-105 ring-2 ring-dalia-rose"
+                ? "bg-dalia-rose text-dalia-navy font-extrabold shadow-md border-2 border-dalia-rose-dark scale-105 ring-2 ring-dalia-rose/60"
                 : "bg-white text-dalia-graphite border border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
             }`}
           >
@@ -44,7 +44,7 @@ export default function FaqAccordion() {
         ))}
       </div>
 
-      {/* Accordion Items - Hover in Rosa Empolvado */}
+      {/* Accordion Items */}
       <div className="space-y-4">
         {filteredFaqs.map((faq) => {
           const isOpen = openId === faq.id;
@@ -74,7 +74,7 @@ export default function FaqAccordion() {
                 <div
                   className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
                     isOpen
-                      ? "bg-dalia-rose text-dalia-navy rotate-180"
+                      ? "bg-dalia-rose text-dalia-navy rotate-180 shadow-xs"
                       : "bg-dalia-warm/50 text-dalia-graphite"
                   }`}
                 >

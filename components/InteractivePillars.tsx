@@ -97,7 +97,7 @@ export default function InteractivePillars() {
     <div className="w-full">
       {/* 
         Interactive Selector Tabs:
-        Hover in Rosa Empolvado (#EFD3D0)
+        Selected State: Rosa Empolvado (#EFD3D0) con icono en contraste e íconos activos
       */}
       <div className="flex overflow-x-auto no-scrollbar sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
         {pillars.map((p, idx) => {
@@ -106,28 +106,28 @@ export default function InteractivePillars() {
             <button
               key={p.id}
               onClick={() => setActiveTab(idx)}
-              className={`shrink-0 sm:shrink p-3 sm:p-4 rounded-2xl text-left border transition-all duration-300 flex items-center gap-3 ${
+              className={`shrink-0 sm:shrink p-3.5 sm:p-4 rounded-2xl text-left border transition-all duration-300 flex items-center gap-3 ${
                 isActive
-                  ? "bg-dalia-navy text-white border-dalia-gold shadow-luxury ring-2 ring-dalia-rose/60"
+                  ? "bg-dalia-rose text-dalia-navy border-dalia-rose-dark shadow-luxury ring-2 ring-dalia-rose/80 scale-[1.02]"
                   : "bg-white text-dalia-graphite border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/40 shadow-xs"
               }`}
             >
               <div
                 className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                   isActive
-                    ? "bg-dalia-gold text-dalia-navy"
+                    ? "bg-white text-dalia-navy shadow-sm border border-dalia-rose-dark/30"
                     : "bg-dalia-rose/40 text-dalia-navy"
                 }`}
               >
                 {p.icon}
               </div>
               <div className="min-w-0">
-                <p className="font-serif text-sm sm:text-base font-bold whitespace-nowrap leading-tight">
+                <p className="font-serif text-sm sm:text-base font-extrabold whitespace-nowrap leading-tight text-dalia-navy">
                   {p.title}
                 </p>
                 <p
-                  className={`text-xs font-semibold whitespace-nowrap mt-0.5 ${
-                    isActive ? "text-dalia-rose-light" : "text-dalia-graphite-light"
+                  className={`text-xs font-bold whitespace-nowrap mt-0.5 ${
+                    isActive ? "text-dalia-navy/80" : "text-dalia-graphite-light"
                   }`}
                 >
                   {p.tag}
@@ -142,8 +142,8 @@ export default function InteractivePillars() {
       <div className="bg-white rounded-3xl p-6 md:p-10 border border-dalia-gold/30 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300 hover:border-dalia-rose transition-colors">
         {/* Left: Didactic Information */}
         <div className="lg:col-span-6 space-y-5">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dalia-rose/40 text-dalia-navy text-sm font-extrabold border border-dalia-rose">
-            <Sparkles size={16} className="text-dalia-gold" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dalia-rose text-dalia-navy text-sm font-extrabold border border-dalia-rose-dark/50">
+            <Sparkles size={16} className="text-dalia-navy" />
             <span>{current.tag}</span>
           </div>
 
@@ -151,7 +151,7 @@ export default function InteractivePillars() {
             <h3 className="font-serif text-3xl sm:text-4xl font-extrabold text-dalia-navy leading-tight">
               {current.title}
             </h3>
-            <p className="text-base sm:text-lg font-bold text-dalia-gold-dark mt-1">
+            <p className="text-base sm:text-lg font-bold text-dalia-navy/80 mt-1">
               {current.subtitle}
             </p>
           </div>
@@ -163,7 +163,7 @@ export default function InteractivePillars() {
           <div className="space-y-2.5 pt-3 border-t border-dalia-warm/60">
             {current.points.map((pt, i) => (
               <div key={i} className="flex items-center gap-2.5 text-base font-bold text-dalia-navy">
-                <CheckCircle2 size={18} className="text-dalia-gold shrink-0" />
+                <CheckCircle2 size={18} className="text-dalia-rose-dark shrink-0" />
                 <span>{pt}</span>
               </div>
             ))}

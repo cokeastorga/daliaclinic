@@ -106,7 +106,7 @@ export default function SmileComparison({
           className="absolute top-0 bottom-0 w-[2px] bg-gradient-to-b from-dalia-gold via-white to-dalia-gold shadow-gold-glow"
           style={{ left: `${sliderPosition}%` }}
         >
-          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-dalia-navy border-2 border-dalia-gold text-dalia-gold flex items-center justify-center shadow-luxury">
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-dalia-rose border-2 border-dalia-rose-dark text-dalia-navy flex items-center justify-center shadow-luxury">
             <MoveHorizontal size={18} />
           </div>
         </div>
