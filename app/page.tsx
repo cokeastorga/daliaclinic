@@ -24,7 +24,7 @@ export default function HomePage() {
 
   return (
     <div className="space-y-20 md:space-y-28">
-      {/* 1. Hero Section: Despejado, Moderno y de Alto Impacto */}
+      {/* 1. Hero Section */}
       <HeroSection />
 
       {/* 2. Los 5 Pilares Dalia: Tarjetas Didácticas e Interactivas */}
@@ -61,7 +61,7 @@ export default function HomePage() {
           </div>
           <button
             onClick={() => openAppointment()}
-            className="btn-gold px-7 py-4 rounded-2xl text-base sm:text-lg font-bold flex items-center gap-2.5 self-start md:self-auto shrink-0 shadow-lg"
+            className="btn-gold px-7 py-4 rounded-2xl text-base sm:text-lg font-bold flex items-center gap-2.5 self-start md:self-auto shrink-0 shadow-lg hover:ring-4 hover:ring-dalia-rose/50"
           >
             <Calendar size={18} />
             <span>Agendar Cita con Especialista</span>
@@ -98,7 +98,7 @@ export default function HomePage() {
           {doctorsData.slice(0, 3).map((doctor) => (
             <div
               key={doctor.id}
-              className="bg-white rounded-3xl overflow-hidden border border-dalia-gold/30 shadow-luxury hover:shadow-luxury-hover transition-all duration-300 group flex flex-col justify-between"
+              className="bg-white rounded-3xl overflow-hidden border border-dalia-gold/30 shadow-luxury hover:shadow-luxury-hover hover:border-dalia-rose transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
                 <div className="relative h-76 w-full overflow-hidden bg-dalia-warm">
@@ -131,14 +131,14 @@ export default function HomePage() {
               <div className="p-7 pt-0 border-t border-dalia-warm/60 flex items-center justify-between">
                 <Link
                   href="/equipo"
-                  className="text-base font-extrabold text-dalia-navy hover:text-dalia-gold flex items-center gap-1.5 transition-colors"
+                  className="text-base font-extrabold text-dalia-navy hover:text-dalia-rose-dark flex items-center gap-1.5 transition-colors"
                 >
                   <span>Ver trayectoria completa</span>
                   <ArrowRight size={16} />
                 </Link>
                 <button
                   onClick={() => openAppointment()}
-                  className="btn-gold text-sm sm:text-base px-4 py-2 rounded-xl font-bold shadow-sm"
+                  className="btn-gold text-sm sm:text-base px-4 py-2 rounded-xl font-bold shadow-sm hover:ring-2 hover:ring-dalia-rose"
                 >
                   Agendar
                 </button>
@@ -150,7 +150,7 @@ export default function HomePage() {
         <div className="mt-12 text-center">
           <Link
             href="/equipo"
-            className="inline-flex items-center gap-2.5 text-base sm:text-lg font-extrabold text-dalia-navy hover:text-dalia-gold border-b-2 border-dalia-gold pb-1.5 transition-colors"
+            className="inline-flex items-center gap-2.5 text-base sm:text-lg font-extrabold text-dalia-navy hover:text-dalia-rose-dark border-b-2 border-dalia-gold hover:border-dalia-rose pb-1.5 transition-all"
           >
             <span>Conoce a todos los especialistas de Dalia Clinic</span>
             <ArrowRight size={18} />
@@ -193,9 +193,9 @@ export default function HomePage() {
             </p>
 
             <div className="space-y-3.5 pt-2">
-              <div className="p-4.5 rounded-2xl bg-white border border-dalia-gold/30 shadow-xs flex items-center gap-4">
+              <div className="p-4.5 rounded-2xl bg-white border border-dalia-gold/30 shadow-xs flex items-center gap-4 hover:border-dalia-rose transition-colors">
                 <div className="w-12 h-12 rounded-2xl bg-dalia-rose/40 text-dalia-navy flex items-center justify-center shrink-0">
-                  <Calendar size={22} className="text-dalia-gold-dark" />
+                  <Calendar size={22} className="text-dalia-rose-dark" />
                 </div>
                 <div>
                   <p className="text-base font-bold text-dalia-navy">Citas Flexibles & Urgencias</p>
@@ -203,9 +203,9 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="p-4.5 rounded-2xl bg-white border border-dalia-gold/30 shadow-xs flex items-center gap-4">
+              <div className="p-4.5 rounded-2xl bg-white border border-dalia-gold/30 shadow-xs flex items-center gap-4 hover:border-dalia-rose transition-colors">
                 <div className="w-12 h-12 rounded-2xl bg-dalia-navy text-white flex items-center justify-center shrink-0">
-                  <ShieldCheck size={22} className="text-dalia-gold" />
+                  <ShieldCheck size={22} className="text-dalia-rose" />
                 </div>
                 <div>
                   <p className="text-base font-bold text-dalia-navy">Presupuestos Claros Sin Sorpresas</p>
@@ -219,7 +219,7 @@ export default function HomePage() {
                 href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20quisiera%20agendar%20una%20hora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 btn-navy px-8 py-4.5 rounded-2xl text-lg font-bold shadow-lg"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 btn-navy px-8 py-4.5 rounded-2xl text-lg font-bold shadow-lg hover:bg-dalia-rose hover:text-dalia-navy transition-all"
               >
                 <span>Chatear por WhatsApp con Coordinación</span>
               </a>

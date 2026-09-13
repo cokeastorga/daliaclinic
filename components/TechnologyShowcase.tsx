@@ -44,10 +44,10 @@ export default function TechnologyShowcase() {
 
   return (
     <section className="bg-dalia-navy text-white py-20 md:py-24 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-dalia-gold/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-dalia-rose/15 rounded-full blur-3xl pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3.5">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-dalia-gold text-sm font-extrabold border border-dalia-gold/30">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-dalia-rose text-sm font-extrabold border border-dalia-rose/40">
             <Sparkles size={16} />
             <span>Vanguardia Digital & Máximo Confort</span>
           </div>
@@ -59,12 +59,12 @@ export default function TechnologyShowcase() {
           </p>
         </div>
 
-        {/* 3 Didactic Technology Cards */}
+        {/* 3 Didactic Technology Cards - Hover in Rosa Empolvado */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {techCards.map((card) => (
             <div
               key={card.id}
-              className="bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden border border-white/15 hover:border-dalia-gold transition-all duration-300 group flex flex-col justify-between"
+              className="bg-white/5 backdrop-blur-md rounded-3xl overflow-hidden border border-white/15 hover:border-dalia-rose hover:bg-white/10 transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
                 <div className="relative h-52 w-full overflow-hidden bg-dalia-navy-dark">
@@ -75,17 +75,17 @@ export default function TechnologyShowcase() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy via-transparent to-transparent" />
-                  <div className="absolute top-4 left-4 bg-dalia-navy/95 backdrop-blur-md text-dalia-gold text-sm font-extrabold px-3.5 py-1.5 rounded-full border border-dalia-gold/40 flex items-center gap-2">
+                  <div className="absolute top-4 left-4 bg-dalia-navy/95 backdrop-blur-md text-dalia-rose text-sm font-extrabold px-3.5 py-1.5 rounded-full border border-dalia-rose/40 flex items-center gap-2">
                     {card.icon}
                     <span>{card.tag}</span>
                   </div>
-                  <div className="absolute bottom-3.5 right-4 bg-dalia-gold text-dalia-navy text-xs sm:text-sm font-extrabold px-3 py-1 rounded-lg shadow-sm">
+                  <div className="absolute bottom-3.5 right-4 bg-dalia-rose text-dalia-navy text-xs sm:text-sm font-extrabold px-3 py-1 rounded-lg shadow-sm">
                     {card.highlight}
                   </div>
                 </div>
 
                 <div className="p-7 space-y-3">
-                  <h3 className="font-serif text-2xl font-bold text-white group-hover:text-dalia-gold transition-colors">
+                  <h3 className="font-serif text-2xl font-bold text-white group-hover:text-dalia-rose transition-colors">
                     {card.title}
                   </h3>
                   <p className="text-base sm:text-lg text-dalia-slate-light leading-relaxed">
@@ -97,14 +97,14 @@ export default function TechnologyShowcase() {
               <div className="p-7 pt-0 border-t border-white/10 mt-4 flex items-center justify-between">
                 <Link
                   href={card.link}
-                  className="text-sm sm:text-base font-bold text-dalia-gold hover:text-white flex items-center gap-1.5 transition-colors"
+                  className="text-sm sm:text-base font-bold text-dalia-rose hover:text-white flex items-center gap-1.5 transition-colors"
                 >
                   <span>Conocer más</span>
                   <ArrowRight size={15} />
                 </Link>
                 <button
                   onClick={() => openAppointment()}
-                  className="btn-gold text-sm sm:text-base px-4 py-2 rounded-xl font-bold shadow-sm"
+                  className="btn-gold text-sm sm:text-base px-4 py-2 rounded-xl font-bold shadow-sm hover:ring-2 hover:ring-dalia-rose"
                 >
                   <span>Probar</span>
                 </button>
@@ -116,7 +116,7 @@ export default function TechnologyShowcase() {
         <div className="mt-14 text-center">
           <button
             onClick={() => openAppointment()}
-            className="btn-gold px-9 py-4.5 rounded-2xl text-base sm:text-lg font-bold inline-flex items-center gap-2.5 shadow-xl"
+            className="btn-gold px-9 py-4.5 rounded-2xl text-base sm:text-lg font-bold inline-flex items-center gap-2.5 shadow-xl hover:ring-4 hover:ring-dalia-rose/50"
           >
             <Calendar size={18} />
             <span>Solicitar Escaneo 3D en tu Primera Consulta</span>

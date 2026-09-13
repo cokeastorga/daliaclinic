@@ -35,22 +35,22 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            {/* Subheadline - Larger, High Contrast, Super Legible */}
+            {/* Subheadline */}
             <p className="text-lg sm:text-xl md:text-2xl text-dalia-graphite leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
               En <strong>Dalia Clinic</strong> transformamos tu sonrisa y realzamos las proporciones de tu rostro. Tecnología digital 3D, microcirugía sin dolor y especialistas dedicados a tu bienestar.
             </p>
 
             {/* Key Value Didactic Bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 text-left">
-              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm">
+              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
                 <CheckCircle2 size={22} className="text-dalia-gold shrink-0" />
                 <span className="text-base font-bold text-dalia-navy">Escáner 3D Digital</span>
               </div>
-              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm">
+              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
                 <CheckCircle2 size={22} className="text-dalia-gold shrink-0" />
                 <span className="text-base font-bold text-dalia-navy">Protocolo Cero Dolor</span>
               </div>
-              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm">
+              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
                 <CheckCircle2 size={22} className="text-dalia-gold shrink-0" />
                 <span className="text-base font-bold text-dalia-navy">Especialistas Colegiados</span>
               </div>
@@ -60,7 +60,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
               <button
                 onClick={() => openAppointment()}
-                className="w-full sm:w-auto btn-gold px-9 py-4.5 rounded-2xl text-lg font-bold flex items-center justify-center gap-3 shadow-xl group"
+                className="w-full sm:w-auto btn-gold px-9 py-4.5 rounded-2xl text-lg font-bold flex items-center justify-center gap-3 shadow-xl group hover:ring-4 hover:ring-dalia-rose/50"
               >
                 <Calendar size={20} />
                 <span>Agendar Cita de Valoración</span>
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
               <Link
                 href="/servicios"
-                className="w-full sm:w-auto px-8 py-4.5 rounded-2xl text-lg font-bold text-dalia-navy bg-white border-2 border-dalia-warm hover:border-dalia-gold hover:bg-dalia-warm-light transition-all text-center shadow-sm"
+                className="w-full sm:w-auto px-8 py-4.5 rounded-2xl text-lg font-bold text-dalia-navy bg-white border-2 border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/40 transition-all text-center shadow-sm"
               >
                 Explorar Tratamientos
               </Link>
@@ -112,7 +112,7 @@ export default function HeroSection() {
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Main Image Container */}
-              <div className="relative h-[460px] sm:h-[520px] w-full rounded-3xl overflow-hidden border-2 border-dalia-gold/40 shadow-luxury">
+              <div className="relative h-[460px] sm:h-[520px] w-full rounded-3xl overflow-hidden border-2 border-dalia-gold/40 shadow-luxury hover:border-dalia-rose transition-all duration-300">
                 <Image
                   src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000"
                   alt="Instalaciones de primer nivel en Dalia Clinic Odontología y Armonización Facial"
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-transparent to-transparent" />
 
                 {/* Overlay Bottom Badge */}
-                <div className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-dalia-gold/40 shadow-luxury">
+                <div className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-dalia-gold/40 shadow-luxury hover:border-dalia-rose transition-colors">
                   <div className="flex items-center justify-between gap-3">
                     <div>
                       <p className="text-xs sm:text-sm uppercase tracking-wider font-extrabold text-dalia-gold-dark">

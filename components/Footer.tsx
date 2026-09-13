@@ -23,13 +23,13 @@ export default function Footer() {
                 <span>Centro Médico Acreditado SNS</span>
               </span>
             </div>
-            {/* Social Icons */}
+            {/* Social Icons - Hover in Rosa Empolvado */}
             <div className="flex items-center gap-3 pt-3">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-dalia-gold hover:text-dalia-navy flex items-center justify-center transition-all"
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-dalia-rose hover:text-dalia-navy flex items-center justify-center transition-all"
                 aria-label="Instagram de Dalia Clinic"
               >
                 <Instagram size={17} />
@@ -38,7 +38,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-dalia-gold hover:text-dalia-navy flex items-center justify-center transition-all"
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-dalia-rose hover:text-dalia-navy flex items-center justify-center transition-all"
                 aria-label="Facebook de Dalia Clinic"
               >
                 <Facebook size={17} />
@@ -47,7 +47,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-dalia-gold hover:text-dalia-navy flex items-center justify-center transition-all"
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-dalia-rose hover:text-dalia-navy flex items-center justify-center transition-all"
                 aria-label="LinkedIn de Dalia Clinic"
               >
                 <Linkedin size={17} />
@@ -68,7 +68,7 @@ export default function Footer() {
                     href={`/servicios/${svc.slug}`}
                     className="text-dalia-slate-light hover:text-dalia-rose transition-colors flex items-center gap-1.5 group"
                   >
-                    <span className="text-dalia-gold text-xs group-hover:translate-x-1 transition-transform">›</span>
+                    <span className="text-dalia-rose text-xs group-hover:translate-x-1 transition-transform">›</span>
                     <span>{svc.title}</span>
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios"
-                  className="text-dalia-gold hover:text-white text-xs font-semibold flex items-center gap-1 pt-1"
+                  className="text-dalia-rose hover:text-white text-xs font-semibold flex items-center gap-1 pt-1 transition-colors"
                 >
                   <span>Ver todas las 10 especialidades</span>
                   <ArrowRight size={12} />
@@ -93,40 +93,40 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/" className="text-dalia-slate-light hover:text-white transition-colors">
+                <Link href="/" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="/quienes-somos" className="text-dalia-slate-light hover:text-white transition-colors">
+                <Link href="/quienes-somos" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
                   Quiénes Somos & Filosofía
                 </Link>
               </li>
               <li>
-                <Link href="/equipo" className="text-dalia-slate-light hover:text-white transition-colors">
+                <Link href="/equipo" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
                   Nuestro Equipo Médico
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" className="text-dalia-slate-light hover:text-white transition-colors">
+                <Link href="/servicios" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
                   Tratamientos & Tecnología
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="text-dalia-slate-light hover:text-white transition-colors">
+                <Link href="/contacto" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
                   Contacto y Agendamiento
                 </Link>
               </li>
               <li>
-                <Link href="/contacto#faq" className="text-dalia-slate-light hover:text-white transition-colors">
+                <Link href="/contacto#faq" className="text-dalia-slate-light hover:text-dalia-rose transition-colors">
                   Preguntas Frecuentes (FAQs)
                 </Link>
               </li>
             </ul>
 
-            <div className="mt-6 p-4 rounded-xl bg-dalia-navy-dark border border-dalia-gold/20">
+            <div className="mt-6 p-4 rounded-xl bg-dalia-navy-dark border border-dalia-gold/20 hover:border-dalia-rose transition-colors">
               <p className="text-xs text-dalia-rose font-medium mb-1 flex items-center gap-1">
-                <Heart size={12} className="text-dalia-gold" />
+                <Heart size={12} className="text-dalia-rose" />
                 <span>Urgencias Dentales</span>
               </p>
               <p className="text-xs text-dalia-slate-light">
@@ -134,7 +134,7 @@ export default function Footer() {
               </p>
               <a
                 href="tel:+56987654321"
-                className="text-xs text-dalia-gold hover:underline font-semibold block mt-1"
+                className="text-xs text-dalia-rose hover:underline font-semibold block mt-1"
               >
                 Llamar Urgencias: +56 9 8765 4321
               </a>
@@ -182,9 +182,9 @@ export default function Footer() {
             © {new Date().getFullYear()} Dalia Clinic SpA. Todos los derechos reservados. Odontología Integral y Armonización Facial.
           </div>
           <div className="flex items-center gap-6">
-            <span>Privacidad de Datos Clínicos</span>
-            <span>Términos de Atención</span>
-            <span>Consentimiento Informado</span>
+            <span className="hover:text-dalia-rose transition-colors cursor-pointer">Privacidad de Datos Clínicos</span>
+            <span className="hover:text-dalia-rose transition-colors cursor-pointer">Términos de Atención</span>
+            <span className="hover:text-dalia-rose transition-colors cursor-pointer">Consentimiento Informado</span>
           </div>
         </div>
       </div>

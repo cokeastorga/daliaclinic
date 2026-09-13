@@ -27,7 +27,7 @@ export default function FaqAccordion() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      {/* Category Pills */}
+      {/* Category Pills - Hover in Rosa Empolvado */}
       <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
         {categories.map((cat) => (
           <button
@@ -35,8 +35,8 @@ export default function FaqAccordion() {
             onClick={() => setSelectedCategory(cat.id)}
             className={`px-5 py-2.5 rounded-full text-sm sm:text-base font-bold transition-all ${
               selectedCategory === cat.id
-                ? "bg-dalia-navy text-white shadow-md border-transparent scale-105"
-                : "bg-white text-dalia-graphite border border-dalia-warm hover:bg-dalia-warm-light"
+                ? "bg-dalia-navy text-white shadow-md border-transparent scale-105 ring-2 ring-dalia-rose"
+                : "bg-white text-dalia-graphite border border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
             }`}
           >
             {cat.label}
@@ -44,7 +44,7 @@ export default function FaqAccordion() {
         ))}
       </div>
 
-      {/* Accordion Items with Generous Font Sizes */}
+      {/* Accordion Items - Hover in Rosa Empolvado */}
       <div className="space-y-4">
         {filteredFaqs.map((faq) => {
           const isOpen = openId === faq.id;
@@ -53,8 +53,8 @@ export default function FaqAccordion() {
               key={faq.id}
               className={`rounded-3xl transition-all duration-200 border ${
                 isOpen
-                  ? "bg-white border-dalia-gold shadow-luxury"
-                  : "bg-white/85 border-dalia-warm/70 hover:border-dalia-gold/50"
+                  ? "bg-white border-dalia-rose shadow-luxury ring-1 ring-dalia-rose/50"
+                  : "bg-white/85 border-dalia-warm/70 hover:border-dalia-rose hover:bg-white"
               }`}
             >
               <button
@@ -66,7 +66,7 @@ export default function FaqAccordion() {
                   <HelpCircle
                     size={22}
                     className={`shrink-0 transition-colors ${
-                      isOpen ? "text-dalia-gold" : "text-dalia-slate"
+                      isOpen ? "text-dalia-rose-dark" : "text-dalia-slate"
                     }`}
                   />
                   <span>{faq.question}</span>
@@ -74,7 +74,7 @@ export default function FaqAccordion() {
                 <div
                   className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
                     isOpen
-                      ? "bg-dalia-rose/40 text-dalia-navy rotate-180"
+                      ? "bg-dalia-rose text-dalia-navy rotate-180"
                       : "bg-dalia-warm/50 text-dalia-graphite"
                   }`}
                 >

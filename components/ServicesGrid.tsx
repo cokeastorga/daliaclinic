@@ -69,7 +69,7 @@ export default function ServicesGrid({
 
   return (
     <div className="w-full">
-      {/* Category Filter Pills */}
+      {/* Category Filter Pills - Hover in Rosa Empolvado */}
       {showFilters && (
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
           {filterCategories.map((cat) => (
@@ -78,8 +78,8 @@ export default function ServicesGrid({
               onClick={() => setFilter(cat.id)}
               className={`px-6 py-3 rounded-full text-base font-bold transition-all duration-200 ${
                 filter === cat.id
-                  ? "bg-dalia-navy text-white shadow-lg ring-2 ring-dalia-gold/50 scale-105"
-                  : "bg-white text-dalia-graphite border border-dalia-warm hover:border-dalia-gold hover:text-dalia-navy shadow-xs"
+                  ? "bg-dalia-navy text-white shadow-lg ring-2 ring-dalia-rose scale-105"
+                  : "bg-white text-dalia-graphite border border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/40 hover:text-dalia-navy shadow-xs"
               }`}
             >
               {cat.label}
@@ -88,12 +88,12 @@ export default function ServicesGrid({
         </div>
       )}
 
-      {/* Grid of Didactic Visual Cards */}
+      {/* Grid of Didactic Visual Cards - Hover in Rosa Empolvado */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
         {displayedServices.map((service) => (
           <div
             key={service.id}
-            className="group bg-white rounded-3xl overflow-hidden border border-dalia-gold/30 shadow-luxury hover:shadow-luxury-hover hover:border-dalia-gold transition-all duration-300 flex flex-col justify-between"
+            className="group bg-white rounded-3xl overflow-hidden border border-dalia-gold/30 shadow-luxury hover:shadow-luxury-hover hover:border-dalia-rose transition-all duration-300 flex flex-col justify-between"
           >
             {/* Visual Card Header with Photo */}
             <div>
@@ -107,7 +107,7 @@ export default function ServicesGrid({
                 <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/85 via-dalia-navy/20 to-transparent" />
 
                 {/* Floating Tag */}
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-dalia-navy text-sm font-extrabold px-3.5 py-1.5 rounded-full border border-dalia-gold/40 shadow-sm flex items-center gap-2">
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-dalia-navy text-sm font-extrabold px-3.5 py-1.5 rounded-full border border-dalia-gold/40 shadow-sm flex items-center gap-2 group-hover:border-dalia-rose transition-colors">
                   <span className="text-dalia-gold">
                     {iconMap[service.icon] || <Sparkles size={16} />}
                   </span>
@@ -128,9 +128,9 @@ export default function ServicesGrid({
                 </div>
               </div>
 
-              {/* Card Body: Clear, Generous & Highly Legible Typography */}
+              {/* Card Body */}
               <div className="p-7 space-y-4">
-                <h3 className="font-serif text-2xl font-extrabold text-dalia-navy group-hover:text-dalia-gold-dark transition-colors">
+                <h3 className="font-serif text-2xl font-extrabold text-dalia-navy group-hover:text-dalia-navy transition-colors">
                   {service.title}
                 </h3>
 
@@ -154,16 +154,16 @@ export default function ServicesGrid({
             <div className="p-7 pt-0 border-t border-dalia-warm/50 mt-4 flex items-center justify-between gap-3">
               <Link
                 href={`/servicios/${service.slug}`}
-                className="text-sm sm:text-base font-extrabold text-dalia-navy hover:text-dalia-gold flex items-center gap-1.5 transition-colors group/link"
+                className="text-sm sm:text-base font-extrabold text-dalia-navy hover:text-dalia-rose-dark flex items-center gap-1.5 transition-colors group/link"
               >
                 <span>Ver detalles</span>
-                <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform text-dalia-rose-dark" />
               </Link>
 
               {onSelectService && (
                 <button
                   onClick={() => onSelectService(service.id)}
-                  className="btn-gold text-sm sm:text-base px-5 py-3 rounded-xl flex items-center gap-2 font-bold shadow-md"
+                  className="btn-gold text-sm sm:text-base px-5 py-3 rounded-xl flex items-center gap-2 font-bold shadow-md hover:ring-2 hover:ring-dalia-rose"
                 >
                   <Calendar size={16} />
                   <span>Agendar</span>

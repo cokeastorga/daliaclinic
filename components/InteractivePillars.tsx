@@ -97,8 +97,7 @@ export default function InteractivePillars() {
     <div className="w-full">
       {/* 
         Interactive Selector Tabs:
-        - Mobile: Smooth horizontal swipeable chip list (Zero cutoff, no truncation)
-        - Desktop / Tablet: Responsive 5-column grid with generous spacing
+        Hover in Rosa Empolvado (#EFD3D0)
       */}
       <div className="flex overflow-x-auto no-scrollbar sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
         {pillars.map((p, idx) => {
@@ -109,8 +108,8 @@ export default function InteractivePillars() {
               onClick={() => setActiveTab(idx)}
               className={`shrink-0 sm:shrink p-3 sm:p-4 rounded-2xl text-left border transition-all duration-300 flex items-center gap-3 ${
                 isActive
-                  ? "bg-dalia-navy text-white border-dalia-gold shadow-luxury ring-1 ring-dalia-gold/50"
-                  : "bg-white text-dalia-graphite border-dalia-warm hover:border-dalia-gold hover:bg-dalia-warm-light shadow-xs"
+                  ? "bg-dalia-navy text-white border-dalia-gold shadow-luxury ring-2 ring-dalia-rose/60"
+                  : "bg-white text-dalia-graphite border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/40 shadow-xs"
               }`}
             >
               <div
@@ -140,7 +139,7 @@ export default function InteractivePillars() {
       </div>
 
       {/* Main Interactive Showcase Card */}
-      <div className="bg-white rounded-3xl p-6 md:p-10 border border-dalia-gold/30 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300">
+      <div className="bg-white rounded-3xl p-6 md:p-10 border border-dalia-gold/30 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300 hover:border-dalia-rose transition-colors">
         {/* Left: Didactic Information */}
         <div className="lg:col-span-6 space-y-5">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dalia-rose/40 text-dalia-navy text-sm font-extrabold border border-dalia-rose">
@@ -173,7 +172,7 @@ export default function InteractivePillars() {
           <div className="pt-2">
             <Link
               href="/quienes-somos"
-              className="inline-flex items-center gap-2 text-base font-extrabold text-dalia-navy hover:text-dalia-gold transition-colors"
+              className="inline-flex items-center gap-2 text-base font-extrabold text-dalia-navy hover:text-dalia-rose-dark transition-colors"
             >
               <span>Conoce más sobre nuestra filosofía</span>
               <ArrowRight size={16} />

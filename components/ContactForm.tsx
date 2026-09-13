@@ -45,9 +45,9 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-white rounded-3xl p-8 md:p-12 border border-dalia-gold/40 shadow-luxury text-center space-y-5 animate-in fade-in">
-        <div className="w-18 h-18 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
-          <CheckCircle2 size={42} />
+      <div className="bg-white rounded-3xl p-8 md:p-12 border border-dalia-rose shadow-luxury text-center space-y-5 animate-in fade-in">
+        <div className="w-18 h-18 bg-dalia-rose/40 text-dalia-navy rounded-full flex items-center justify-center mx-auto shadow-inner">
+          <CheckCircle2 size={42} className="text-dalia-rose-dark" />
         </div>
         <h3 className="font-serif text-3xl font-bold text-dalia-navy">
           ¡Tu Cita Ha Sido Solicitada!
@@ -57,7 +57,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="btn-navy px-8 py-3.5 rounded-2xl text-base font-bold mt-4 inline-block shadow-md"
+          className="btn-navy px-8 py-3.5 rounded-2xl text-base font-bold mt-4 inline-block shadow-md hover:bg-dalia-rose hover:text-dalia-navy transition-colors"
         >
           Enviar otra consulta
         </button>
@@ -68,7 +68,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-3xl p-7 md:p-10 border border-dalia-gold/30 shadow-luxury space-y-5"
+      className="bg-white rounded-3xl p-7 md:p-10 border border-dalia-gold/30 shadow-luxury space-y-5 hover:border-dalia-rose transition-colors"
     >
       <div className="mb-2">
         <span className="text-xs sm:text-sm font-extrabold text-dalia-gold-dark uppercase tracking-wider">
@@ -95,7 +95,7 @@ export default function ContactForm() {
             placeholder="Ej. Francisca Domínguez"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all font-medium"
+            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all font-medium"
           />
         </div>
 
@@ -111,7 +111,7 @@ export default function ContactForm() {
             placeholder="+56 9 9876 5432"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all font-medium"
+            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all font-medium"
           />
         </div>
       </div>
@@ -129,7 +129,7 @@ export default function ContactForm() {
             placeholder="francisca@ejemplo.cl"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all font-medium"
+            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all font-medium"
           />
         </div>
 
@@ -142,7 +142,7 @@ export default function ContactForm() {
           <select
             value={formData.service}
             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all font-medium"
+            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all font-medium"
           >
             {servicesData.map((svc) => (
               <option key={svc.id} value={svc.id}>
@@ -165,7 +165,7 @@ export default function ContactForm() {
             value={formData.date}
             min={new Date().toISOString().split("T")[0]}
             onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all font-medium"
+            className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all font-medium"
           />
         </div>
 
@@ -182,7 +182,7 @@ export default function ContactForm() {
               className={`py-3 px-3 rounded-xl text-sm sm:text-base font-bold border transition-all ${
                 formData.timeSlot === "morning"
                   ? "bg-dalia-navy text-white border-dalia-navy shadow-sm"
-                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-warm-light"
+                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
               }`}
             >
               Mañana (08:30-13h)
@@ -193,7 +193,7 @@ export default function ContactForm() {
               className={`py-3 px-3 rounded-xl text-sm sm:text-base font-bold border transition-all ${
                 formData.timeSlot === "afternoon"
                   ? "bg-dalia-navy text-white border-dalia-navy shadow-sm"
-                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-warm-light"
+                  : "bg-[#FAF8F7] text-dalia-navy border-dalia-warm hover:bg-dalia-rose/40 hover:border-dalia-rose"
               }`}
             >
               Tarde (14:00-20h)
@@ -213,7 +213,7 @@ export default function ContactForm() {
           placeholder="Cuéntanos brevemente si tienes dolor, deseas cotizar un diseño de sonrisa, alineadores invisibles o armonización facial..."
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-gold/50 transition-all resize-none font-medium"
+          className="w-full px-4 py-3 rounded-xl border border-dalia-warm bg-[#FAF8F7] text-base text-dalia-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-dalia-rose transition-all resize-none font-medium"
         />
       </div>
 
@@ -221,7 +221,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full btn-gold py-4 rounded-2xl text-base sm:text-lg font-bold flex items-center justify-center gap-2.5 shadow-lg"
+          className="w-full btn-gold py-4 rounded-2xl text-base sm:text-lg font-bold flex items-center justify-center gap-2.5 shadow-lg hover:ring-4 hover:ring-dalia-rose/50"
         >
           {loading ? (
             <span>Enviando solicitud...</span>

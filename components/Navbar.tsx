@@ -54,7 +54,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
           <div className="flex items-center gap-6">
             <a
               href="tel:+56987654321"
-              className="flex items-center gap-1.5 hover:text-dalia-gold transition-colors font-medium"
+              className="flex items-center gap-1.5 hover:text-dalia-rose transition-colors font-medium"
             >
               <Phone size={13} className="text-dalia-gold" />
               <span>+56 9 8765 4321</span>
@@ -77,7 +77,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
               href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20quisiera%20solicitar%20información%20para%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-dalia-gold hover:text-white transition-colors font-bold text-xs"
+              className="flex items-center gap-1.5 text-dalia-rose hover:text-white transition-colors font-bold text-xs"
             >
               <MessageCircle size={13} />
               <span>WhatsApp Directo</span>
@@ -98,7 +98,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
           {/* Logo */}
           <Logo variant="horizontal" size={isScrolled ? "sm" : "md"} />
 
-          {/* Desktop Navigation - Sleek single-line typography */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
             {navLinks.map((link) => {
               const isActive =
@@ -118,8 +118,8 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                       href={link.href}
                       className={`px-3 py-2 rounded-xl text-sm font-semibold tracking-wide flex items-center gap-1 transition-all whitespace-nowrap ${
                         isActive
-                          ? "text-dalia-navy bg-dalia-rose/40 font-bold"
-                          : "text-dalia-navy hover:text-dalia-gold-dark hover:bg-dalia-warm/50"
+                          ? "text-dalia-navy bg-dalia-rose font-bold"
+                          : "text-dalia-navy hover:bg-dalia-rose/50 hover:text-dalia-navy"
                       }`}
                     >
                       <span>{link.name}</span>
@@ -140,7 +140,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                           </span>
                           <Link
                             href="/servicios"
-                            className="text-xs font-bold text-dalia-navy hover:text-dalia-gold"
+                            className="text-xs font-bold text-dalia-navy hover:text-dalia-rose-dark"
                           >
                             Ver catálogo completo →
                           </Link>
@@ -149,13 +149,13 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                           <Link
                             key={svc.id}
                             href={`/servicios/${svc.slug}`}
-                            className="p-2.5 rounded-2xl hover:bg-dalia-warm-light transition-colors group flex items-start gap-2.5"
+                            className="p-2.5 rounded-2xl hover:bg-dalia-rose/40 hover:border-dalia-rose/60 border border-transparent transition-all group flex items-start gap-2.5"
                           >
-                            <div className="w-8 h-8 rounded-xl bg-dalia-rose/40 flex items-center justify-center text-dalia-navy shrink-0 group-hover:bg-dalia-navy group-hover:text-dalia-gold transition-colors">
+                            <div className="w-8 h-8 rounded-xl bg-dalia-rose/40 flex items-center justify-center text-dalia-navy shrink-0 group-hover:bg-dalia-navy group-hover:text-dalia-rose transition-colors">
                               <Sparkles size={16} />
                             </div>
                             <div>
-                              <p className="text-xs font-bold text-dalia-navy group-hover:text-dalia-gold-dark transition-colors">
+                              <p className="text-xs font-bold text-dalia-navy group-hover:text-dalia-navy transition-colors">
                                 {svc.title}
                               </p>
                               <p className="text-[11px] text-dalia-graphite line-clamp-1 font-medium">
@@ -176,8 +176,8 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                   href={link.href}
                   className={`px-3 py-2 rounded-xl text-sm font-semibold tracking-wide transition-all whitespace-nowrap ${
                     isActive
-                      ? "text-dalia-navy bg-dalia-rose/40 font-bold"
-                      : "text-dalia-navy hover:text-dalia-gold-dark hover:bg-dalia-warm/50"
+                      ? "text-dalia-navy bg-dalia-rose font-bold"
+                      : "text-dalia-navy hover:bg-dalia-rose/50 hover:text-dalia-navy"
                   }`}
                 >
                   {link.name}
@@ -192,15 +192,15 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
               href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-xl border border-dalia-gold/40 text-dalia-navy hover:bg-dalia-rose/25 transition-all"
+              className="p-2 rounded-xl border border-dalia-gold/40 text-dalia-navy hover:bg-dalia-rose hover:border-dalia-rose transition-all"
               title="Escríbenos por WhatsApp"
             >
-              <MessageCircle size={18} className="text-dalia-gold" />
+              <MessageCircle size={18} className="text-dalia-navy" />
             </a>
 
             <button
               onClick={onOpenAppointment}
-              className="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 shadow-sm whitespace-nowrap"
+              className="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 shadow-sm whitespace-nowrap hover:ring-2 hover:ring-dalia-rose"
             >
               <Calendar size={15} />
               <span>Agendar Cita</span>
@@ -211,14 +211,14 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
           <div className="flex lg:hidden items-center gap-1.5 shrink-0">
             <button
               onClick={onOpenAppointment}
-              className="btn-gold px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm whitespace-nowrap"
+              className="btn-gold px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm whitespace-nowrap hover:bg-dalia-rose"
             >
               <Calendar size={13} />
               <span>Cita</span>
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 rounded-xl text-dalia-navy hover:bg-dalia-warm/60 transition-colors"
+              className="p-1.5 rounded-xl text-dalia-navy hover:bg-dalia-rose/50 transition-colors"
               aria-label="Abrir menú de navegación"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -234,7 +234,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="px-4 py-2.5 rounded-xl text-base font-bold text-dalia-navy hover:bg-dalia-rose/25"
+                  className="px-4 py-2.5 rounded-xl text-base font-bold text-dalia-navy hover:bg-dalia-rose/60 transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -247,7 +247,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                   setMobileMenuOpen(false);
                   if (onOpenAppointment) onOpenAppointment();
                 }}
-                className="w-full btn-gold py-3 rounded-2xl text-center font-bold text-sm flex items-center justify-center gap-2 shadow-md"
+                className="w-full btn-gold py-3 rounded-2xl text-center font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:ring-2 hover:ring-dalia-rose"
               >
                 <Calendar size={16} />
                 <span>Agendar Cita de Valoración</span>
@@ -256,7 +256,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                 href="https://wa.me/56987654321?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full btn-navy py-3 rounded-2xl text-center font-bold text-sm flex items-center justify-center gap-2 shadow-md"
+                className="w-full btn-navy py-3 rounded-2xl text-center font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:bg-dalia-rose hover:text-dalia-navy transition-all"
               >
                 <MessageCircle size={16} />
                 <span>WhatsApp Directo (+56 9 8765 4321)</span>
