@@ -25,48 +25,30 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <HeroSection />
 
-      {/* 2. Especialidades Clínicas: Tarjetas Visuales con Fotografía */}
+      {/* 2. Tratamientos */}
       <section id="servicios" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-          <div>
-            <span className="text-xs uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
-              Tratamientos Integrales en Quilicura
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
-              Especialidades y Servicios
-            </h2>
-            <p className="text-lg md:text-xl text-dalia-graphite mt-2 max-w-2xl leading-relaxed">
-              Explora nuestras especialidades. Cada tarjeta cuenta con información directa y acceso al detalle clínico completo.
-            </p>
-          </div>
-          <button
-            onClick={() => openAppointment()}
-            className="btn-gold px-7 py-4 rounded-2xl text-base sm:text-lg font-bold flex items-center gap-2.5 self-start md:self-auto shrink-0 shadow-lg hover:ring-4 hover:ring-dalia-rose/50"
-          >
-            <Calendar size={18} />
-            <span>Agendar Cita con Especialista</span>
-          </button>
+        <div className="text-center mb-10">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
+            Tratamientos
+          </h2>
         </div>
 
-        {/* Cuadrícula Didáctica con Imágenes */}
+        {/* Cuadrícula con Switcher en Dos Áreas */}
         <ServicesGrid onSelectService={(serviceId) => openAppointment(serviceId)} />
       </section>
 
-      {/* 3. Los 5 Pilares Dalia: Tarjetas Didácticas e Interactivas (Elegancia Natural) */}
+      {/* 3. Nuestra Identidad & Propósito: La esencia de Dalia Clinic */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-sm sm:text-base uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-2">
+          <span className="text-base sm:text-lg md:text-xl uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-3">
             Nuestra Identidad & Propósito
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
-            La Experiencia Dalia Clinic
+            La esencia de Dalia Clinic
           </h2>
-          <p className="text-lg md:text-xl text-dalia-graphite mt-3 leading-relaxed">
-            Selecciona cada pilar para descubrir cómo combinamos ciencia, arte y exclusividad en cada tratamiento.
-          </p>
         </div>
 
-        {/* Componente Interactivo con Fotos y Pestañas */}
+        {/* Componente Interactivo de Identidad y Pilares */}
         <InteractivePillars />
       </section>
 

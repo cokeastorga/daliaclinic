@@ -19,7 +19,7 @@ export default function AppointmentModal({
     name: "",
     phone: "",
     email: "",
-    service: preselectedService || "estetica-oral",
+    service: preselectedService || "evaluacion-prevencion",
     date: "",
     timeSlot: "morning",
     notes: "",

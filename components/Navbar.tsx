@@ -135,7 +135,7 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
 
                     {/* Dropdown Menu */}
                     {servicesDropdownOpen && (
-                      <div className="absolute top-full left-0 w-[580px] bg-white rounded-3xl shadow-luxury border border-dalia-gold/30 p-5 mt-1 grid grid-cols-2 gap-2.5 animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="absolute top-full left-0 w-[600px] max-h-[480px] overflow-y-auto bg-white rounded-3xl shadow-luxury border border-dalia-gold/30 p-5 mt-1 grid grid-cols-2 gap-2.5 animate-in fade-in slide-in-from-top-2 duration-200">
                         <div className="col-span-2 pb-2.5 mb-1 border-b border-dalia-warm/60 flex justify-between items-center">
                           <span className="text-xs uppercase tracking-wider font-extrabold text-dalia-gold-dark">
                             Especialidades Odontológicas y Faciales

@@ -78,7 +78,7 @@ export default function Footer() {
                   href="/servicios"
                   className="text-dalia-rose hover:text-white text-xs font-semibold flex items-center gap-1 pt-1 transition-colors"
                 >
-                  <span>Ver todas las 10 especialidades</span>
+                  <span>Ver todos los tratamientos</span>
                   <ArrowRight size={12} />
                 </Link>
               </li>

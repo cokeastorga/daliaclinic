@@ -9,7 +9,7 @@ export default function ContactForm() {
     name: "",
     phone: "",
     email: "",
-    service: "estetica-oral",
+    service: "evaluacion-prevencion",
     date: "",
     timeSlot: "morning",
     message: "",

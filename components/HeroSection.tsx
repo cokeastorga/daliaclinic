@@ -41,22 +41,22 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl md:text-2xl text-dalia-graphite leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              En <strong>Dalia Clinic</strong> transformamos tu sonrisa y realzamos las proporciones de tu rostro. Tecnología digital 3D, microcirugía sin dolor y especialistas dedicados a tu bienestar.
+              En <strong>Dalia Clinic</strong> cuidamos tu salud oral y realzamos los rasgos naturales de tu rostro, a través de una atención integral y personalizada, pensada para tu bienestar.
             </p>
 
             {/* Key Value Didactic Bullets */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 text-left">
               <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
-                <CheckCircle2 size={22} className="text-dalia-gold shrink-0" />
-                <span className="text-base font-bold text-dalia-navy">Escáner 3D Digital</span>
+                <CheckCircle2 size={22} className="text-dalia-rose-dark shrink-0" />
+                <span className="text-base font-bold text-dalia-navy">Atención personalizada y cercana</span>
               </div>
               <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
-                <CheckCircle2 size={22} className="text-dalia-gold shrink-0" />
-                <span className="text-base font-bold text-dalia-navy">Protocolo Cero Dolor</span>
+                <CheckCircle2 size={22} className="text-dalia-rose-dark shrink-0" />
+                <span className="text-base font-bold text-dalia-navy">Odontología integral</span>
               </div>
               <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
-                <CheckCircle2 size={22} className="text-dalia-gold shrink-0" />
-                <span className="text-base font-bold text-dalia-navy">Especialistas Colegiados</span>
+                <CheckCircle2 size={22} className="text-dalia-rose-dark shrink-0" />
+                <span className="text-base font-bold text-dalia-navy">Profesionales calificados</span>
               </div>
             </div>
 
@@ -64,16 +64,16 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
               <button
                 onClick={() => openAppointment()}
-                className="w-full sm:w-auto btn-gold px-9 py-4.5 rounded-2xl text-lg font-bold flex items-center justify-center gap-3 shadow-xl group hover:ring-4 hover:ring-dalia-rose/50"
+                className="w-full sm:w-auto bg-dalia-rose hover:bg-dalia-rose-dark text-dalia-navy px-9 py-4.5 rounded-2xl text-lg font-bold flex items-center justify-center gap-3 shadow-xl transition-all border border-dalia-rose-dark/40 hover:shadow-2xl hover:scale-[1.02] group"
               >
-                <Calendar size={20} />
-                <span>Agendar Cita de Valoración</span>
-                <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform" />
+                <Calendar size={20} className="text-dalia-navy" />
+                <span>Agenda tu evaluación</span>
+                <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform text-dalia-navy" />
               </button>
 
               <Link
-                href="/servicios"
-                className="w-full sm:w-auto px-8 py-4.5 rounded-2xl text-lg font-bold text-dalia-navy bg-white border-2 border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/40 transition-all text-center shadow-sm"
+                href="#servicios"
+                className="w-full sm:w-auto px-8 py-4.5 rounded-2xl text-lg font-bold text-dalia-navy bg-white border-2 border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/30 transition-all text-center shadow-sm"
               >
                 Explorar Tratamientos
               </Link>

@@ -3,89 +3,44 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, Microscope, Heart, ShieldCheck, Award, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Sparkles, Smile, HeartHandshake, ArrowRight, CheckCircle2 } from "lucide-react";
 
 interface Pillar {
   id: string;
   title: string;
   subtitle: string;
   description: string;
-  tag: string;
   image: string;
-  points: string[];
   icon: React.ReactNode;
 }
 
 const pillars: Pillar[] = [
   {
-    id: "elegancia",
-    title: "Elegancia Natural",
-    subtitle: "Inspirada en la Proporción Áurea",
-    tag: "Estética Facial",
-    description: "Huimos de sonrisas artificiales o sobrecargadas. Diseñamos cada pieza dental respetando la curvatura de tus labios, tono de piel y rasgos únicos para un resultado armónico.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=900",
-    points: [
-      "Carillas cerámicas ultradelgadas con textura biológica",
-      "Simulación previa de tu nueva sonrisa en tu rostro",
-      "Resultados que realzan tu belleza sin verse falsos"
-    ],
-    icon: <Sparkles size={22} />,
-  },
-  {
-    id: "ciencia",
-    title: "Ciencia y Rigor",
-    subtitle: "Diagnóstico Digital Microscópico",
-    tag: "Diagnóstico 3D",
-    description: "Sustituimos las conjeturas por imágenes milimétricas. Toda nuestra planificación se realiza mediante escaneo intraoral 3D y tomografía Cone Beam de última generación.",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=900",
-    points: [
-      "Escaneo digital 3D en 2 minutos sin pastas molestas",
-      "Magnificación óptica con microscopio clínico",
-      "Cirugía guiada por ordenador de máxima precisión"
-    ],
-    icon: <Microscope size={22} />,
-  },
-  {
     id: "armonia",
-    title: "Belleza y Armonía",
-    subtitle: "Odontología + Armonización Facial",
-    tag: "Enfoque Integral",
-    description: "Una sonrisa espectacular requiere el marco facial perfecto. Integramos perfilado labial con ácido hialurónico y toxina botulínica para lograr un equilibrio orofacial sublime.",
-    image: "https://images.unsplash.com/photo-1512290900672-1f02307df0ea?auto=format&fit=crop&q=80&w=900",
-    points: [
-      "Perfilado e hidratación labial con productos premium",
-      "Atenuación suave de líneas de expresión dinámicas",
-      "Médicos y cirujanos dentistas especializados"
-    ],
-    icon: <Heart size={22} />,
+    title: "ARMONÍA",
+    subtitle: "Todo está conectado",
+    description:
+      "La sonrisa forma parte del rostro y ambos influyen en nuestra expresión. Por eso trabajamos desde una mirada integral, buscando equilibrio entre salud, función y estética.",
+    image: "/pillars/armonia.png",
+    icon: <Sparkles size={24} />,
   },
   {
-    id: "confianza",
-    title: "Cero Dolor",
-    subtitle: "Atención Empática Sin Miedos",
-    tag: "Confort Total",
-    description: "Transformamos la consulta dental en una experiencia placentera. Anestesia computarizada guiada, aromaterapia relajante y opción de sedación consciente.",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=900",
-    points: [
-      "Anestesia digital indolora sin pinchazos bruscos",
-      "Sedación consciente asistida por médico anestesiólogo",
-      "Atención cercana, cálida y sin prisas médicas"
-    ],
-    icon: <ShieldCheck size={22} />,
+    id: "naturalidad",
+    title: "NATURALIDAD",
+    subtitle: "Respetar lo que te hace único",
+    description:
+      "Cada sonrisa y cada rostro tienen características propias. Nuestros tratamientos buscan mejorarlas y conservar su identidad, evitando resultados estandarizados.",
+    image: "/pillars/naturalidad.png",
+    icon: <Smile size={24} />,
   },
   {
-    id: "lujo",
-    title: "Exclusividad",
-    subtitle: "Tu Espacio Privado en Quilicura",
-    tag: "Sede Boutique",
-    description: "Instalaciones diseñadas para brindarte tranquilidad absoluta desde el primer instante, con boxes individuales esterilizados y atención de alto nivel concierge.",
-    image: "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=900",
-    points: [
-      "Boxes clínicos privados de máxima bioseguridad",
-      "Horarios continuados y estacionamiento subterráneo",
-      "Atención personalizada con seguimiento post-tratamiento"
-    ],
-    icon: <Award size={22} />,
+    id: "cuidado",
+    title: "CUIDADO",
+    subtitle: "Una experiencia centrada en ti",
+    description:
+      "Creemos que un buen resultado también depende de cómo se vive el proceso. Escuchar, explicar y acompañar forman parte de nuestra manera de atender.",
+    image: "/pillars/cuidado.png",
+    icon: <HeartHandshake size={24} />,
   },
 ];
 
@@ -94,43 +49,86 @@ export default function InteractivePillars() {
   const current = pillars[activeTab];
 
   return (
-    <div className="w-full">
-      {/* 
-        Interactive Selector Tabs:
-        Selected State: Rosa Empolvado (#EFD3D0) con icono en contraste e íconos activos
-      */}
-      <div className="flex overflow-x-auto no-scrollbar sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8 pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+    <div className="w-full space-y-12">
+      {/* Intro Box: Identidad Dalia with Flower Visual */}
+      <div className="bg-gradient-to-br from-white via-[#FCFAF8] to-dalia-rose-light/40 rounded-3xl p-8 sm:p-12 border border-dalia-gold/30 shadow-luxury overflow-hidden relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Left: Introductory Text */}
+          <div className="lg:col-span-8 space-y-5 text-left z-10">
+            <p className="text-base sm:text-lg md:text-xl text-dalia-graphite leading-relaxed font-normal">
+              La dalia inspira nuestra identidad por la simetría, disposición y proporción de sus
+              pétalos, que representan una belleza que nace de la naturalidad y el equilibrio, no de
+              la perfección.
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-dalia-graphite leading-relaxed font-normal">
+              En <strong className="text-dalia-navy font-bold">Dalia Clinic</strong> llevamos esa
+              misma mirada a la odontología y la armonización facial, integrando salud, función y
+              estética en el cuidado de la sonrisa y el rostro.
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-dalia-navy font-semibold leading-relaxed">
+              Cada tratamiento es parte de algo más amplio: cuidar, acompañar y contribuir al
+              bienestar y la confianza de cada paciente.
+            </p>
+          </div>
+
+          {/* Right: Authentic Dalia Flower Image */}
+          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+            <div className="relative w-56 h-72 sm:w-64 sm:h-80 rounded-3xl overflow-hidden border-2 border-dalia-gold/40 shadow-md">
+              <Image
+                src="/pillars/identidad-flor.png"
+                alt="Flor Dalia - Identidad Dalia Clinic"
+                fill
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/30 via-transparent to-transparent" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pilares Selector Header */}
+      <div className="text-center pt-2">
+        <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-dalia-navy tracking-tight">
+          Pilares de Dalia Clinic
+        </h3>
+        <p className="text-sm sm:text-base text-dalia-graphite mt-1">
+          Descubre los tres principios esenciales que guían cada uno de nuestros tratamientos
+        </p>
+      </div>
+
+      {/* 3 Interactive Buttons: ARMONÍA · NATURALIDAD · CUIDADO */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
         {pillars.map((p, idx) => {
           const isActive = idx === activeTab;
           return (
             <button
               key={p.id}
               onClick={() => setActiveTab(idx)}
-              className={`shrink-0 sm:shrink p-3.5 sm:p-4 rounded-2xl text-left border transition-all duration-300 flex items-center gap-3 ${
+              className={`p-5 rounded-2xl text-center border transition-all duration-300 flex flex-col items-center justify-center gap-3 ${
                 isActive
-                  ? "bg-dalia-rose text-dalia-navy border-dalia-rose-dark shadow-luxury ring-2 ring-dalia-rose/80 scale-[1.02]"
-                  : "bg-white text-dalia-graphite border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/40 shadow-xs"
+                  ? "bg-dalia-rose text-dalia-navy border-2 border-dalia-rose-dark shadow-luxury ring-2 ring-dalia-rose/80 scale-[1.03]"
+                  : "bg-white text-dalia-graphite border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/30 shadow-xs"
               }`}
             >
               <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${
                   isActive
-                    ? "bg-white text-dalia-gold shadow-sm border border-dalia-gold/30"
-                    : "bg-white text-dalia-gold-dark border border-dalia-warm/80 shadow-xs"
+                    ? "bg-white text-dalia-gold-dark shadow-sm border border-dalia-gold/30"
+                    : "bg-dalia-warm/60 text-dalia-navy"
                 }`}
               >
                 {p.icon}
               </div>
-              <div className="min-w-0">
-                <p className="font-sans text-sm sm:text-base font-extrabold whitespace-nowrap leading-tight text-dalia-navy">
+              <div>
+                <p className="font-sans text-lg sm:text-xl font-extrabold tracking-wide text-dalia-navy">
                   {p.title}
                 </p>
                 <p
-                  className={`text-xs font-bold whitespace-nowrap mt-0.5 ${
-                    isActive ? "text-dalia-navy/80" : "text-dalia-graphite-light"
+                  className={`text-xs sm:text-sm font-semibold mt-0.5 ${
+                    isActive ? "text-dalia-navy/85" : "text-dalia-graphite"
                   }`}
                 >
-                  {p.tag}
+                  {p.subtitle}
                 </p>
               </div>
             </button>
@@ -138,20 +136,20 @@ export default function InteractivePillars() {
         })}
       </div>
 
-      {/* Main Interactive Showcase Card */}
-      <div className="bg-white rounded-3xl p-6 md:p-10 border border-dalia-gold/30 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300 hover:border-dalia-rose transition-colors">
-        {/* Left: Didactic Information */}
-        <div className="lg:col-span-6 space-y-5">
+      {/* Interactive Detail Showcase Card */}
+      <div className="bg-white rounded-3xl p-6 sm:p-10 border border-dalia-gold/30 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300 hover:border-dalia-rose transition-colors">
+        {/* Left Information */}
+        <div className="lg:col-span-6 space-y-5 text-left">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dalia-rose text-dalia-navy text-sm font-extrabold border border-dalia-rose-dark/50">
             <Sparkles size={16} className="text-dalia-navy" />
-            <span>{current.tag}</span>
+            <span>Pilar Esencial</span>
           </div>
 
           <div>
-            <h3 className="font-serif text-3xl sm:text-4xl font-extrabold text-dalia-navy leading-tight">
+            <h4 className="font-serif text-3xl sm:text-4xl font-extrabold text-dalia-navy leading-tight">
               {current.title}
-            </h3>
-            <p className="text-base sm:text-lg font-bold text-dalia-navy/80 mt-1">
+            </h4>
+            <p className="text-base sm:text-lg font-bold text-dalia-gold-dark mt-1">
               {current.subtitle}
             </p>
           </div>
@@ -160,27 +158,21 @@ export default function InteractivePillars() {
             {current.description}
           </p>
 
-          <div className="space-y-2.5 pt-3 border-t border-dalia-warm/60">
-            {current.points.map((pt, i) => (
-              <div key={i} className="flex items-center gap-2.5 text-base font-bold text-dalia-navy">
-                <CheckCircle2 size={18} className="text-dalia-rose-dark shrink-0" />
-                <span>{pt}</span>
-              </div>
-            ))}
-          </div>
-
           <div className="pt-2">
             <Link
               href="/quienes-somos"
-              className="inline-flex items-center gap-2 text-base font-extrabold text-dalia-navy hover:text-dalia-rose-dark transition-colors"
+              className="inline-flex items-center gap-2 text-base font-extrabold text-dalia-navy hover:text-dalia-rose-dark transition-colors group"
             >
               <span>Conoce más sobre nuestra filosofía</span>
-              <ArrowRight size={16} />
+              <ArrowRight
+                size={16}
+                className="group-hover:translate-x-1.5 transition-transform text-dalia-rose-dark"
+              />
             </Link>
           </div>
         </div>
 
-        {/* Right: Rich Photography Visual */}
+        {/* Right Photography Visual */}
         <div className="lg:col-span-6">
           <div className="relative h-72 sm:h-[380px] w-full rounded-2xl overflow-hidden border-2 border-dalia-gold/40 shadow-md">
             <Image
@@ -196,7 +188,7 @@ export default function InteractivePillars() {
                 Compromiso Dalia Clinic
               </p>
               <p className="text-xs sm:text-sm text-dalia-graphite mt-0.5 font-medium leading-normal">
-                Cada procedimiento es planificado con dedicación exclusiva y atención personalizada en Quilicura.
+                {current.subtitle} — Atención integral y personalizada en Quilicura.
               </p>
             </div>
           </div>

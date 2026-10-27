@@ -127,9 +127,11 @@ export default function ServiceDetailPage({ params }: PageProps) {
                 <div className="w-14 h-14 rounded-2xl bg-dalia-rose/30 text-dalia-navy flex items-center justify-center">
                   {iconMap[service.icon] || <Sparkles size={28} />}
                 </div>
-                <span className="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full bg-dalia-warm-light text-dalia-navy border border-dalia-gold/30">
-                  {service.tag}
-                </span>
+                {service.tag && (
+                  <span className="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full bg-dalia-warm-light text-dalia-navy border border-dalia-gold/30">
+                    {service.tag}
+                  </span>
+                )}
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-dalia-navy tracking-tight">
