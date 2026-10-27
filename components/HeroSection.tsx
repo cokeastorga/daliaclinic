@@ -10,7 +10,7 @@ export default function HeroSection() {
   const { openAppointment } = useAppointmentModal();
 
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 md:pt-14 md:pb-24 bg-gradient-to-b from-[#FAF8F7] via-dalia-rose-light/30 to-[#FAF8F7]">
+    <section className="relative overflow-hidden pt-8 pb-8 md:pt-14 md:pb-12 bg-gradient-to-b from-[#FAF8F7] via-dalia-rose-light/30 to-[#FAF8F7]">
       {/* Background Decorative Ambient Blobs */}
       <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-dalia-rose/30 rounded-full blur-3xl -z-10 pointer-events-none" />
       <div className="absolute top-1/3 left-0 w-[450px] h-[450px] bg-dalia-gold/20 rounded-full blur-3xl -z-10 pointer-events-none" />
@@ -44,36 +44,42 @@ export default function HeroSection() {
               En <strong>Dalia Clinic</strong> cuidamos tu salud oral y realzamos los rasgos naturales de tu rostro, a través de una atención integral y personalizada, pensada para tu bienestar.
             </p>
 
-            {/* Key Value Didactic Bullets */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 text-left">
-              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
-                <CheckCircle2 size={22} className="text-dalia-rose-dark shrink-0" />
-                <span className="text-base font-bold text-dalia-navy">Atención personalizada y cercana</span>
+            {/* Key Value Didactic Bullets - Centered & Balanced */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1">
+              <div className="flex items-center justify-center text-center gap-2.5 bg-white p-4 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
+                <CheckCircle2 size={20} className="text-dalia-rose-dark shrink-0" />
+                <span className="text-sm sm:text-base font-bold text-dalia-navy text-center">
+                  Atención personalizada y cercana
+                </span>
               </div>
-              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
-                <CheckCircle2 size={22} className="text-dalia-rose-dark shrink-0" />
-                <span className="text-base font-bold text-dalia-navy">Odontología integral</span>
+              <div className="flex items-center justify-center text-center gap-2.5 bg-white p-4 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
+                <CheckCircle2 size={20} className="text-dalia-rose-dark shrink-0" />
+                <span className="text-sm sm:text-base font-bold text-dalia-navy text-center">
+                  Odontología integral
+                </span>
               </div>
-              <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
-                <CheckCircle2 size={22} className="text-dalia-rose-dark shrink-0" />
-                <span className="text-base font-bold text-dalia-navy">Profesionales calificados</span>
+              <div className="flex items-center justify-center text-center gap-2.5 bg-white p-4 rounded-2xl border border-dalia-gold/30 shadow-sm hover:border-dalia-rose hover:bg-dalia-rose/20 transition-all">
+                <CheckCircle2 size={20} className="text-dalia-rose-dark shrink-0" />
+                <span className="text-sm sm:text-base font-bold text-dalia-navy text-center">
+                  Profesionales calificados
+                </span>
               </div>
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons - Comfortable Spacing & Padding */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
               <button
                 onClick={() => openAppointment()}
-                className="w-full sm:w-auto bg-dalia-rose hover:bg-dalia-rose-dark text-dalia-navy px-9 py-4.5 rounded-2xl text-lg font-bold flex items-center justify-center gap-3 shadow-xl transition-all border border-dalia-rose-dark/40 hover:shadow-2xl hover:scale-[1.02] group"
+                className="w-full sm:w-auto bg-dalia-rose hover:bg-dalia-rose-dark text-dalia-navy px-8 sm:px-10 py-4 rounded-2xl text-base sm:text-lg font-extrabold flex items-center justify-center gap-3 shadow-xl transition-all border border-dalia-rose-dark/40 hover:shadow-2xl hover:scale-[1.02] whitespace-nowrap group"
               >
-                <Calendar size={20} className="text-dalia-navy" />
+                <Calendar size={20} className="text-dalia-navy shrink-0" />
                 <span>Agenda tu evaluación</span>
-                <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform text-dalia-navy" />
+                <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform text-dalia-navy shrink-0" />
               </button>
 
               <Link
                 href="#servicios"
-                className="w-full sm:w-auto px-8 py-4.5 rounded-2xl text-lg font-bold text-dalia-navy bg-white border-2 border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/30 transition-all text-center shadow-sm"
+                className="w-full sm:w-auto px-8 sm:px-10 py-4 rounded-2xl text-base sm:text-lg font-bold text-dalia-navy bg-white border-2 border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/30 transition-all text-center shadow-sm whitespace-nowrap"
               >
                 Explorar Tratamientos
               </Link>

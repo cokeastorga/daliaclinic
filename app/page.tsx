@@ -21,13 +21,13 @@ export default function HomePage() {
   const { openAppointment } = useAppointmentModal();
 
   return (
-    <div className="space-y-20 md:space-y-28">
+    <div className="space-y-16 md:space-y-24">
       {/* 1. Hero Section */}
       <HeroSection />
 
       {/* 2. Tratamientos */}
-      <section id="servicios" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
+      <section id="servicios" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 !mt-4 md:!mt-6 scroll-mt-24">
+        <div className="text-center mb-6 md:mb-8">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
             Tratamientos
           </h2>
