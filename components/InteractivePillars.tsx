@@ -45,14 +45,14 @@ export default function InteractivePillars() {
           ───────────────────────────────────────────── */}
       <div className="relative overflow-hidden rounded-3xl bg-[#FAF7F4] border border-dalia-gold/20 shadow-sm px-8 sm:px-14 py-10 sm:py-14 mb-3">
         {/* Decorative Dalia Flower (top-right) */}
-        <div className="absolute top-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 pointer-events-none select-none opacity-90">
-          <Image
-            src="/pillars/identidad-flor.png"
-            alt="Flor Dalia decorativa"
-            fill
-            className="object-cover object-left-bottom"
-          />
-        </div>
+        <div className="absolute top-0 right-0 h-full w-1/2 sm:w-2/5 pointer-events-none select-none mix-blend-multiply opacity-90 [mask-image:linear-gradient(to_left,black_60%,transparent_100%)]">
+  <Image
+    src="/pillars/identidad-flor.png"
+    alt="Flor Dalia decorativa"
+    fill
+    className="object-cover object-right"
+  />
+</div>
 
         {/* Header text block */}
         <div className="relative z-10 text-center max-w-2xl mx-auto">
@@ -70,24 +70,26 @@ export default function InteractivePillars() {
         </div>
 
         {/* 3 Circular Icon Badges */}
-        <div className="relative z-10 mt-10 flex items-end justify-center gap-6 sm:gap-12 md:gap-16">
-          {pillars.map((p) => (
-            <div key={p.id} className="flex flex-col items-center gap-2.5">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 relative rounded-full overflow-visible">
-                <Image
-                  src={p.icon}
-                  alt={p.iconAlt}
-                  width={80}
-                  height={80}
-                  className="object-contain drop-shadow-md"
-                />
-              </div>
-              <span className="text-[10px] sm:text-xs tracking-[0.25em] font-extrabold text-dalia-gold-dark uppercase">
-                {p.label}
-              </span>
-            </div>
-          ))}
-        </div>
+	        <div className="relative z-10 mt-10 flex items-end justify-center gap-6 sm:gap-12 md:gap-16">
+ 		 {pillars.map((p) => (
+	   	 <div key={p.id} className="flex flex-col items-center gap-2.5">
+   		   {/* 1. Cambiar overflow-visible por overflow-hidden */}
+	    	  <div className="w-16 h-16 sm:w-20 sm:h-20 relative rounded-full overflow-hidden">
+        	<Image
+	          src={p.icon}
+        	  alt={p.iconAlt}
+	          width={80}
+          	height={80}
+          	/* 2. Agregar rounded-full y cambiar object-contain por object-cover */
+        	  className="rounded-full object-cover drop-shadow-md"
+ 	       />
+    	  	</div>
+  	    <span className="text-[10px] sm:text-xs tracking-[0.25em] font-extrabold text-dalia-gold-dark uppercase">
+  	     {p.label}
+   	   </span>
+  	  </div>
+	  ))}
+	</div>
       </div>
 
       {/* ─────────────────────────────────────────────
