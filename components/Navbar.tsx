@@ -1,10 +1,20 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
-import { Phone, Clock, MapPin, Calendar, Menu, X, ChevronDown, Sparkles, MessageCircle } from "lucide-react";
+import {
+  Phone,
+  Clock,
+  MapPin,
+  Calendar,
+  Menu,
+  X,
+  ChevronDown,
+  Sparkles,
+  MessageCircle,
+} from "lucide-react";
 import { servicesData } from "@/data/services";
 
 interface NavbarProps {
@@ -14,7 +24,9 @@ interface NavbarProps {
 export default function Navbar({ onOpenAppointment }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -29,10 +41,26 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close dropdown on route change
   useEffect(() => {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
+    setMobileServicesOpen(false);
   }, [pathname]);
+
+  // Click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setServicesDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const navLinks = [
     { name: "Inicio", href: "/" },
@@ -89,14 +117,14 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
 
       {/* Main Sticky Navbar */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#FAF8F7]/95 backdrop-blur-md shadow-md py-2.5 border-b border-dalia-gold/30"
-            : "bg-[#FAF8F7]/90 backdrop-blur-sm py-3.5 border-b border-dalia-warm/80"
+            ? "bg-[#FAF8F7]/95 backdrop-blur-md shadow-md py-2 border-b border-dalia-gold/20"
+            : "bg-[#FAF8F7] py-3.5 border-b border-dalia-warm"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 xl:gap-4">
-          {/* Logo */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          {/* Logo Brand Component */}
           <Logo variant="horizontal" size={isScrolled ? "sm" : "md"} />
 
           {/* Desktop Navigation */}
@@ -110,15 +138,21 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
               if (link.hasDropdown) {
                 return (
                   <div
+                    ref={dropdownRef}
                     key={link.name}
                     className="relative"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
                     onMouseLeave={() => setServicesDropdownOpen(false)}
                   >
-                    <Link
-                      href={link.href}
-                      className={`px-2 xl:px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide flex items-center gap-1 transition-all whitespace-nowrap ${
-                        isActive
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setServicesDropdownOpen((prev) => !prev);
+                      }}
+                      aria-expanded={servicesDropdownOpen}
+                      className={`px-2 xl:px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold tracking-wide flex items-center gap-1 transition-all whitespace-nowrap cursor-pointer ${
+                        isActive || servicesDropdownOpen
                           ? "text-dalia-navy bg-dalia-rose font-bold"
                           : "text-dalia-navy hover:bg-dalia-rose/50 hover:text-dalia-navy"
                       }`}
@@ -128,44 +162,48 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                       <ChevronDown
                         size={14}
                         className={`transition-transform duration-200 ${
-                          servicesDropdownOpen ? "rotate-180 text-dalia-gold" : ""
+                          servicesDropdownOpen ? "rotate-180 text-dalia-gold-dark" : ""
                         }`}
                       />
-                    </Link>
+                    </button>
 
-                    {/* Dropdown Menu */}
+                    {/* Dropdown Menu with invisible bridge container */}
                     {servicesDropdownOpen && (
-                      <div className="absolute top-full left-0 w-[600px] max-h-[480px] overflow-y-auto bg-white rounded-3xl shadow-luxury border border-dalia-gold/30 p-5 mt-1 grid grid-cols-2 gap-2.5 animate-in fade-in slide-in-from-top-2 duration-200">
-                        <div className="col-span-2 pb-2.5 mb-1 border-b border-dalia-warm/60 flex justify-between items-center">
-                          <span className="text-xs uppercase tracking-wider font-extrabold text-dalia-gold-dark">
-                            Especialidades Odontológicas y Faciales
-                          </span>
-                          <Link
-                            href="/servicios"
-                            className="text-xs font-bold text-dalia-navy hover:text-dalia-rose-dark"
-                          >
-                            Ver catálogo completo →
-                          </Link>
+                      <div className="absolute top-full left-0 pt-2 z-50">
+                        <div className="w-[620px] max-h-[490px] overflow-y-auto bg-white rounded-3xl shadow-luxury border border-dalia-gold/30 p-5 grid grid-cols-2 gap-2.5 animate-in fade-in slide-in-from-top-1 duration-200">
+                          <div className="col-span-2 pb-2.5 mb-1 border-b border-dalia-warm/60 flex justify-between items-center">
+                            <span className="text-xs uppercase tracking-wider font-extrabold text-dalia-gold-dark">
+                              Especialidades Odontológicas y Faciales
+                            </span>
+                            <Link
+                              href="/servicios"
+                              onClick={() => setServicesDropdownOpen(false)}
+                              className="text-xs font-bold text-dalia-navy hover:text-dalia-rose-dark"
+                            >
+                              Ver catálogo completo →
+                            </Link>
+                          </div>
+                          {servicesData.map((svc) => (
+                            <Link
+                              key={svc.id}
+                              href={`/servicios/${svc.slug}`}
+                              onClick={() => setServicesDropdownOpen(false)}
+                              className="p-2.5 rounded-2xl hover:bg-dalia-rose/40 hover:border-dalia-rose/60 border border-transparent transition-all group flex items-start gap-2.5"
+                            >
+                              <div className="w-8 h-8 rounded-xl bg-dalia-rose/40 flex items-center justify-center text-dalia-navy shrink-0 group-hover:bg-dalia-navy group-hover:text-dalia-rose transition-colors">
+                                <Sparkles size={16} />
+                              </div>
+                              <div>
+                                <p className="text-xs font-bold text-dalia-navy group-hover:text-dalia-navy transition-colors">
+                                  {svc.title}
+                                </p>
+                                <p className="text-[11px] text-dalia-graphite line-clamp-1 font-medium">
+                                  {svc.highlight || svc.tag || "Dalia Clinic"}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
                         </div>
-                        {servicesData.map((svc) => (
-                          <Link
-                            key={svc.id}
-                            href={`/servicios/${svc.slug}`}
-                            className="p-2.5 rounded-2xl hover:bg-dalia-rose/40 hover:border-dalia-rose/60 border border-transparent transition-all group flex items-start gap-2.5"
-                          >
-                            <div className="w-8 h-8 rounded-xl bg-dalia-rose/40 flex items-center justify-center text-dalia-navy shrink-0 group-hover:bg-dalia-navy group-hover:text-dalia-rose transition-colors">
-                              <Sparkles size={16} />
-                            </div>
-                            <div>
-                              <p className="text-xs font-bold text-dalia-navy group-hover:text-dalia-navy transition-colors">
-                                {svc.title}
-                              </p>
-                              <p className="text-[11px] text-dalia-graphite line-clamp-1 font-medium">
-                                {svc.highlight}
-                              </p>
-                            </div>
-                          </Link>
-                        ))}
                       </div>
                     )}
                   </div>
@@ -189,42 +227,42 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
             })}
           </nav>
 
-          {/* Action CTAs Desktop */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
-            <a
-              href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-xl border border-dalia-gold/40 text-dalia-navy hover:bg-dalia-rose hover:border-dalia-rose transition-all"
-              title="Escríbenos por WhatsApp"
-            >
-              <MessageCircle size={18} className="text-dalia-navy" />
-            </a>
-
+          {/* Action CTAs: Agendar y WhatsApp */}
+          <div className="hidden sm:flex items-center gap-2.5">
             <button
               onClick={onOpenAppointment}
-              className="btn-gold px-4 xl:px-5 py-2.5 rounded-xl text-xs xl:text-sm font-bold flex items-center gap-1.5 xl:gap-2 shadow-sm whitespace-nowrap hover:ring-2 hover:ring-dalia-rose"
+              className="btn-gold px-4 py-2 rounded-xl text-xs xl:text-sm font-bold flex items-center gap-2 shadow-sm hover:ring-2 hover:ring-dalia-rose"
             >
               <Calendar size={15} />
               <span>Agendar Cita</span>
             </button>
+
+            <a
+              href="https://wa.me/56975384019?text=Hola%20Dalia%20Clinic,%20deseo%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contactar por WhatsApp"
+              className="btn-navy p-2 rounded-xl text-white hover:bg-dalia-rose hover:text-dalia-navy transition-all border border-dalia-gold/40 shadow-sm"
+            >
+              <MessageCircle size={18} />
+            </a>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="flex lg:hidden items-center gap-1.5 shrink-0">
+          {/* Mobile Menu Hamburger */}
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={onOpenAppointment}
-              className="btn-gold px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm whitespace-nowrap hover:bg-dalia-rose"
+              className="btn-gold px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5"
             >
               <Calendar size={13} />
-              <span>Cita</span>
+              <span>Agendar</span>
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 rounded-xl text-dalia-navy hover:bg-dalia-rose/50 transition-colors"
-              aria-label="Abrir menú de navegación"
+              className="p-2 rounded-xl bg-white border border-dalia-warm text-dalia-navy hover:bg-dalia-rose/40 transition-colors"
+              aria-label="Abrir menú"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -238,6 +276,54 @@ export default function Navbar({ onOpenAppointment }: NavbarProps) {
                   link.href === "/"
                     ? pathname === "/"
                     : pathname.startsWith(link.href);
+
+                if (link.hasDropdown) {
+                  return (
+                    <div key={link.name} className="flex flex-col">
+                      <button
+                        type="button"
+                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                        className={`px-4 py-2.5 rounded-xl text-base font-bold transition-colors flex items-center justify-between text-left ${
+                          isActive || mobileServicesOpen
+                            ? "bg-dalia-rose text-dalia-navy"
+                            : "text-dalia-navy hover:bg-dalia-rose/60"
+                        }`}
+                      >
+                        <span>{link.name}</span>
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform duration-200 ${
+                            mobileServicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+
+                      {mobileServicesOpen && (
+                        <div className="pl-3 pr-1 py-2 space-y-1 max-h-64 overflow-y-auto bg-white/70 rounded-xl my-1 border border-dalia-gold/20">
+                          <Link
+                            href="/servicios"
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block px-3 py-2 text-xs font-extrabold text-dalia-gold-dark hover:text-dalia-navy border-b border-dalia-warm/40"
+                          >
+                            Ver catálogo completo de tratamientos →
+                          </Link>
+                          {servicesData.map((svc) => (
+                            <Link
+                              key={svc.id}
+                              href={`/servicios/${svc.slug}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold text-dalia-navy hover:bg-dalia-rose/30 transition-colors"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-dalia-gold shrink-0" />
+                              <span>{svc.title}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.name}
