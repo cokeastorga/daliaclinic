@@ -39,16 +39,7 @@ export default function HomePage() {
 
       {/* 3. Nuestra Identidad & Propósito: La esencia de Dalia Clinic */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-base sm:text-lg md:text-xl uppercase tracking-[0.25em] font-extrabold text-dalia-gold-dark block mb-3">
-            Nuestra Identidad & Propósito
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-dalia-navy tracking-tight">
-            La esencia de Dalia Clinic
-          </h2>
-        </div>
-
-        {/* Componente Interactivo de Identidad y Pilares */}
+        {/* Full redesign - header + pillar cards inside the component */}
         <InteractivePillars />
       </section>
 

@@ -1,198 +1,141 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Sparkles, Smile, HeartHandshake, ArrowRight, CheckCircle2 } from "lucide-react";
 
-interface Pillar {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  icon: React.ReactNode;
-}
-
-const pillars: Pillar[] = [
+const pillars = [
   {
     id: "armonia",
-    title: "ARMONÍA",
-    subtitle: "Todo está conectado",
+    label: "ARMONÍA",
+    title: "Todo está conectado",
     description:
       "La sonrisa forma parte del rostro y ambos influyen en nuestra expresión. Por eso trabajamos desde una mirada integral, buscando equilibrio entre salud, función y estética.",
-    image: "/pillars/armonia.png",
-    icon: <Sparkles size={24} />,
+    photo: "/pillars/armonia.png",
+    icon: "/pillars/icon-armonia.png",
+    iconAlt: "Ícono Armonía - Flor geométrica Dalia",
   },
   {
     id: "naturalidad",
-    title: "NATURALIDAD",
-    subtitle: "Respetar lo que te hace único",
+    label: "NATURALIDAD",
+    title: "Respetar lo que te hace único",
     description:
       "Cada sonrisa y cada rostro tienen características propias. Nuestros tratamientos buscan mejorarlas y conservar su identidad, evitando resultados estandarizados.",
-    image: "/pillars/naturalidad.png",
-    icon: <Smile size={24} />,
+    photo: "/pillars/naturalidad.png",
+    icon: "/pillars/icon-naturalidad.png",
+    iconAlt: "Ícono Naturalidad - Perfil de mujer con flor",
   },
   {
     id: "cuidado",
-    title: "CUIDADO",
-    subtitle: "Una experiencia centrada en ti",
+    label: "CUIDADO",
+    title: "Una experiencia centrada en ti",
     description:
       "Creemos que un buen resultado también depende de cómo se vive el proceso. Escuchar, explicar y acompañar forman parte de nuestra manera de atender.",
-    image: "/pillars/cuidado.png",
-    icon: <HeartHandshake size={24} />,
+    photo: "/pillars/cuidado.png",
+    icon: "/pillars/icon-cuidado.png",
+    iconAlt: "Ícono Cuidado - Manos con diente y flor",
   },
 ];
 
 export default function InteractivePillars() {
-  const [activeTab, setActiveTab] = useState(0);
-  const current = pillars[activeTab];
-
   return (
-    <div className="w-full space-y-12">
-      {/* Intro Box: Identidad Dalia with Flower Visual */}
-      <div className="bg-gradient-to-br from-white via-[#FCFAF8] to-dalia-rose-light/40 rounded-3xl p-8 sm:p-12 border border-dalia-gold/30 shadow-luxury overflow-hidden relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left: Introductory Text */}
-          <div className="lg:col-span-8 space-y-5 text-left z-10">
-            <p className="text-base sm:text-lg md:text-xl text-dalia-graphite leading-relaxed font-normal">
-              La dalia inspira nuestra identidad por la simetría, disposición y proporción de sus
-              pétalos, que representan una belleza que nace de la naturalidad y el equilibrio, no de
-              la perfección.
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-dalia-graphite leading-relaxed font-normal">
-              En <strong className="text-dalia-navy font-bold">Dalia Clinic</strong> llevamos esa
-              misma mirada a la odontología y la armonización facial, integrando salud, función y
-              estética en el cuidado de la sonrisa y el rostro.
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-dalia-navy font-semibold leading-relaxed">
-              Cada tratamiento es parte de algo más amplio: cuidar, acompañar y contribuir al
-              bienestar y la confianza de cada paciente.
-            </p>
-          </div>
-
-          {/* Right: Authentic Dalia Flower Image */}
-          <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <div className="relative w-56 h-72 sm:w-64 sm:h-80 rounded-3xl overflow-hidden border-2 border-dalia-gold/40 shadow-md">
-              <Image
-                src="/pillars/identidad-flor.png"
-                alt="Flor Dalia - Identidad Dalia Clinic"
-                fill
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/30 via-transparent to-transparent" />
-            </div>
-          </div>
+    <div className="w-full space-y-0">
+      {/* ─────────────────────────────────────────────
+          HEADER: "LA ESENCIA DE / DALIA CLINIC"
+          with flower decoration and icon row
+          ───────────────────────────────────────────── */}
+      <div className="relative overflow-hidden rounded-3xl bg-[#FAF7F4] border border-dalia-gold/20 shadow-sm px-8 sm:px-14 py-10 sm:py-14 mb-3">
+        {/* Decorative Dalia Flower (top-right) */}
+        <div className="absolute top-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 pointer-events-none select-none opacity-90">
+          <Image
+            src="/pillars/identidad-flor.png"
+            alt="Flor Dalia decorativa"
+            fill
+            className="object-cover object-left-bottom"
+          />
         </div>
-      </div>
 
-      {/* Pilares Selector Header */}
-      <div className="text-center pt-2">
-        <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-dalia-navy tracking-tight">
-          Pilares de Dalia Clinic
-        </h3>
-        <p className="text-sm sm:text-base text-dalia-graphite mt-1">
-          Descubre los tres principios esenciales que guían cada uno de nuestros tratamientos
-        </p>
-      </div>
-
-      {/* 3 Interactive Buttons: ARMONÍA · NATURALIDAD · CUIDADO */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-        {pillars.map((p, idx) => {
-          const isActive = idx === activeTab;
-          return (
-            <button
-              key={p.id}
-              onClick={() => setActiveTab(idx)}
-              className={`p-5 rounded-2xl text-center border transition-all duration-300 flex flex-col items-center justify-center gap-3 ${
-                isActive
-                  ? "bg-dalia-rose text-dalia-navy border-2 border-dalia-rose-dark shadow-luxury ring-2 ring-dalia-rose/80 scale-[1.03]"
-                  : "bg-white text-dalia-graphite border-dalia-warm hover:border-dalia-rose hover:bg-dalia-rose/30 shadow-xs"
-              }`}
-            >
-              <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${
-                  isActive
-                    ? "bg-white text-dalia-gold-dark shadow-sm border border-dalia-gold/30"
-                    : "bg-dalia-warm/60 text-dalia-navy"
-                }`}
-              >
-                {p.icon}
-              </div>
-              <div>
-                <p className="font-sans text-lg sm:text-xl font-extrabold tracking-wide text-dalia-navy">
-                  {p.title}
-                </p>
-                <p
-                  className={`text-xs sm:text-sm font-semibold mt-0.5 ${
-                    isActive ? "text-dalia-navy/85" : "text-dalia-graphite"
-                  }`}
-                >
-                  {p.subtitle}
-                </p>
-              </div>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Interactive Detail Showcase Card */}
-      <div className="bg-white rounded-3xl p-6 sm:p-10 border border-dalia-gold/30 shadow-luxury grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-in fade-in duration-300 hover:border-dalia-rose transition-colors">
-        {/* Left Information */}
-        <div className="lg:col-span-6 space-y-5 text-left">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dalia-rose text-dalia-navy text-sm font-extrabold border border-dalia-rose-dark/50">
-            <Sparkles size={16} className="text-dalia-navy" />
-            <span>Pilar Esencial</span>
-          </div>
-
-          <div>
-            <h4 className="font-serif text-3xl sm:text-4xl font-extrabold text-dalia-navy leading-tight">
-              {current.title}
-            </h4>
-            <p className="text-base sm:text-lg font-bold text-dalia-gold-dark mt-1">
-              {current.subtitle}
-            </p>
-          </div>
-
-          <p className="text-base sm:text-lg text-dalia-graphite leading-relaxed">
-            {current.description}
+        {/* Header text block */}
+        <div className="relative z-10 text-center max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm tracking-[0.35em] uppercase font-semibold text-dalia-graphite mb-1">
+            La Esencia De
           </p>
-
-          <div className="pt-2">
-            <Link
-              href="/quienes-somos"
-              className="inline-flex items-center gap-2 text-base font-extrabold text-dalia-navy hover:text-dalia-rose-dark transition-colors group"
-            >
-              <span>Conoce más sobre nuestra filosofía</span>
-              <ArrowRight
-                size={16}
-                className="group-hover:translate-x-1.5 transition-transform text-dalia-rose-dark"
-              />
-            </Link>
-          </div>
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dalia-navy tracking-tight leading-tight mb-2">
+            Dalia Clinic
+          </h2>
+          {/* Gold separator line */}
+          <div className="w-14 h-[2px] bg-dalia-gold mx-auto my-4 rounded-full" />
+          <p className="text-sm sm:text-base md:text-lg text-dalia-graphite leading-relaxed max-w-xl mx-auto font-normal">
+            Creemos en una odontología y estética facial que va más allá de un resultado estético. Nuestra esencia se basa en tres pilares que guían cada tratamiento y cada relación con nuestros pacientes.
+          </p>
         </div>
 
-        {/* Right Photography Visual */}
-        <div className="lg:col-span-6">
-          <div className="relative h-72 sm:h-[380px] w-full rounded-2xl overflow-hidden border-2 border-dalia-gold/40 shadow-md">
-            <Image
-              src={current.image}
-              alt={current.title}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-dalia-navy/80 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-dalia-gold/40">
-              <p className="text-xs sm:text-sm font-extrabold text-dalia-navy uppercase tracking-wider">
-                Compromiso Dalia Clinic
-              </p>
-              <p className="text-xs sm:text-sm text-dalia-graphite mt-0.5 font-medium leading-normal">
-                {current.subtitle} — Atención integral y personalizada en Quilicura.
+        {/* 3 Circular Icon Badges */}
+        <div className="relative z-10 mt-10 flex items-end justify-center gap-6 sm:gap-12 md:gap-16">
+          {pillars.map((p) => (
+            <div key={p.id} className="flex flex-col items-center gap-2.5">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 relative rounded-full overflow-visible">
+                <Image
+                  src={p.icon}
+                  alt={p.iconAlt}
+                  width={80}
+                  height={80}
+                  className="object-contain drop-shadow-md"
+                />
+              </div>
+              <span className="text-[10px] sm:text-xs tracking-[0.25em] font-extrabold text-dalia-gold-dark uppercase">
+                {p.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ─────────────────────────────────────────────
+          3 STACKED CARDS: Photo left · Text right
+          (Desktop: side-by-side 45/55, Mobile: stacked)
+          ───────────────────────────────────────────── */}
+      <div className="flex flex-col gap-3">
+        {pillars.map((pillar, idx) => (
+          <div
+            key={pillar.id}
+            className="group flex flex-col lg:flex-row overflow-hidden rounded-3xl border border-dalia-gold/25 shadow-luxury bg-white hover:shadow-luxury-hover hover:border-dalia-rose transition-all duration-300"
+            style={{ minHeight: "220px" }}
+          >
+            {/* LEFT: Photograph */}
+            <div className="relative w-full lg:w-[45%] h-56 sm:h-72 lg:h-auto shrink-0 overflow-hidden bg-dalia-warm">
+              <Image
+                src={pillar.photo}
+                alt={`${pillar.label} - Dalia Clinic`}
+                fill
+                className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-700"
+                priority={idx === 0}
+              />
+              {/* Subtle gradient overlay on right edge to blend into white */}
+              <div className="hidden lg:block absolute top-0 right-0 h-full w-20 bg-gradient-to-r from-transparent to-white/60 pointer-events-none" />
+            </div>
+
+            {/* RIGHT: Text Content */}
+            <div className="flex flex-col justify-center px-8 sm:px-12 py-8 sm:py-10 lg:py-0 bg-white w-full lg:w-[55%]">
+              {/* Pillar label with small gold separator */}
+              <div className="flex flex-col gap-1.5 mb-4">
+                <span className="text-[10px] sm:text-xs tracking-[0.3em] uppercase font-extrabold text-dalia-gold-dark">
+                  {pillar.label}
+                </span>
+                <div className="w-10 h-[2px] bg-dalia-gold rounded-full" />
+              </div>
+
+              {/* Pillar subtitle (large serif heading) */}
+              <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-dalia-navy leading-tight mb-4">
+                {pillar.title}
+              </h3>
+
+              {/* Description paragraph */}
+              <p className="text-sm sm:text-base lg:text-lg text-dalia-graphite leading-relaxed max-w-lg">
+                {pillar.description}
               </p>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
